@@ -99,13 +99,188 @@ const translations = {
     formMessage: 'Mensaje',
     formPlaceholderName: 'Su nombre completo',
     formPlaceholderEmail: 'correo@ejemplo.com',
-    formPlaceholderMsg: 'Cuéntenos sobre su proyecto...',
-    formSubmit: 'Enviar Mensaje',
-    projectTypes: ['Infraestructura Minera', 'Instalación Industrial', 'Diseño Sala de Control', 'Proyecto de Ingeniería', 'Otro'],
-    footerText: 'Especialistas en Arquitectura de Ingeniería, Industrial y Minería',
-    viewProject: 'Ver proyecto',
-    phone: 'Teléfono',
-    location: 'Ubicación'
+    formPlaceholderMessage: 'Cuéntenos sobre su proyecto...',
+    formProjectTypes: [
+      'Instalación Industrial',
+      'Infraestructura Minera',
+      'Salas de Control',
+      'Expansión de Planta',
+      'Otro'
+    ],
+    submitMessage: 'Enviar Mensaje',
+    allRights: 'Todos los derechos reservados',
+    description: 'Especialistas en soluciones de ingeniería'
+  },
+  en: {
+    nav: ['Home', 'About', 'Services', 'Projects', 'Contact'],
+    tagline: 'Technical Solutions Supporting Your Operations',
+    heroTitle1: 'ARCHITECTURE SPECIALISTS',
+    heroTitle2: 'FOR ENGINEERING PROJECTS',
+    heroDesc: 'We are a technical office focused on the physical component of your processes. We approach architecture with rigor and engineering, delivering technical files and construction solutions that align precisely with the mechanical, electrical, and process requirements of the overall project.',
+    heroSubdesc: 'We don\'t just design buildings; we execute the architecture and detailed engineering necessary for your industrial assets to function at the highest standard.',
+    viewProjects: 'View Projects',
+    contactUs: 'Contact Us',
+    about: 'About',
+    aboutTitle: 'Technical Consulting in Industrial Architecture',
+    aboutSubtitle: 'Over 10 years integrating architecture as a critical specialty within process engineering.',
+    aboutText1: 'We are an office specialized in infrastructure development for large-scale mining and industry. We differentiate ourselves by approaching architecture not as an aesthetic end, but as an operational component that must respond to the demands of production, safety, and plant maintenance.',
+    aboutText2: 'We understand the language of engineering. Our work integrates seamlessly with mechanical, electrical, and structural specialties, ensuring interference-free projects optimized for the asset\'s lifecycle.',
+    pillar1Title: 'Process Focus',
+    pillar1Desc: 'We design from the logic of the production process. Every square meter is planned to facilitate operation, personnel flow, and service continuity.',
+    pillar2Title: 'Regulatory Rigor',
+    pillar2Desc: 'Advanced command of industrial regulations and mining safety standards. We deliver files ready for approval and construction.',
+    pillar3Title: 'Multidisciplinary Coordination',
+    pillar3Desc: 'We use BIM methodology and engineering tools to ensure perfect integration with the rest of the project disciplines (EPC/EPCM).',
+    portfolio: 'Portfolio',
+    featuredProjects: 'Featured Projects',
+    projectsDesc: 'Comprehensive architectural solutions for large-scale mining and industrial engineering projects.',
+    comingSoon: 'Coming Soon',
+    moreProjects: 'More Projects',
+    services: 'Services',
+    servicesTitle: 'Specialized Solutions',
+    servicesDesc: 'We offer comprehensive architectural services specifically designed for engineering projects, industrial facilities, and large-scale mining operations.',
+    servicesList: [
+      'Control Room and Operations Center Design',
+      'Industrial Facility Architecture',
+      'Mining Infrastructure Planning',
+      'Engineering Project Consulting',
+      'Construction Supervision'
+    ],
+    yearsExp: 'Years of Experience',
+    contact: 'Contact',
+    contactTitle: 'Let\'s Build Together',
+    contactDesc: 'Ready to start your next industrial or mining infrastructure project? Contact us for a consultation.',
+    formName: 'Name',
+    formEmail: 'Email',
+    formProject: 'Project Type',
+    formMessage: 'Message',
+    formPlaceholderName: 'Your full name',
+    formPlaceholderEmail: 'email@example.com',
+    formPlaceholderMessage: 'Tell us about your project...',
+    formProjectTypes: [
+      'Industrial Facility',
+      'Mining Infrastructure',
+      'Control Rooms',
+      'Plant Expansion',
+      'Other'
+    ],
+    submitMessage: 'Send Message',
+    allRights: 'All rights reserved',
+    description: 'Engineering solutions specialists'
+  },
+  pt: {
+    nav: ['Início', 'Sobre', 'Serviços', 'Projetos', 'Contato'],
+    tagline: 'Soluções Técnicas como Suporte para suas Operações',
+    heroTitle1: 'ESPECIALISTAS EM ARQUITETURA',
+    heroTitle2: 'PARA PROJETOS DE ENGENHARIA',
+    heroDesc: 'Somos um escritório técnico focado no componente físico de seus processos. Abordamos a arquitetura com rigor e engenharia, entregando expedientes técnicos e soluções construtivas que se alinham milimétricamente com os requisitos mecânicos, elétricos e de processos do projeto geral.',
+    heroSubdesc: 'Não apenas projetamos edifícios; executamos a arquitetura e a engenharia de detalhe necessária para que seus ativos industriais funcionem no mais alto padrão.',
+    viewProjects: 'Ver Projetos',
+    contactUs: 'Contate-nos',
+    about: 'Sobre',
+    aboutTitle: 'Consultoria Técnica em Arquitetura Industrial',
+    aboutSubtitle: 'Mais de 10 anos integrando a arquitetura como uma especialidade crítica dentro da engenharia de processos.',
+    aboutText1: 'Somos um escritório especializado no desenvolvimento de infraestrutura para a grande mineração e indústria. Nos diferenciamos ao abordar a arquitetura não como um fim estético, mas como um componente operacional que deve responder às exigências de produção, segurança e manutenção da planta.',
+    aboutText2: 'Entendemos a linguagem da engenharia. Nosso trabalho se integra fluidamente com as especialidades mecânicas, elétricas e estruturais, garantindo projetos livres de interferências e otimizados para o ciclo de vida do ativo.',
+    pillar1Title: 'Foco em Processos',
+    pillar1Desc: 'Projetamos a partir da lógica do processo produtivo. Cada metro quadrado é planejado para facilitar a operação, o fluxo de pessoal e a continuidade do serviço.',
+    pillar2Title: 'Rigor Normativo',
+    pillar2Desc: 'Domínio avançado de normas industriais e padrões de segurança de mineração. Entregamos expedientes prontos para aprovação e construção.',
+    pillar3Title: 'Coordenação Multidisciplinar',
+    pillar3Desc: 'Utilizamos metodologia BIM e ferramentas de engenharia para garantir uma integração perfeita com o restante das disciplinas do projeto (EPC/EPCM).',
+    portfolio: 'Portfólio',
+    featuredProjects: 'Projetos Destacados',
+    projectsDesc: 'Soluções arquitetônicas integrais para projetos de engenharia de mineração e industrial em grande escala.',
+    comingSoon: 'Em Breve',
+    moreProjects: 'Mais Projetos',
+    services: 'Serviços',
+    servicesTitle: 'Soluções Especializadas',
+    servicesDesc: 'Oferecemos serviços arquitetônicos integrais projetados especificamente para projetos de engenharia, instalações industriais e operações de mineração em grande escala.',
+    servicesList: [
+      'Design de Salas de Controle e Centros de Operações',
+      'Arquitetura de Instalações Industriais',
+      'Planejamento de Infraestrutura de Mineração',
+      'Consultoria em Projetos de Engenharia',
+      'Supervisão de Construção'
+    ],
+    yearsExp: 'Anos de Experiência',
+    contact: 'Contato',
+    contactTitle: 'Vamos Construir Juntos',
+    contactDesc: 'Pronto para iniciar seu próximo projeto de infraestrutura industrial ou de mineração? Entre em contato conosco para uma consulta.',
+    formName: 'Nome',
+    formEmail: 'E-mail',
+    formProject: 'Tipo de Projeto',
+    formMessage: 'Mensagem',
+    formPlaceholderName: 'Seu nome completo',
+    formPlaceholderEmail: 'email@exemplo.com',
+    formPlaceholderMessage: 'Conte-nos sobre seu projeto...',
+    formProjectTypes: [
+      'Instalação Industrial',
+      'Infraestrutura de Mineração',
+      'Salas de Controle',
+      'Expansão de Planta',
+      'Outro'
+    ],
+    submitMessage: 'Enviar Mensagem',
+    allRights: 'Todos os direitos reservados',
+    description: 'Especialistas em soluções de engenharia'
+  },
+  zh: {
+    nav: ['首页', '关于', '服务', '项目', '联系'],
+    tagline: '为您的运营提供技术解决方案支持',
+    heroTitle1: '建筑专家',
+    heroTitle2: '工程项目',
+    heroDesc: '我们是一家专注于您流程物理组件的技术办公室。我们以严谨的工程方法处理建筑，交付与整体项目的机械、电气和流程要求精确对齐的技术文件和施工解决方案。',
+    heroSubdesc: '我们不仅设计建筑；我们执行必要的建筑和详细工程，使您的工业资产以最高标准运行。',
+    viewProjects: '查看项目',
+    contactUs: '联系我们',
+    about: '关于我们',
+    aboutTitle: '工业建筑技术咨询',
+    aboutSubtitle: '10多年来将建筑作为流程工程中的关键专业进行整合。',
+    aboutText1: '我们是一家专门从事大型采矿和工业基础设施开发的办公室。我们的不同之处在于，我们不将建筑视为审美目的，而是作为必须响应生产、安全和工厂维护要求的运营组件。',
+    aboutText2: '我们理解工程语言。我们的工作与机械、电气和结构专业无缝集成，确保项目无干扰并针对资产生命周期进行优化。',
+    pillar1Title: '流程重点',
+    pillar1Desc: '我们从生产流程的逻辑出发进行设计。每平方米都经过规划，以促进运营、人员流动和服务连续性。',
+    pillar2Title: '规范严谨',
+    pillar2Desc: '精通工业法规和采矿安全标准。我们交付准备批准和施工的文件。',
+    pillar3Title: '多学科协调',
+    pillar3Desc: '我们使用BIM方法和工程工具，确保与项目其他学科(EPC/EPCM)完美集成。',
+    portfolio: '项目组合',
+    featuredProjects: '精选项目',
+    projectsDesc: '为大型采矿和工业工程项目提供全面的建筑解决方案。',
+    comingSoon: '即将推出',
+    moreProjects: '更多项目',
+    services: '服务',
+    servicesTitle: '专业解决方案',
+    servicesDesc: '我们提供专门为工程项目、工业设施和大型采矿作业设计的全面建筑服务。',
+    servicesList: [
+      '控制室和运营中心设计',
+      '工业设施建筑',
+      '采矿基础设施规划',
+      '工程项目咨询',
+      '施工监督'
+    ],
+    yearsExp: '年经验',
+    contact: '联系方式',
+    contactTitle: '让我们一起建设',
+    contactDesc: '准备开始您的下一个工业或采矿基础设施项目了吗？请联系我们进行咨询。',
+    formName: '姓名',
+    formEmail: '电子邮件',
+    formProject: '项目类型',
+    formMessage: '信息',
+    formPlaceholderName: '您的全名',
+    formPlaceholderEmail: 'email@example.com',
+    formPlaceholderMessage: '告诉我们您的项目...',
+    formProjectTypes: [
+      '工业设施',
+      '采矿基础设施',
+      '控制室',
+      '工厂扩建',
+      '其他'
+    ],
+    submitMessage: '发送消息',
+    allRights: '版权所有',
+    description: '工程解决方案专家'
   }
 };
 
@@ -286,7 +461,10 @@ const ProjectCard = ({ title, index, t, delay = 0 }) => {
 const LanguageSelector = ({ currentLang, setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const langs = [
-    { code: 'es', label: 'ES', full: 'Español' }
+    { code: 'es', label: 'ES', full: 'Español', flag: '🇪🇸' },
+    { code: 'en', label: 'EN', full: 'English', flag: '🇺🇸' },
+    { code: 'pt', label: 'PT', full: 'Português', flag: '🇧🇷' },
+    { code: 'zh', label: 'ZH', full: '中文', flag: '🇨🇳' }
   ];
 
   return (
@@ -298,7 +476,58 @@ const LanguageSelector = ({ currentLang, setLang }) => {
         <Globe className="w-3.5 h-3.5" />
         {langs.find(l => l.code === currentLang)?.label}
       </button>
+
+      {isOpen && (
+        <div className="absolute top-full right-0 mt-2 bg-neutral-900 border border-white/20 shadow-xl min-w-[160px] z-50">
+          {langs.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => {
+                setLang(lang.code);
+                setIsOpen(false);
+              }}
+              className={`w-full px-4 py-3 text-left flex items-center gap-3 hover:bg-orange-600/20 transition-colors ${
+                currentLang === lang.code ? 'bg-orange-600/10 text-orange-400' : 'text-white/70 hover:text-white'
+              }`}
+            >
+              <span className="text-lg">{lang.flag}</span>
+              <span className="text-sm font-medium">{lang.full}</span>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
+  );
+};
+
+
+// Componente de partículas flotantes para el hero
+const FloatingParticles = () => {
+  return (
+    <>
+      {[...Array(15)].map((_, i) => (
+        <div
+          key={i}
+          className="absolute rounded-full bg-white/10"
+          style={{
+            width: Math.random() * 6 + 2 + 'px',
+            height: Math.random() * 6 + 2 + 'px',
+            left: Math.random() * 100 + '%',
+            top: Math.random() * 100 + '%',
+            animation: `float ${Math.random() * 10 + 15}s ease-in-out infinite`,
+            animationDelay: Math.random() * 5 + 's'
+          }}
+        />
+      ))}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+          25% { transform: translate(20px, -30px) scale(1.2); opacity: 0.6; }
+          50% { transform: translate(-15px, -60px) scale(0.8); opacity: 0.4; }
+          75% { transform: translate(30px, -40px) scale(1.1); opacity: 0.5; }
+        }
+      `}</style>
+    </>
   );
 };
 
@@ -747,7 +976,7 @@ export default function A4ELanding() {
   const [showSplash, setShowSplash] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroVisible, setHeroVisible] = useState(false);
-  const [lang] = useState('es');
+  const [lang, setLang] = useState('es');
   const [scrollY, setScrollY] = useState(0);
 
   const t = translations[lang];
@@ -900,6 +1129,27 @@ export default function A4ELanding() {
 
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700" />
+
+        {/* Efecto de onda animado */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.1) 35px, rgba(255,255,255,0.1) 70px)',
+            animation: 'wave 20s linear infinite',
+          }} />
+        </div>
+        <style jsx>{`
+          @keyframes wave {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-70px) translateY(70px); }
+          }
+        `}</style>
+
+        {/* Resplandor dinámico */}
+        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-orange-400 rounded-full blur-[120px] opacity-30 animate-pulse" />
+        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-orange-500 rounded-full blur-[120px] opacity-20 animate-pulse delay-1000" style={{animationDelay: '2s'}} />
+
+        {/* Partículas flotantes */}
+        <FloatingParticles />
 
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
