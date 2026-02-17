@@ -291,6 +291,27 @@ const projectNames = {
     "Remodelación Sala de Control GOM BHP",
     "Remodelación CHO Puerto Coloso BHP",
     "Remodelación Main Office Laguna Seca BHP"
+  ],
+  en: [
+    "Spence Control Room BHP",
+    "Autonomy Infrastructure Expansion BHP",
+    "GOM Control Room Remodeling BHP",
+    "CHO Puerto Coloso Remodeling BHP",
+    "Laguna Seca Main Office Remodeling BHP"
+  ],
+  pt: [
+    "Sala de Controle Spence BHP",
+    "Expansão Infraestrutura Autonomia BHP",
+    "Remodelação Sala de Controle GOM BHP",
+    "Remodelação CHO Puerto Coloso BHP",
+    "Remodelação Main Office Laguna Seca BHP"
+  ],
+  zh: [
+    "斯彭斯控制室 BHP",
+    "自主基础设施扩展 BHP",
+    "GOM控制室改造 BHP",
+    "CHO科洛索港改造 BHP",
+    "拉古纳塞卡主办公室改造 BHP"
   ]
 };
 
