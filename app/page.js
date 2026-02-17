@@ -733,7 +733,7 @@ const ContactForm = ({ t }) => {
               onFocus={() => setFocusedField('project')}
               onBlur={() => setFocusedField(null)}
             >
-              {t.projectTypes.map((type, i) => (
+              {t.formProjectTypes.map((type, i) => (
                 <option key={i}>{type}</option>
               ))}
             </select>
