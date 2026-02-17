@@ -331,20 +331,21 @@ const A4ELogo = ({ className = "" }) => (
 // Componente Splash Screen con efecto de entrada
 const SplashScreen = ({ onComplete }) => {
   const [logoVisible, setLogoVisible] = useState(false);
+  const [linesVisible, setLinesVisible] = useState(false);
+  const [particlesVisible, setParticlesVisible] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Mostrar logo con animación
-    const logoTimer = setTimeout(() => setLogoVisible(true), 500);
-
-    // Comenzar fade out
-    const fadeTimer = setTimeout(() => setFadeOut(true), 4500);
-
-    // Completar y ocultar splash
-    const completeTimer = setTimeout(() => onComplete(), 5500);
+    const logoTimer = setTimeout(() => setLogoVisible(true), 400);
+    const linesTimer = setTimeout(() => setLinesVisible(true), 900);
+    const particlesTimer = setTimeout(() => setParticlesVisible(true), 600);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 3800);
+    const completeTimer = setTimeout(() => onComplete(), 4500);
 
     return () => {
       clearTimeout(logoTimer);
+      clearTimeout(linesTimer);
+      clearTimeout(particlesTimer);
       clearTimeout(fadeTimer);
       clearTimeout(completeTimer);
     };
@@ -352,60 +353,137 @@ const SplashScreen = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-white flex items-center justify-center transition-opacity duration-1000 ${
+      className={`fixed inset-0 z-[100] bg-white flex items-center justify-center overflow-hidden transition-all duration-1000 ${
         fadeOut ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      {/* Logo principal con animación */}
-      <div className="relative z-10 flex flex-col items-center">
+      {/* Dramatic particles - floating background */}
+      <div className={`absolute inset-0 transition-opacity duration-1500 ${particlesVisible ? 'opacity-100' : 'opacity-0'}`}>
+        {/* Large glowing orbs with parallax effect */}
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={`orb-${i}`}
+            className="absolute rounded-full bg-orange-400/20"
+            style={{
+              width: `${Math.random() * 120 + 80}px`,
+              height: `${Math.random() * 120 + 80}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              filter: 'blur(60px)',
+              animation: `float-slow ${Math.random() * 10 + 15}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`,
+              transform: `translateZ(${i * 10}px)`
+            }}
+          />
+        ))}
+        
+        {/* Medium particles */}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={`particle-${i}`}
+            className="absolute rounded-full bg-neutral-300/40"
+            style={{
+              width: `${Math.random() * 8 + 4}px`,
+              height: `${Math.random() * 8 + 4}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `float ${Math.random() * 12 + 18}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 4}s`
+            }}
+          />
+        ))}
+        
+        {/* Small sparkles */}
+        {[...Array(25)].map((_, i) => (
+          <div
+            key={`sparkle-${i}`}
+            className="absolute rounded-full bg-orange-500/30"
+            style={{
+              width: `${Math.random() * 3 + 1}px`,
+              height: `${Math.random() * 3 + 1}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `twinkle ${Math.random() * 3 + 2}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Geometric architectural lines - minimalist style */}
+      <div className={`absolute inset-0 transition-opacity duration-1000 ${linesVisible ? 'opacity-100' : 'opacity-0'}`}>
+        {/* Horizontal lines */}
+        <div
+          className="absolute top-1/4 left-0 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent transition-all duration-1500"
+          style={{ width: linesVisible ? '100%' : '0%' }}
+        />
+        <div
+          className="absolute bottom-1/4 left-0 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent transition-all duration-1500 delay-200"
+          style={{ width: linesVisible ? '100%' : '0%' }}
+        />
+        
+        {/* Vertical lines */}
+        <div
+          className="absolute left-1/4 top-0 w-px bg-gradient-to-b from-transparent via-neutral-300 to-transparent transition-all duration-1500 delay-100"
+          style={{ height: linesVisible ? '100%' : '0%' }}
+        />
+        <div
+          className="absolute right-1/4 top-0 w-px bg-gradient-to-b from-transparent via-neutral-300 to-transparent transition-all duration-1500 delay-300"
+          style={{ height: linesVisible ? '100%' : '0%' }}
+        />
+      </div>
+
+      {/* Logo - centered with refined animation */}
+      <div className="relative z-20 flex flex-col items-center">
         <div
           className={`transition-all duration-1500 ease-out ${
-            logoVisible
-              ? 'opacity-100 scale-100 translate-y-0'
-              : 'opacity-0 scale-90 translate-y-12'
+            logoVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-8'
           }`}
+          style={{ transform: logoVisible ? 'translateZ(50px)' : 'translateZ(0px)' }}
         >
-          <A4ELogo className="h-96 md:h-120 lg:h-144 w-auto" />
+          <A4ELogo className="h-16 md:h-20 w-auto drop-shadow-lg" />
         </div>
 
-        {/* Línea decorativa debajo del logo */}
-        <div
-          className={`mt-10 h-0.5 bg-gradient-to-r from-transparent via-orange-500 to-transparent transition-all duration-1200 delay-700 ${
-            logoVisible ? 'w-80 opacity-100' : 'w-0 opacity-0'
-          }`}
-        />
-
-        {/* Tagline sutil */}
-        <p
-          className={`mt-8 text-neutral-400 text-sm tracking-[0.35em] uppercase transition-all duration-1000 delay-1000 ${
-            logoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-          }`}
-        >
+        {/* Subtitle */}
+        <p className={`mt-6 text-neutral-600 text-xs md:text-sm tracking-[0.3em] font-light uppercase transition-all duration-1000 delay-500 ${
+          logoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>
           Architecture for Engineering
         </p>
       </div>
 
-      {/* Animación de carga sutil en la parte inferior */}
-      <div className="absolute bottom-16 left-1/2 -translate-x-1/2">
-        <div className="flex gap-2">
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className={`w-2 h-2 rounded-full bg-orange-500 transition-all duration-500 ${
-                logoVisible ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{
-                animation: logoVisible ? `pulse 1.6s ease-in-out ${i * 0.3}s infinite` : 'none'
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      <style>{`
-        @keyframes pulse {
-          0%, 100% { transform: scale(1); opacity: 0.4; }
-          50% { transform: scale(1.4); opacity: 1; }
+      {/* Corner accents - architectural frame */}
+      <div className={`absolute top-8 left-8 w-12 h-12 border-t-2 border-l-2 border-orange-500 transition-all duration-1000 delay-700 ${
+        linesVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
+      }`} />
+      <div className={`absolute top-8 right-8 w-12 h-12 border-t-2 border-r-2 border-orange-500 transition-all duration-1000 delay-800 ${
+        linesVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
+      }`} />
+      <div className={`absolute bottom-8 left-8 w-12 h-12 border-b-2 border-l-2 border-orange-500 transition-all duration-1000 delay-900 ${
+        linesVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
+      }`} />
+      <div className={`absolute bottom-8 right-8 w-12 h-12 border-b-2 border-r-2 border-orange-500 transition-all duration-1000 delay-1000 ${
+        linesVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
+      }`} />
+      
+      {/* Add keyframes for animations */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) translateX(0px); }
+          25% { transform: translateY(-20px) translateX(10px); }
+          50% { transform: translateY(-40px) translateX(-10px); }
+          75% { transform: translateY(-20px) translateX(10px); }
+        }
+        
+        @keyframes float-slow {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -30px) scale(1.1); }
+          66% { transform: translate(-30px, -60px) scale(0.9); }
+        }
+        
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.3; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.5); }
         }
       `}</style>
     </div>
