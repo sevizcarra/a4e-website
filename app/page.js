@@ -87,6 +87,7 @@ const translations = {
       'Edificación y remodelación de espacios claves como Oficinas y Casas de Cambio',
       'Salas de Control, de Servidores, Eléctricas y Técnicas.',
       'Edificación técnica para RESPEL, Almacenamiento y Truck Shops',
+      'Revisión de contraparte de planos y documentos.',
       'Supervisión de Terreno de ejecución y avances'
     ],
     yearsExp: 'Años de Experiencia',
@@ -145,6 +146,7 @@ const translations = {
       'Construction and remodeling of key spaces such as Offices and Change Houses',
       'Control, Server, Electrical and Technical Rooms',
       'Technical construction for HAZMAT, Storage and Truck Shops',
+      'Counterpart review of plans and documents',
       'On-site Execution and Progress Supervision'
     ],
     yearsExp: 'Years of Experience',
@@ -203,6 +205,7 @@ const translations = {
       'Edificação e remodelação de espaços chave como Escritórios e Vestiários',
       'Salas de Controle, de Servidores, Elétricas e Técnicas',
       'Edificação técnica para RESPEL, Armazenamento e Truck Shops',
+      'Revisão de contraparte de plantas e documentos',
       'Supervisão de Campo de execução e avanços'
     ],
     yearsExp: 'Anos de Experiência',
@@ -261,6 +264,7 @@ const translations = {
       '关键空间的建设和改造，如办公室和更衣室',
       '控制室、服务器室、电气室和技术室',
       'HAZMAT、仓储和卡车车间的技术建设',
+      '图纸和文件的对方审查',
       '现场执行和进度监督'
     ],
     yearsExp: '年经验',
