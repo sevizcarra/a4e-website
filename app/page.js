@@ -1146,7 +1146,7 @@ export default function A4ELanding() {
         `}</style>
       </section>
 
-      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-1500 ease-in-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-[2500ms] ease-in-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700" />
 
         {/* Efecto de onda animado */}
