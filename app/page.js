@@ -335,8 +335,8 @@ const SplashScreen = ({ onComplete }) => {
 
   useEffect(() => {
     const logoTimer = setTimeout(() => setLogoVisible(true), 400);
-    const fadeTimer = setTimeout(() => setFadeOut(true), 3500);
-    const completeTimer = setTimeout(() => onComplete(), 5000);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 2800);
+    const completeTimer = setTimeout(() => onComplete(), 3800);
 
     return () => {
       clearTimeout(logoTimer);
@@ -999,8 +999,8 @@ export default function A4ELanding() {
   const projects = projectNames[lang];
 
   useEffect(() => {
-    // Hero starts fading in sooner but takes longer to complete
-    const timer = setTimeout(() => setHeroVisible(true), showSplash ? 4000 : 300);
+    // Hero starts fading in right after splash completes
+    const timer = setTimeout(() => setHeroVisible(true), showSplash ? 3900 : 300);
     return () => clearTimeout(timer);
   }, [showSplash]);
 
@@ -1146,7 +1146,7 @@ export default function A4ELanding() {
         `}</style>
       </section>
 
-      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-[3500ms] ease-in-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-[2000ms] ease-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700" />
 
         {/* Efecto de onda animado */}
