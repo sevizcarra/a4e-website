@@ -83,7 +83,7 @@ const translations = {
     servicesTitle: 'Soluciones Especializadas',
     servicesDesc: 'Ofrecemos servicios arquitectónicos integrales diseñados específicamente para proyectos de ingeniería, instalaciones industriales y operaciones mineras a gran escala.',
     servicesList: [
-      'Diseño de Salas de Control, de Servidores, Eléctricas y Técnicas.',
+      'Salas de Control, de Servidores, Eléctricas y Técnicas.',
       'Master Plan de Arquitectura para estudio de instalaciones',
       'Planificación de Infraestructura Minera',
       'Consultoría en Proyectos de Ingeniería',
