@@ -350,12 +350,26 @@ const SplashScreen = ({ onComplete }) => {
       fadeOut ? 'opacity-0' : 'opacity-100'
     }`}>
       {/* Logo simple y elegante */}
-      <div className={`transition-all duration-1000 ease-out ${
+      <div className={`flex flex-col items-center gap-4 transition-all duration-1000 ease-out ${
         logoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
       }`}>
         <A4ELogo className="h-20 md:h-24 w-auto" style={{
           filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.08))'
         }} />
+
+        {/* Loading dots */}
+        <div className="flex gap-1.5">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="w-2 h-2 rounded-full bg-orange-500"
+              style={{
+                animation: `loading-bounce 1.4s ease-in-out infinite`,
+                animationDelay: `${i * 0.16}s`
+              }}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -996,23 +1010,7 @@ export default function A4ELanding() {
           : 'bg-neutral-900/95 backdrop-blur-md py-4'
       } border-b border-white/5`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <div className="flex flex-col items-start gap-2">
-            <A4ELogo className={`w-auto transition-all duration-300 ${scrollY > 50 ? 'h-8' : 'h-10'}`} />
-
-            {/* Loading dots - elegant animation */}
-            <div className="flex gap-1">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className="w-1 h-1 rounded-full bg-orange-500/60"
-                  style={{
-                    animation: `loading-bounce 1.4s ease-in-out infinite`,
-                    animationDelay: `${i * 0.16}s`
-                  }}
-                />
-              ))}
-            </div>
-          </div>
+          <A4ELogo className={`w-auto transition-all duration-300 ${scrollY > 50 ? 'h-8' : 'h-10'}`} />
 
           <div className="hidden md:flex items-center gap-8">
             <nav className="flex items-center gap-8">
