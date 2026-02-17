@@ -972,9 +972,10 @@ export default function A4ELanding() {
   const projects = projectNames[lang];
 
   useEffect(() => {
-    const timer = setTimeout(() => setHeroVisible(true), 500);
+    // Delay hero appearance after splash
+    const timer = setTimeout(() => setHeroVisible(true), showSplash ? 4000 : 300);
     return () => clearTimeout(timer);
-  }, []);
+  }, [showSplash]);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -1134,7 +1135,7 @@ export default function A4ELanding() {
         `}</style>
       </section>
 
-      <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-opacity duration-1000 ${heroVisible ? 'opacity-100' : 'opacity-0'}`}>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700" />
 
         {/* Efecto de onda animado */}
