@@ -1027,6 +1027,8 @@ export default function A4ELanding() {
                 </a>
               ))}
             </nav>
+          
+            <LanguageSelector currentLang={lang} setLang={setLang} />
           </div>
 
           <button
