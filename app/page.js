@@ -108,6 +108,7 @@ const translations = {
       'Otro'
     ],
     submitMessage: 'Enviar Mensaje',
+        intranet: 'Acceso Equipo',
     allRights: 'Todos los derechos reservados',
     description: 'Especialistas en soluciones de ingeniería'
   },
@@ -165,6 +166,7 @@ const translations = {
       'Other'
     ],
     submitMessage: 'Send Message',
+        intranet: 'Team Access',
     allRights: 'All rights reserved',
     description: 'Engineering solutions specialists'
   },
@@ -222,6 +224,7 @@ const translations = {
       'Outro'
     ],
     submitMessage: 'Enviar Mensagem',
+        intranet: 'Acesso da Equipe',
     allRights: 'Todos os direitos reservados',
     description: 'Especialistas em soluções de engenharia'
   },
@@ -279,6 +282,7 @@ const translations = {
       '其他'
     ],
     submitMessage: '发送消息',
+        intranet: '团队访问',
     allRights: '版权所有',
     description: '工程解决方案专家'
   }
@@ -985,7 +989,7 @@ const Footer = ({ t }) => {
           <p className={`text-white/40 text-xs font-light text-center md:text-right transition-all duration-700 delay-300 ${
             isVisible ? 'opacity-100' : 'opacity-0'
           }`}>
-            © 2025 A4E. {t.footerText}
+            © 2025 A4E. {t.allRights}
           </p>
         </div>
       </div>
