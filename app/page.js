@@ -939,10 +939,10 @@ const Footer = ({ t }) => {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   return (
-    <footer ref={ref} className="relative bg-white py-12 border-t border-neutral-200 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-neutral-50 to-white" />
+    <footer ref={ref} className="relative bg-neutral-800 py-12 border-t border-neutral-700 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-neutral-800" />
 
-      <div className={`absolute top-0 left-1/4 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl transition-all duration-1000 ${
+      <div className={`absolute top-0 left-1/4 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl transition-all duration-1000 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`} />
 
@@ -958,7 +958,7 @@ const Footer = ({ t }) => {
             <A4ELogo className="h-10 w-auto" />
           </div>
 
-          <div className={`hidden md:block flex-1 h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent mx-8 transition-all duration-700 delay-200 ${
+          <div className={`hidden md:block flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-8 transition-all duration-700 delay-200 ${
             isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`} />
 
@@ -967,16 +967,16 @@ const Footer = ({ t }) => {
               href="https://intranet.a4e.cl"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-neutral-400 hover:text-orange-500 text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
+              className={`text-white/60 hover:text-orange-500 text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
                 isVisible ? 'opacity-100' : 'opacity-0'
               }`}
             >
               {t.intranet}
             </a>
 
-            <div className="h-3 w-px bg-neutral-300" />
+            <div className="h-3 w-px bg-white/20" />
 
-            <p className={`text-neutral-500 text-xs font-light text-center md:text-right transition-all duration-700 delay-300 ${
+            <p className={`text-white/50 text-xs font-light text-center md:text-right transition-all duration-700 delay-300 ${
               isVisible ? 'opacity-100' : 'opacity-0'
             }`}>
               © 2025 A4E. {t.allRights}
@@ -1019,9 +1019,9 @@ export default function A4ELanding() {
     <div className="min-h-screen bg-neutral-900 antialiased scroll-smooth" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrollY > 100
-          ? 'translate-y-0 bg-neutral-900 backdrop-blur-lg shadow-lg shadow-black/20 py-3'
-          : '-translate-y-full bg-neutral-900/95 backdrop-blur-md py-4'
-      } border-b border-white/5`}>
+          ? 'translate-y-0 bg-neutral-900/80 backdrop-blur-lg shadow-lg shadow-black/20 py-3'
+          : '-translate-y-full bg-neutral-900/70 backdrop-blur-md py-4'
+      } border-b border-white/10`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <A4ELogo className={`w-auto transition-all duration-300 ${scrollY > 50 ? 'h-8' : 'h-10'}`} />
 
