@@ -83,11 +83,11 @@ const translations = {
     servicesTitle: 'Soluciones Especializadas',
     servicesDesc: 'Ofrecemos servicios arquitectónicos integrales diseñados específicamente para proyectos de ingeniería, instalaciones industriales y operaciones mineras a gran escala.',
     servicesList: [
+      'Master Plan de Arquitectura para estudio de Faenas e Instalaciones',
+      'Edificación y remodelación de espacios claves como Oficinas y Casas de Cambio',
       'Salas de Control, de Servidores, Eléctricas y Técnicas.',
-      'Master Plan de Arquitectura para estudio de instalaciones',
-      'Planificación de Infraestructura Minera',
-      'Consultoría en Proyectos de Ingeniería',
-      'Supervisión de Construcción'
+      'Edificación técnica para RESPEL, Almacenamiento y Truck Shops',
+      'Supervisión de Terreno de ejecución y avances'
     ],
     yearsExp: 'Años de Experiencia',
     contact: 'Contacto',
