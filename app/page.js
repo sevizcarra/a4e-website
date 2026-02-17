@@ -999,8 +999,8 @@ export default function A4ELanding() {
   const projects = projectNames[lang];
 
   useEffect(() => {
-    // Delay hero appearance after splash - wait for splash to fully fade out
-    const timer = setTimeout(() => setHeroVisible(true), showSplash ? 5200 : 300);
+    // Hero starts fading in sooner but takes longer to complete
+    const timer = setTimeout(() => setHeroVisible(true), showSplash ? 4000 : 300);
     return () => clearTimeout(timer);
   }, [showSplash]);
 
@@ -1146,7 +1146,7 @@ export default function A4ELanding() {
         `}</style>
       </section>
 
-      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-[2500ms] ease-in-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-[3500ms] ease-in-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700" />
 
         {/* Efecto de onda animado */}
