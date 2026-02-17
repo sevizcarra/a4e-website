@@ -331,169 +331,32 @@ const A4ELogo = ({ className = "" }) => (
 // Componente Splash Screen con efecto de entrada
 const SplashScreen = ({ onComplete }) => {
   const [logoVisible, setLogoVisible] = useState(false);
-  const [lineVisible, setLineVisible] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-  const [whiteGlow, setWhiteGlow] = useState(false);
 
   useEffect(() => {
-    const logoTimer = setTimeout(() => setLogoVisible(true), 500);
-    const lineTimer = setTimeout(() => setLineVisible(true), 1200);
-    const glowTimer = setTimeout(() => setWhiteGlow(true), 4200);
-    const fadeTimer = setTimeout(() => setFadeOut(true), 4500);
-    const completeTimer = setTimeout(() => onComplete(), 5500);
+    const logoTimer = setTimeout(() => setLogoVisible(true), 300);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 3000);
+    const completeTimer = setTimeout(() => onComplete(), 3800);
 
     return () => {
       clearTimeout(logoTimer);
-      clearTimeout(lineTimer);
-      clearTimeout(glowTimer);
       clearTimeout(fadeTimer);
       clearTimeout(completeTimer);
     };
   }, [onComplete]);
 
   return (
-    <div className={`fixed inset-0 z-[100] flex items-center justify-center overflow-hidden transition-all duration-1500 ${fadeOut ? 'opacity-0 scale-105' : 'opacity-100 scale-100'}`}
-      style={{
-        background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)'
-      }}
-    >
-      {/* Subtle animated gradient overlay */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0" style={{
-          background: 'radial-gradient(ellipse at center, rgba(251,146,60,0.15) 0%, transparent 70%)',
-          animation: 'pulse-subtle 8s ease-in-out infinite'
+    <div className={`fixed inset-0 z-[100] bg-white flex items-center justify-center transition-opacity duration-800 ${
+      fadeOut ? 'opacity-0' : 'opacity-100'
+    }`}>
+      {/* Logo simple y elegante */}
+      <div className={`transition-all duration-1000 ease-out ${
+        logoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+      }`}>
+        <A4ELogo className="h-20 md:h-24 w-auto" style={{
+          filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.08))'
         }} />
       </div>
-
-      {/* White glow transition effect */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${
-        whiteGlow ? 'opacity-100' : 'opacity-0 pointer-events-none'
-      }`}>
-        <div className="absolute rounded-full bg-white"
-          style={{
-            width: whiteGlow ? '300vw' : '0px',
-            height: whiteGlow ? '300vh' : '0px',
-            filter: 'blur(100px)',
-            transition: 'width 1.3s cubic-bezier(0.4, 0, 0.2, 1), height 1.3s cubic-bezier(0.4, 0, 0.2, 1)',
-            boxShadow: '0 0 200px rgba(255,255,255,0.8), 0 0 400px rgba(255,255,255,0.6)'
-          }}
-        />
-      </div>
-
-      {/* Minimal elegant particles - just 8 */}
-      <div className={`absolute inset-0 transition-opacity duration-2000 ${logoVisible ? 'opacity-100' : 'opacity-0'}`}>
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={`elegant-${i}`}
-            className="absolute rounded-full"
-            style={{
-              width: '3px',
-              height: '3px',
-              left: `${20 + Math.random() * 60}%`,
-              top: `${20 + Math.random() * 60}%`,
-              background: '#fb923c',
-              boxShadow: '0 0 20px rgba(251,146,60,0.8), 0 0 40px rgba(251,146,60,0.4)',
-              animation: `elegant-float ${Math.random() * 10 + 15}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 3}s`,
-              opacity: 0.6
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Single elegant glow behind logo */}
-      <div className={`absolute transition-all duration-2000 ${logoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
-        style={{
-          width: '400px',
-          height: '400px',
-          background: 'radial-gradient(circle, rgba(251,146,60,0.2) 0%, transparent 70%)',
-          filter: 'blur(80px)',
-          animation: 'breathe 6s ease-in-out infinite'
-        }}
-      />
-
-      {/* Logo - clean and elegant */}
-      <div className="relative z-20 flex flex-col items-center">
-        <div className={`transition-all duration-2000 ease-out ${
-          logoVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-8'
-        }`}>
-          <A4ELogo className="h-20 md:h-24 w-auto" style={{
-            filter: 'drop-shadow(0 4px 20px rgba(251,146,60,0.3))'
-          }} />
-        </div>
-
-        {/* Elegant line animation */}
-        <div className={`mt-8 transition-all duration-1500 ${lineVisible ? 'w-48 opacity-100' : 'w-0 opacity-0'}`}>
-          <div className="h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent"
-            style={{
-              boxShadow: '0 0 10px rgba(251,146,60,0.5)'
-            }}
-          />
-        </div>
-
-        {/* Minimal text */}
-        <div className={`mt-6 transition-all duration-1500 delay-300 ${lineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <p className="text-neutral-400 text-xs tracking-[0.4em] font-light uppercase">
-            Architecture for Engineering
-          </p>
-        </div>
-      </div>
-
-      {/* Minimal corner accents - very subtle */}
-      <div className={`absolute top-8 left-8 w-16 h-16 transition-all duration-1500 delay-500 ${
-        lineVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-75'
-      }`}>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-orange-500/60 to-transparent" />
-        <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-orange-500/60 to-transparent" />
-      </div>
-
-      <div className={`absolute top-8 right-8 w-16 h-16 transition-all duration-1500 delay-600 ${
-        lineVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-75'
-      }`}>
-        <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-orange-500/60 to-transparent" />
-        <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-orange-500/60 to-transparent" />
-      </div>
-
-      <div className={`absolute bottom-8 left-8 w-16 h-16 transition-all duration-1500 delay-700 ${
-        lineVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-75'
-      }`}>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-orange-500/60 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-px h-full bg-gradient-to-t from-orange-500/60 to-transparent" />
-      </div>
-
-      <div className={`absolute bottom-8 right-8 w-16 h-16 transition-all duration-1500 delay-800 ${
-        lineVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-75'
-      }`}>
-        <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-orange-500/60 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-px h-full bg-gradient-to-t from-orange-500/60 to-transparent" />
-      </div>
-
-      <style jsx>{`
-        @keyframes elegant-float {
-          0%, 100% { 
-            transform: translateY(0) translateX(0);
-            opacity: 0.6;
-          }
-          50% { 
-            transform: translateY(-30px) translateX(20px);
-            opacity: 1;
-          }
-        }
-        @keyframes breathe {
-          0%, 100% { 
-            transform: scale(1);
-            opacity: 0.3;
-          }
-          50% { 
-            transform: scale(1.2);
-            opacity: 0.5;
-          }
-        }
-        @keyframes pulse-subtle {
-          0%, 100% { opacity: 0.2; }
-          50% { opacity: 0.4; }
-        }
-      `}</style>
     </div>
   );
 };
