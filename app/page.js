@@ -330,192 +330,150 @@ const A4ELogo = ({ className = "" }) => (
 
 // Componente Splash Screen con efecto de entrada
 const SplashScreen = ({ onComplete }) => {
-  const [stage, setStage] = useState(0);
+  const [logoVisible, setLogoVisible] = useState(false);
+  const [lineVisible, setLineVisible] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const stage1 = setTimeout(() => setStage(1), 300);
-    const stage2 = setTimeout(() => setStage(2), 1000);
-    const stage3 = setTimeout(() => setStage(3), 2000);
-    const fadeTimer = setTimeout(() => setFadeOut(true), 5500);
-    const completeTimer = setTimeout(() => onComplete(), 6500);
+    const logoTimer = setTimeout(() => setLogoVisible(true), 500);
+    const lineTimer = setTimeout(() => setLineVisible(true), 1200);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 4500);
+    const completeTimer = setTimeout(() => onComplete(), 5500);
 
     return () => {
-      clearTimeout(stage1);
-      clearTimeout(stage2);
-      clearTimeout(stage3);
+      clearTimeout(logoTimer);
+      clearTimeout(lineTimer);
       clearTimeout(fadeTimer);
       clearTimeout(completeTimer);
     };
   }, [onComplete]);
 
   return (
-    <div className={`fixed inset-0 z-[100] flex items-center justify-center overflow-hidden transition-all duration-1000 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}
+    <div className={`fixed inset-0 z-[100] flex items-center justify-center overflow-hidden transition-all duration-1500 ${fadeOut ? 'opacity-0 scale-105' : 'opacity-100 scale-100'}`}
       style={{
-        background: 'radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f1e 50%, #000000 100%)'
+        background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)'
       }}
     >
-      {/* Animated grid background */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Subtle animated gradient overlay */}
+      <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'linear-gradient(rgba(251,146,60,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(251,146,60,0.1) 1px, transparent 1px)',
-          backgroundSize: '50px 50px',
-          animation: 'grid-move 20s linear infinite'
+          background: 'radial-gradient(ellipse at center, rgba(251,146,60,0.15) 0%, transparent 70%)',
+          animation: 'pulse-subtle 8s ease-in-out infinite'
         }} />
       </div>
 
-      {/* Massive glowing orbs with intense colors */}
-      <div className={`absolute inset-0 transition-all duration-2000 ${stage >= 1 ? 'opacity-100' : 'opacity-0'}`}>
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={`glow-orb-${i}`}
-            className="absolute rounded-full"
-            style={{
-              width: `${Math.random() * 300 + 200}px`,
-              height: `${Math.random() * 300 + 200}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              background: i % 3 === 0 
-                ? 'radial-gradient(circle, rgba(251,146,60,0.6) 0%, rgba(251,146,60,0.2) 40%, transparent 70%)'
-                : i % 3 === 1
-                ? 'radial-gradient(circle, rgba(234,88,12,0.5) 0%, rgba(234,88,12,0.15) 40%, transparent 70%)'
-                : 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 40%, transparent 70%)',
-              filter: 'blur(60px)',
-              animation: `float-dramatic ${Math.random() * 15 + 20}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 3}s`,
-              boxShadow: i % 2 === 0 ? '0 0 150px rgba(251,146,60,0.8)' : '0 0 100px rgba(255,255,255,0.5)'
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Light rays from center */}
-      <div className={`absolute inset-0 transition-all duration-2000 ${stage >= 2 ? 'opacity-100' : 'opacity-0'}`}>
+      {/* Minimal elegant particles - just 8 */}
+      <div className={`absolute inset-0 transition-opacity duration-2000 ${logoVisible ? 'opacity-100' : 'opacity-0'}`}>
         {[...Array(8)].map((_, i) => (
           <div
-            key={`ray-${i}`}
-            className="absolute top-1/2 left-1/2 origin-left"
-            style={{
-              width: '2px',
-              height: '800px',
-              background: 'linear-gradient(to bottom, rgba(251,146,60,0.8) 0%, transparent 100%)',
-              transform: `rotate(${i * 45}deg) translateX(-50%)`,
-              animation: `pulse-ray ${3 + i * 0.5}s ease-in-out infinite`,
-              animationDelay: `${i * 0.2}s`,
-              boxShadow: '0 0 20px rgba(251,146,60,0.8), 0 0 40px rgba(251,146,60,0.5)'
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Bright particles everywhere */}
-      <div className={`absolute inset-0 ${stage >= 1 ? 'opacity-100' : 'opacity-0'}`}>
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={`bright-${i}`}
+            key={`elegant-${i}`}
             className="absolute rounded-full"
             style={{
-              width: `${Math.random() * 12 + 6}px`,
-              height: `${Math.random() * 12 + 6}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              background: i % 2 === 0 ? '#fb923c' : '#ffffff',
-              boxShadow: i % 2 === 0 
-                ? '0 0 30px #fb923c, 0 0 60px rgba(251,146,60,0.5)' 
-                : '0 0 20px #ffffff, 0 0 40px rgba(255,255,255,0.5)',
-              animation: `twinkle-bright ${Math.random() * 2 + 1}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`
+              width: '3px',
+              height: '3px',
+              left: `${20 + Math.random() * 60}%`,
+              top: `${20 + Math.random() * 60}%`,
+              background: '#fb923c',
+              boxShadow: '0 0 20px rgba(251,146,60,0.8), 0 0 40px rgba(251,146,60,0.4)',
+              animation: `elegant-float ${Math.random() * 10 + 15}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`,
+              opacity: 0.6
             }}
           />
         ))}
       </div>
 
-      {/* Logo with glow effect */}
+      {/* Single elegant glow behind logo */}
+      <div className={`absolute transition-all duration-2000 ${logoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}
+        style={{
+          width: '400px',
+          height: '400px',
+          background: 'radial-gradient(circle, rgba(251,146,60,0.2) 0%, transparent 70%)',
+          filter: 'blur(80px)',
+          animation: 'breathe 6s ease-in-out infinite'
+        }}
+      />
+
+      {/* Logo - clean and elegant */}
       <div className="relative z-20 flex flex-col items-center">
         <div className={`transition-all duration-2000 ease-out ${
-          stage >= 2 ? 'opacity-100 scale-100 blur-0' : 'opacity-0 scale-75 blur-lg'
+          logoVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-8'
         }`}>
-          <div className="relative">
-            <div className="absolute inset-0 blur-2xl opacity-75" style={{
-              background: 'radial-gradient(circle, rgba(251,146,60,0.8) 0%, transparent 70%)',
-              animation: 'pulse-glow-intense 3s ease-in-out infinite'
-            }} />
-            <A4ELogo className="relative h-32 md:h-40 lg:h-48 w-auto" style={{
-              filter: 'drop-shadow(0 0 30px rgba(251,146,60,1)) drop-shadow(0 0 60px rgba(251,146,60,0.5))'
-            }} />
-          </div>
+          <A4ELogo className="h-20 md:h-24 w-auto" style={{
+            filter: 'drop-shadow(0 4px 20px rgba(251,146,60,0.3))'
+          }} />
         </div>
 
-        {/* Neon text */}
-        <div className={`mt-10 transition-all duration-1500 ${stage >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-white text-base md:text-lg tracking-[0.5em] font-light uppercase" style={{
-            textShadow: '0 0 10px rgba(251,146,60,0.8), 0 0 20px rgba(251,146,60,0.5), 0 0 30px rgba(251,146,60,0.3)'
-          }}>
+        {/* Elegant line animation */}
+        <div className={`mt-8 transition-all duration-1500 ${lineVisible ? 'w-48 opacity-100' : 'w-0 opacity-0'}`}>
+          <div className="h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent"
+            style={{
+              boxShadow: '0 0 10px rgba(251,146,60,0.5)'
+            }}
+          />
+        </div>
+
+        {/* Minimal text */}
+        <div className={`mt-6 transition-all duration-1500 delay-300 ${lineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <p className="text-neutral-400 text-xs tracking-[0.4em] font-light uppercase">
             Architecture for Engineering
           </p>
         </div>
-
-        {/* Pulsing ring around logo */}
-        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-2000 ${
-          stage >= 2 ? 'opacity-100' : 'opacity-0'
-        }`}>
-          <div className="relative w-64 h-64 md:w-80 md:h-80">
-            <div className="absolute inset-0 rounded-full border-2 border-orange-500/30" style={{
-              animation: 'pulse-ring 3s ease-out infinite',
-              boxShadow: '0 0 20px rgba(251,146,60,0.5), inset 0 0 20px rgba(251,146,60,0.3)'
-            }} />
-            <div className="absolute inset-0 rounded-full border border-orange-400/20" style={{
-              animation: 'pulse-ring 3s ease-out infinite 0.5s',
-              boxShadow: '0 0 30px rgba(251,146,60,0.3)'
-            }} />
-          </div>
-        </div>
       </div>
 
-      {/* Corner tech frames */}
-      {[
-        { pos: 'top-8 left-8', borders: 'border-t-2 border-l-2' },
-        { pos: 'top-8 right-8', borders: 'border-t-2 border-r-2' },
-        { pos: 'bottom-8 left-8', borders: 'border-b-2 border-l-2' },
-        { pos: 'bottom-8 right-8', borders: 'border-b-2 border-r-2' }
-      ].map((corner, i) => (
-        <div key={i} className={`absolute ${corner.pos} w-24 h-24 ${corner.borders} border-orange-500 transition-all duration-1500 delay-${i * 200} ${
-          stage >= 3 ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
-        }`} style={{
-          boxShadow: '0 0 20px rgba(251,146,60,0.6)',
-          animation: 'corner-pulse 4s ease-in-out infinite'
-        }} />
-      ))}
+      {/* Minimal corner accents - very subtle */}
+      <div className={`absolute top-8 left-8 w-16 h-16 transition-all duration-1500 delay-500 ${
+        lineVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-75'
+      }`}>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-orange-500/60 to-transparent" />
+        <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-orange-500/60 to-transparent" />
+      </div>
+
+      <div className={`absolute top-8 right-8 w-16 h-16 transition-all duration-1500 delay-600 ${
+        lineVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-75'
+      }`}>
+        <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-orange-500/60 to-transparent" />
+        <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-orange-500/60 to-transparent" />
+      </div>
+
+      <div className={`absolute bottom-8 left-8 w-16 h-16 transition-all duration-1500 delay-700 ${
+        lineVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-75'
+      }`}>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-orange-500/60 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-px h-full bg-gradient-to-t from-orange-500/60 to-transparent" />
+      </div>
+
+      <div className={`absolute bottom-8 right-8 w-16 h-16 transition-all duration-1500 delay-800 ${
+        lineVisible ? 'opacity-40 scale-100' : 'opacity-0 scale-75'
+      }`}>
+        <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-orange-500/60 to-transparent" />
+        <div className="absolute bottom-0 right-0 w-px h-full bg-gradient-to-t from-orange-500/60 to-transparent" />
+      </div>
 
       <style jsx>{`
-        @keyframes grid-move {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
+        @keyframes elegant-float {
+          0%, 100% { 
+            transform: translateY(0) translateX(0);
+            opacity: 0.6;
+          }
+          50% { 
+            transform: translateY(-30px) translateX(20px);
+            opacity: 1;
+          }
         }
-        @keyframes float-dramatic {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(60px, -80px) scale(1.3); }
-          66% { transform: translate(-60px, -120px) scale(0.8); }
+        @keyframes breathe {
+          0%, 100% { 
+            transform: scale(1);
+            opacity: 0.3;
+          }
+          50% { 
+            transform: scale(1.2);
+            opacity: 0.5;
+          }
         }
-        @keyframes pulse-ray {
-          0%, 100% { opacity: 0.4; transform: rotate(var(--angle)) translateX(-50%) scaleY(1); }
-          50% { opacity: 1; transform: rotate(var(--angle)) translateX(-50%) scaleY(1.2); }
-        }
-        @keyframes twinkle-bright {
-          0%, 100% { opacity: 0.5; transform: scale(1); }
-          50% { opacity: 1; transform: scale(2.5); }
-        }
-        @keyframes pulse-glow-intense {
-          0%, 100% { opacity: 0.6; transform: scale(1); }
-          50% { opacity: 1; transform: scale(1.3); }
-        }
-        @keyframes pulse-ring {
-          0% { transform: scale(0.8); opacity: 1; }
-          100% { transform: scale(1.5); opacity: 0; }
-        }
-        @keyframes corner-pulse {
-          0%, 100% { opacity: 0.6; }
-          50% { opacity: 1; }
+        @keyframes pulse-subtle {
+          0%, 100% { opacity: 0.2; }
+          50% { opacity: 0.4; }
         }
       `}</style>
     </div>
