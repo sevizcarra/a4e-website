@@ -336,11 +336,11 @@ const SplashScreen = ({ onComplete }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const logoTimer = setTimeout(() => setLogoVisible(true), 400);
-    const linesTimer = setTimeout(() => setLinesVisible(true), 900);
-    const particlesTimer = setTimeout(() => setParticlesVisible(true), 600);
-    const fadeTimer = setTimeout(() => setFadeOut(true), 3800);
-    const completeTimer = setTimeout(() => onComplete(), 4500);
+    const particlesTimer = setTimeout(() => setParticlesVisible(true), 200);
+    const linesTimer = setTimeout(() => setLinesVisible(true), 1200);
+    const logoTimer = setTimeout(() => setLogoVisible(true), 800);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 6500);
+    const completeTimer = setTimeout(() => onComplete(), 7500);
 
     return () => {
       clearTimeout(logoTimer);
@@ -359,36 +359,40 @@ const SplashScreen = ({ onComplete }) => {
     >
       {/* Dramatic particles - floating background */}
       <div className={`absolute inset-0 transition-opacity duration-1500 ${particlesVisible ? 'opacity-100' : 'opacity-0'}`}>
-        {/* Large glowing orbs with parallax effect */}
-        {[...Array(5)].map((_, i) => (
+        {/* MASSIVE glowing orbs - very visible */}
+        {[...Array(10)].map((_, i) => (
           <div
             key={`orb-${i}`}
-            className="absolute rounded-full bg-orange-400/20"
+            className="absolute rounded-full"
             style={{
-              width: `${Math.random() * 120 + 80}px`,
-              height: `${Math.random() * 120 + 80}px`,
+              width: `${Math.random() * 200 + 150}px`,
+              height: `${Math.random() * 200 + 150}px`,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              filter: 'blur(60px)',
-              animation: `float-slow ${Math.random() * 10 + 15}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 3}s`,
+              background: `radial-gradient(circle, rgba(251,146,60,${Math.random() * 0.3 + 0.3}) 0%, rgba(251,146,60,0.1) 50%, transparent 70%)`,
+              filter: 'blur(80px)',
+              boxShadow: '0 0 100px rgba(251,146,60,0.5)',
+              animation: `float-slow ${Math.random() * 12 + 18}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 2}s`,
               transform: `translateZ(${i * 10}px)`
             }}
           />
         ))}
         
-        {/* Medium particles */}
-        {[...Array(15)].map((_, i) => (
+        {/* Large visible particles */}
+        {[...Array(25)].map((_, i) => (
           <div
             key={`particle-${i}`}
-            className="absolute rounded-full bg-neutral-300/40"
+            className="absolute rounded-full bg-orange-400/50"
             style={{
-              width: `${Math.random() * 8 + 4}px`,
-              height: `${Math.random() * 8 + 4}px`,
+              width: `${Math.random() * 20 + 15}px`,
+              height: `${Math.random() * 20 + 15}px`,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `float ${Math.random() * 12 + 18}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 4}s`
+              filter: 'blur(4px)',
+              boxShadow: '0 0 20px rgba(251,146,60,0.6)',
+              animation: `float ${Math.random() * 10 + 15}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 3}s`
             }}
           />
         ))}
@@ -441,7 +445,7 @@ const SplashScreen = ({ onComplete }) => {
           }`}
           style={{ transform: logoVisible ? 'translateZ(50px)' : 'translateZ(0px)' }}
         >
-          <A4ELogo className="h-16 md:h-20 w-auto drop-shadow-lg" />
+          <A4ELogo className="h-24 md:h-32 lg:h-36 w-auto drop-shadow-2xl" />
         </div>
 
         {/* Subtitle */}
