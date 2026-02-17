@@ -1018,9 +1018,9 @@ export default function A4ELanding() {
   return (
     <div className="min-h-screen bg-neutral-900 antialiased scroll-smooth" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrollY > 50
-          ? 'bg-neutral-900 backdrop-blur-lg shadow-lg shadow-black/20 py-3'
-          : 'bg-neutral-900/95 backdrop-blur-md py-4'
+        scrollY > 100
+          ? 'translate-y-0 bg-neutral-900 backdrop-blur-lg shadow-lg shadow-black/20 py-3'
+          : '-translate-y-full bg-neutral-900/95 backdrop-blur-md py-4'
       } border-b border-white/5`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <A4ELogo className={`w-auto transition-all duration-300 ${scrollY > 50 ? 'h-8' : 'h-10'}`} />
