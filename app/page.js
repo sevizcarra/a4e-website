@@ -333,16 +333,19 @@ const SplashScreen = ({ onComplete }) => {
   const [logoVisible, setLogoVisible] = useState(false);
   const [lineVisible, setLineVisible] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [whiteGlow, setWhiteGlow] = useState(false);
 
   useEffect(() => {
     const logoTimer = setTimeout(() => setLogoVisible(true), 500);
     const lineTimer = setTimeout(() => setLineVisible(true), 1200);
+    const glowTimer = setTimeout(() => setWhiteGlow(true), 4200);
     const fadeTimer = setTimeout(() => setFadeOut(true), 4500);
     const completeTimer = setTimeout(() => onComplete(), 5500);
 
     return () => {
       clearTimeout(logoTimer);
       clearTimeout(lineTimer);
+      clearTimeout(glowTimer);
       clearTimeout(fadeTimer);
       clearTimeout(completeTimer);
     };
@@ -360,6 +363,21 @@ const SplashScreen = ({ onComplete }) => {
           background: 'radial-gradient(ellipse at center, rgba(251,146,60,0.15) 0%, transparent 70%)',
           animation: 'pulse-subtle 8s ease-in-out infinite'
         }} />
+      </div>
+
+      {/* White glow transition effect */}
+      <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${
+        whiteGlow ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}>
+        <div className="absolute rounded-full bg-white"
+          style={{
+            width: whiteGlow ? '300vw' : '0px',
+            height: whiteGlow ? '300vh' : '0px',
+            filter: 'blur(100px)',
+            transition: 'width 1.3s cubic-bezier(0.4, 0, 0.2, 1), height 1.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            boxShadow: '0 0 200px rgba(255,255,255,0.8), 0 0 400px rgba(255,255,255,0.6)'
+          }}
+        />
       </div>
 
       {/* Minimal elegant particles - just 8 */}
