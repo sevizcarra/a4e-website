@@ -334,9 +334,9 @@ const SplashScreen = ({ onComplete }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const logoTimer = setTimeout(() => setLogoVisible(true), 300);
-    const fadeTimer = setTimeout(() => setFadeOut(true), 3000);
-    const completeTimer = setTimeout(() => onComplete(), 3800);
+    const logoTimer = setTimeout(() => setLogoVisible(true), 400);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 3500);
+    const completeTimer = setTimeout(() => onComplete(), 5000);
 
     return () => {
       clearTimeout(logoTimer);
@@ -346,12 +346,12 @@ const SplashScreen = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className={`fixed inset-0 z-[100] bg-white flex items-center justify-center transition-opacity duration-800 ${
-      fadeOut ? 'opacity-0' : 'opacity-100'
+    <div className={`fixed inset-0 z-[100] bg-white flex items-center justify-center transition-all duration-1500 ${
+      fadeOut ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
     }`}>
       {/* Logo simple y elegante */}
-      <div className={`flex flex-col items-center gap-4 transition-all duration-1000 ease-out ${
-        logoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+      <div className={`flex flex-col items-center gap-4 transition-all duration-1200 ease-out ${
+        logoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
       }`}>
         <A4ELogo className="h-20 md:h-24 w-auto" style={{
           filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.08))'
@@ -364,13 +364,26 @@ const SplashScreen = ({ onComplete }) => {
               key={i}
               className="w-2 h-2 rounded-full bg-orange-500"
               style={{
-                animation: `loading-bounce 1.4s ease-in-out infinite`,
+                animation: `splash-bounce 1.4s ease-in-out infinite`,
                 animationDelay: `${i * 0.16}s`
               }}
             />
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes splash-bounce {
+          0%, 80%, 100% {
+            transform: scale(0);
+            opacity: 0.3;
+          }
+          40% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   );
 };
@@ -986,8 +999,8 @@ export default function A4ELanding() {
   const projects = projectNames[lang];
 
   useEffect(() => {
-    // Delay hero appearance after splash
-    const timer = setTimeout(() => setHeroVisible(true), showSplash ? 4000 : 300);
+    // Delay hero appearance after splash - wait for splash to fully fade out
+    const timer = setTimeout(() => setHeroVisible(true), showSplash ? 5200 : 300);
     return () => clearTimeout(timer);
   }, [showSplash]);
 
@@ -1133,7 +1146,7 @@ export default function A4ELanding() {
         `}</style>
       </section>
 
-      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-opacity duration-1000 ${heroVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-1500 ease-in-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700" />
 
         {/* Efecto de onda animado */}
