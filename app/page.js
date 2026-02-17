@@ -1123,7 +1123,7 @@ const Footer = ({ t }) => {
 };
 
 export default function A4ELanding() {
-  const [showSplash, setShowSplash] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroVisible, setHeroVisible] = useState(false);
   const [lang, setLang] = useState('es');
