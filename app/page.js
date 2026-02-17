@@ -995,7 +995,23 @@ export default function A4ELanding() {
           : 'bg-neutral-900/95 backdrop-blur-md py-4'
       } border-b border-white/5`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <A4ELogo className={`w-auto transition-all duration-300 ${scrollY > 50 ? 'h-8' : 'h-10'}`} />
+          <div className="flex flex-col items-start gap-2">
+            <A4ELogo className={`w-auto transition-all duration-300 ${scrollY > 50 ? 'h-8' : 'h-10'}`} />
+
+            {/* Loading dots - elegant animation */}
+            <div className="flex gap-1">
+              {[0, 1, 2].map((i) => (
+                <div
+                  key={i}
+                  className="w-1 h-1 rounded-full bg-orange-500/60"
+                  style={{
+                    animation: `loading-bounce 1.4s ease-in-out infinite`,
+                    animationDelay: `${i * 0.16}s`
+                  }}
+                />
+              ))}
+            </div>
+          </div>
 
           <div className="hidden md:flex items-center gap-8">
             <nav className="flex items-center gap-8">
@@ -1132,6 +1148,16 @@ export default function A4ELanding() {
           @keyframes wave {
             0% { transform: translateX(0) translateY(0); }
             100% { transform: translateX(-70px) translateY(70px); }
+          }
+          @keyframes loading-bounce {
+            0%, 80%, 100% {
+              transform: scale(0);
+              opacity: 0.3;
+            }
+            40% {
+              transform: scale(1);
+              opacity: 1;
+            }
           }
         `}</style>
 
