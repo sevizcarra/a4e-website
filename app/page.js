@@ -369,7 +369,7 @@ const featuredProjectsData = [
     title: 'Ingeniería Remediación Edificio CHO',
     client: 'BHP-COLOSO',
     year: '2025',
-    description: 'Ingeniería de remediación para Edificio CHO en Puerto Coloso, coordinación multidisciplinaria con áreas mecánica, eléctrica e instrumentación.',
+    description: 'Definición arquitectónica y habilitación de espacios para la Remediación del Edificio CHO en Puerto Coloso. El proyecto contempló la reconversión de todo el edificio (420 m²) en una instalación técnica de alta disponibilidad, incluyendo distribución interna, accesos, sala técnica para equipos eléctricos, UPS, oficinas, espacios de CoWork y mejoras generales arquitectónicas en cielos, mobiliario y otras adecuaciones.',
     image: null,
   },
   {
