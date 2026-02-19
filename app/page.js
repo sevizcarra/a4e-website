@@ -892,7 +892,7 @@ const AboutSection = ({ t }) => {
           <p className="text-neutral-600 font-light leading-relaxed text-base">{t.aboutText2}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-3">
           {pillars.map((pillar, i) => (
             <div
               key={i}
@@ -903,7 +903,7 @@ const AboutSection = ({ t }) => {
               onMouseEnter={() => setHoveredPillar(i)}
               onMouseLeave={() => setHoveredPillar(null)}
             >
-              <div className={`relative h-full p-8 md:p-10 overflow-hidden transition-all duration-500 ${
+              <div className={`relative h-full p-6 md:p-6 overflow-hidden transition-all duration-500 ${
                 hoveredPillar === i
                   ? 'bg-gradient-to-br from-orange-600 to-orange-700 shadow-2xl shadow-orange-500/30 -translate-y-2'
                   : 'bg-neutral-900'
@@ -919,7 +919,7 @@ const AboutSection = ({ t }) => {
                   hoveredPillar === i ? 'scale-150 opacity-30' : 'scale-100 opacity-10'
                 }`} />
 
-                <div className={`absolute top-4 right-4 text-6xl md:text-7xl font-bold transition-all duration-500 ${
+                <div className={`absolute top-3 right-3 text-5xl md:text-6xl font-bold transition-all duration-500 ${
                   hoveredPillar === i ? 'text-white/20' : 'text-white/5'
                 }`}>
                   {pillar.num}
@@ -935,7 +935,7 @@ const AboutSection = ({ t }) => {
                     }`} />
                   </div>
 
-                  <h3 className={`text-xl md:text-2xl font-medium mb-4 transition-colors duration-300 text-white`}>
+                  <h3 className={`text-lg md:text-xl font-medium mb-3 transition-colors duration-300 text-white`}>
                     {pillar.title}
                   </h3>
 
