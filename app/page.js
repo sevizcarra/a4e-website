@@ -334,32 +334,32 @@ const translations = {
 
 const engineeringProjects = [
   { year: '2025', project: 'Servicio Ingeniería IPS/SPS Proyecto Minero Las Yacas', client: 'Las Yacas' },
-  { year: '2025', project: 'Ingeniería Sala Servidores CHO - Puerto Coloso (Delivery)', client: 'BHP - Minera Escondida' },
-  { year: '2024', project: 'Ingeniería SPS/DPS Facilities E-AT Stripping', client: 'BHP - Minera Escondida' },
-  { year: '2024', project: 'AS Built EN-AT - Facilities Autonomía MEL', client: 'BHP - Minera Escondida' },
+  { year: '2025', project: 'Ingeniería Sala Servidores CHO - Puerto Coloso (Delivery)', client: 'BHP-MEL' },
+  { year: '2024', project: 'Ingeniería SPS/DPS Facilities E-AT Stripping', client: 'BHP-MEL' },
+  { year: '2024', project: 'AS Built EN-AT - Facilities Autonomía MEL', client: 'BHP-MEL' },
   { year: '2023', project: 'Edificio Puerta Sur', client: 'MECASFY' },
-  { year: '2022', project: 'Ingeniería Interim Facilities Autonomía MEL', client: 'BHP - Minera Escondida' },
-  { year: '2022', project: 'Ingeniería DPS EN-AT', client: 'BHP - Minera Escondida' },
-  { year: '2021', project: 'Logistic Solutions', client: 'BHP - Minera Escondida' },
-  { year: '2019', project: 'Flowsheets 3D de Procesos', client: 'BHP - Minera Escondida' },
-  { year: '2019', project: 'Idea Campamento Cerro Colorado', client: 'BHP - Cerro Colorado' },
+  { year: '2022', project: 'Ingeniería Interim Facilities Autonomía MEL', client: 'BHP-MEL' },
+  { year: '2022', project: 'Ingeniería DPS EN-AT', client: 'BHP-MEL' },
+  { year: '2021', project: 'Logistic Solutions', client: 'BHP-MEL' },
+  { year: '2019', project: 'Flowsheets 3D de Procesos', client: 'BHP-MEL' },
+  { year: '2019', project: 'Idea Campamento Cerro Colorado', client: 'BHP - C. COLORADO' },
   { year: '2019', project: 'Ampliación Oficinas MECASFY', client: 'MECASFY' },
-  { year: '2018', project: 'Garita de Accesos Cerro Colorado', client: 'BHP - Cerro Colorado' },
-  { year: '2018', project: 'Diagramas de Flujo Cal Alianza', client: 'Cal Alianza' },
+  { year: '2018', project: 'Garita de Accesos Cerro Colorado', client: 'BHP - C. COLORADO' },
+  { year: '2018', project: 'Diagramas de Flujo Cal Alianza', client: 'CAL ALIANZA' },
 ];
 
 const counterpartProjects = [
   { year: '2023', project: 'ILNSC - Innovación Lixiviación Nuevas Columnas de Simulación', company: 'HATCH' },
   { year: '2019', project: 'Bodega y Muestrera - Spence Growth Options', company: 'ARCADIS' },
   { year: '2018', project: 'Sala de Control Lixiviación - Spence Growth Options', company: 'ATCO' },
-  { year: '2017', project: 'Instalaciones Auxiliares (Truckshop, RESPEL, etc.) - SGO', company: 'ARCADIS' },
+  { year: '2017', project: 'Instalaciones Auxiliares (Truckshop, RESPEL, etc.) - Spence Growth Options', company: 'ARCADIS' },
 ];
 
 const featuredProjectsData = [
   {
     id: 1,
     title: 'Facilities Autonomía MEL',
-    client: 'BHP - Minera Escondida',
+    client: 'BHP-MEL',
     year: '2022-2024',
     description: 'Desarrollo de ingeniería para las instalaciones del proyecto de autonomía en Minera Escondida, incluyendo facilities interim y AS Built de EN-AT.',
     image: null,
@@ -367,7 +367,7 @@ const featuredProjectsData = [
   {
     id: 2,
     title: 'Ingeniería Sala Servidores CHO',
-    client: 'BHP - Minera Escondida',
+    client: 'BHP-MEL',
     year: '2025',
     description: 'Ingeniería para sala de servidores en CHO Puerto Coloso, coordinación multidisciplinaria con áreas mecánica, eléctrica e instrumentación.',
     image: null,
