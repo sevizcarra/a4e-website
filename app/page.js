@@ -370,6 +370,11 @@ const featuredProjectsData = [
     client: 'BHP-COLOSO',
     year: '2025',
     description: 'Definición arquitectónica y habilitación de espacios para la Remediación del Edificio CHO en Puerto Coloso. El proyecto contempló la reconversión de todo el edificio (420 m²) en una instalación técnica de alta disponibilidad, incluyendo distribución interna, accesos, sala técnica para equipos eléctricos, UPS, oficinas, espacios de CoWork y mejoras generales arquitectónicas en cielos, mobiliario y otras adecuaciones.',
+    credits: [
+      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Ingeniería', company: 'CHKING' },
+      { role: 'Mobiliario', company: '3D Concept' },
+    ],
     image: '/edificio-cho.jpg',
   },
   {
@@ -433,6 +438,15 @@ const FeaturedProjectCard = ({ project, index, t }) => {
           <p className="text-sm text-neutral-500 leading-relaxed">
             {project.description}
           </p>
+          {project.credits && (
+            <div className="mt-3 pt-3 border-t border-neutral-100 flex flex-wrap gap-x-4 gap-y-1">
+              {project.credits.map((c, i) => (
+                <span key={i} className="text-xs text-neutral-400">
+                  <span className="text-neutral-500 font-medium">{c.role}:</span> {c.company}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
         <button
           onClick={() => setIsExpanded(!isExpanded)}
