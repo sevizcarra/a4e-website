@@ -402,12 +402,16 @@ const FeaturedProjectCard = ({ project, index, t }) => {
       }`}
       style={{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }}
     >
-      {/* Image placeholder */}
-      <div className="relative h-52 bg-gradient-to-br from-neutral-100 to-neutral-200 overflow-hidden cursor-pointer"
+      {/* Image */}
+      <div className={`relative bg-gradient-to-br from-neutral-100 to-neutral-200 overflow-hidden cursor-pointer transition-all duration-500 ${
+        isExpanded ? 'h-72 md:h-96' : 'h-52'
+      }`}
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {project.image ? (
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          <img src={project.image} alt={project.title} className={`w-full h-full transition-all duration-500 ${
+            isExpanded ? 'object-contain bg-white' : 'object-cover'
+          }`} />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
@@ -431,14 +435,16 @@ const FeaturedProjectCard = ({ project, index, t }) => {
       {/* Content */}
       <div className="p-5">
         <h3 className="text-lg font-medium text-neutral-900 mb-2 leading-tight">{project.title}</h3>
-        <p className={`text-sm text-neutral-500 leading-relaxed transition-all duration-500 ${
-          isExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        <div className={`transition-all duration-500 overflow-hidden ${
+          isExpanded ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
         }`}>
-          {project.description}
-        </p>
+          <p className="text-sm text-neutral-500 leading-relaxed">
+            {project.description}
+          </p>
+        </div>
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-2 inline-flex items-center gap-1 text-xs text-orange-600 hover:text-orange-700 font-medium tracking-wider uppercase transition-colors"
+          className="mt-3 inline-flex items-center gap-1 text-xs text-orange-600 hover:text-orange-700 font-medium tracking-wider uppercase transition-colors"
         >
           {t.viewDetails}
           <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
@@ -1401,7 +1407,7 @@ export default function A4ELanding() {
             description={t.highlightedDesc}
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjectsData.map((project, index) => (
               <FeaturedProjectCard key={project.id} project={project} index={index} t={t} />
             ))}
