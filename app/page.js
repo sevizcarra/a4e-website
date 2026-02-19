@@ -374,18 +374,10 @@ const featuredProjectsData = [
   },
   {
     id: 3,
-    title: 'Proyecto Minero Las Yacas',
-    client: 'LAS YACAS',
-    year: '2025',
-    description: 'Servicio de ingeniería IPS/SPS para nuevo proyecto minero Las Yacas, desarrollo integral de infraestructura y espacios técnicos.',
-    image: null,
-  },
-  {
-    id: 4,
     title: 'Flowsheets 3D de Procesos',
     client: 'BHP-MEL',
     year: '2019',
-    description: 'Desarrollo de diagramas de flujo tridimensionales para la visualización de sistemas y procesos completos, ejecutado por CHKING como base de ingeniería para BHP. El proyecto respondió a la necesidad de reemplazar los esquemas 2D tradicionales por representaciones 3D interactivas que permiten identificar equipos, correas transportadoras, silos y stockpiles con mayor claridad operacional, facilitando la toma de decisiones en terreno y la comunicación entre disciplinas.',
+    description: 'Desarrollo de diagramas de flujo tridimensionales para la visualización de sistemas y procesos completos. El proyecto respondió a la necesidad de reemplazar los esquemas 2D tradicionales por representaciones 3D interactivas que permiten identificar equipos, correas transportadoras, silos y stockpiles con mayor claridad operacional, facilitando la toma de decisiones en terreno y la comunicación entre disciplinas.',
     image: '/flowsheet-3d.jpg',
   },
 ];
