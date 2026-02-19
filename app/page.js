@@ -334,7 +334,7 @@ const translations = {
 
 const engineeringProjects = [
   { year: '2025', project: 'Servicio Ingeniería IPS/SPS Proyecto Minero Las Yacas', client: 'LAS YACAS' },
-  { year: '2025', project: 'Ingeniería Remediación Edificio CHO - Puerto Coloso (Delivery)', client: 'BHP-MEL' },
+  { year: '2025', project: 'Ingeniería Remediación Edificio CHO - Puerto Coloso (Delivery)', client: 'BHP-COLOSO' },
   { year: '2024', project: 'Ingeniería SPS/DPS Facilities E-AT Stripping', client: 'BHP-MEL' },
   { year: '2024', project: 'AS Built EN-AT - Facilities Autonomía MEL', client: 'BHP-MEL' },
   { year: '2023', project: 'Edificio Puerta Sur', client: 'MECASFY' },
@@ -367,7 +367,7 @@ const featuredProjectsData = [
   {
     id: 2,
     title: 'Ingeniería Remediación Edificio CHO',
-    client: 'BHP-MEL',
+    client: 'BHP-COLOSO',
     year: '2025',
     description: 'Ingeniería de remediación para Edificio CHO en Puerto Coloso, coordinación multidisciplinaria con áreas mecánica, eléctrica e instrumentación.',
     image: null,
