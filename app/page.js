@@ -361,8 +361,11 @@ const featuredProjectsData = [
     title: 'Facilities Autonomía MEL',
     client: 'BHP-MEL',
     year: '2022-2024',
-    description: 'Desarrollo de ingeniería para las instalaciones del proyecto de autonomía en Minera Escondida, incluyendo facilities interim y AS Built de EN-AT.',
-    image: null,
+    description: 'Desarrollo de arquitectura para las Facilities del programa de Camiones Autónomos (EN-AT) en Minera Escondida. El proyecto requirió diseñar con criterio estético las instalaciones de soporte para la operación autónoma, incluyendo la Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera en pilares y muros, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Se desarrolló ingeniería Interim con diseños aptos para construcción, definiendo distribución interior, accesos, iluminación técnica y requerimientos constructivos de cada facility.',
+    credits: [
+      { role: 'Ingeniería', company: 'CHKING' },
+    ],
+    image: '/facilities-enat.jpg',
   },
   {
     id: 2,
