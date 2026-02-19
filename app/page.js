@@ -76,6 +76,10 @@ const translations = {
     pillar3Desc: 'Trabajamos en Revit/BIM y entregamos modelos coordinados en el formato y codificación que su proyecto requiera. Nos integramos con las disciplinas estructural, mecánica, eléctrica e instrumentación sin generar interferencias ni reprocesos.',
     pillar4Title: 'Modelo Flexible',
     pillar4Desc: 'Acceda a un equipo especializado de arquitectura solo cuando su proyecto lo requiera. Sin contrataciones, sin overhead permanente. Capacidad disponible para responder a sus plazos.',
+    highlighted: 'Proyectos',
+    highlightedTitle: 'Proyectos Destacados',
+    highlightedDesc: 'Algunos de nuestros proyectos más representativos en la gran minería.',
+    viewDetails: 'Ver Detalles',
     portfolio: 'Portafolio',
     featuredProjects: 'Trayectoria de Proyectos',
     projectsDesc: 'Más de 20 proyectos ejecutados para la gran minería e industria desde 2017.',
@@ -141,6 +145,10 @@ const translations = {
     pillar3Desc: 'We work in Revit/BIM and deliver coordinated models in the format and coding your project requires. We integrate with structural, mechanical, electrical, and instrumentation disciplines without generating interferences or rework.',
     pillar4Title: 'Flexible Model',
     pillar4Desc: 'Access a specialized architecture team only when your project requires it. No hiring, no permanent overhead. Available capacity to meet your deadlines.',
+    highlighted: 'Projects',
+    highlightedTitle: 'Featured Projects',
+    highlightedDesc: 'Some of our most representative projects in large-scale mining.',
+    viewDetails: 'View Details',
     portfolio: 'Portfolio',
     featuredProjects: 'Project Track Record',
     projectsDesc: 'Over 20 projects executed for large-scale mining and industry since 2017.',
@@ -206,6 +214,10 @@ const translations = {
     pillar3Desc: 'Trabalhamos em Revit/BIM e entregamos modelos coordenados no formato e codificação que seu projeto requeira. Integramo-nos com as disciplinas estrutural, mecânica, elétrica e instrumentação sem gerar interferências nem retrabalhos.',
     pillar4Title: 'Modelo Flexível',
     pillar4Desc: 'Acesse uma equipe especializada de arquitetura apenas quando seu projeto necessitar. Sem contratações, sem overhead permanente. Capacidade disponível para atender seus prazos.',
+    highlighted: 'Projetos',
+    highlightedTitle: 'Projetos Destacados',
+    highlightedDesc: 'Alguns dos nossos projetos mais representativos na grande mineração.',
+    viewDetails: 'Ver Detalhes',
     portfolio: 'Portfólio',
     featuredProjects: 'Trajetória de Projetos',
     projectsDesc: 'Mais de 20 projetos executados para a grande mineração e indústria desde 2017.',
@@ -271,6 +283,10 @@ const translations = {
     pillar3Desc: '我们使用Revit/BIM工作，按照您项目要求的格式和编码交付协调模型。我们与结构、机械、电气和仪表学科集成，不产生干扰或返工。',
     pillar4Title: '灵活模式',
     pillar4Desc: '仅在您的项目需要时访问专业建筑团队。无需招聘，无永久开销。随时可用的能力来满足您的截止日期。',
+    highlighted: '项目',
+    highlightedTitle: '精选项目',
+    highlightedDesc: '我们在大型采矿领域最具代表性的部分项目。',
+    viewDetails: '查看详情',
     portfolio: '项目组合',
     featuredProjects: '项目履历',
     projectsDesc: '自2017年以来为大型采矿和工业执行了20多个项目。',
@@ -341,6 +357,102 @@ const counterpartProjects = [
   { year: '2023', project: 'Revisión de Ingeniería Truck Shop Los Colorados', company: 'ATCO' },
   { year: '2024', project: 'Revisión de Ingeniería Radomiro Tomic', company: 'HATCH' },
 ];
+
+const featuredProjectsData = [
+  {
+    id: 1,
+    title: 'Sala de Control Concentradora Spence',
+    client: 'BHP',
+    year: '2017',
+    description: 'Diseño integral de sala de control para la concentradora Spence, incluyendo coordinación multidisciplinaria con áreas mecánica, eléctrica e instrumentación.',
+    image: null,
+  },
+  {
+    id: 2,
+    title: 'Infraestructura Autonomía Spence',
+    client: 'BHP',
+    year: '2024',
+    description: 'Ampliación de infraestructura para el proyecto de autonomía, abarcando oficinas, salas técnicas y espacios operacionales para vehículos autónomos.',
+    image: null,
+  },
+  {
+    id: 3,
+    title: 'Sala de Control Radomiro Tomic',
+    client: 'Codelco',
+    year: '2024',
+    description: 'Desarrollo de ingeniería de arquitectura para nueva sala de control en faena Radomiro Tomic, con integración completa al proyecto de ingeniería.',
+    image: null,
+  },
+  {
+    id: 4,
+    title: 'Estudio de Brechas Infraestructura OGP1',
+    client: 'BHP',
+    year: '2025',
+    description: 'Estudio técnico de brechas de infraestructura para el proyecto OGP1, identificando necesidades de adecuación y nuevas construcciones.',
+    image: null,
+  },
+];
+
+const FeaturedProjectCard = ({ project, index, t }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [ref, isVisible] = useScrollAnimation(0.1);
+
+  return (
+    <div
+      ref={ref}
+      className={`group relative bg-white overflow-hidden transition-all duration-700 hover:shadow-2xl ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+      }`}
+      style={{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }}
+    >
+      {/* Image placeholder */}
+      <div className="relative h-52 bg-gradient-to-br from-neutral-100 to-neutral-200 overflow-hidden cursor-pointer"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        {project.image ? (
+          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <Building2 className="w-12 h-12 text-neutral-300 mx-auto mb-2" strokeWidth={1} />
+              <span className="text-neutral-400 text-xs tracking-widest uppercase">Imagen referencial</span>
+            </div>
+            <div className="absolute inset-0 opacity-30" style={{
+              backgroundImage: 'linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px)',
+              backgroundSize: '20px 20px'
+            }} />
+          </div>
+        )}
+        <div className="absolute top-3 left-3">
+          <span className="bg-orange-500 text-white text-xs font-medium px-2.5 py-1">{project.client}</span>
+        </div>
+        <div className="absolute top-3 right-3">
+          <span className="bg-neutral-900/70 text-white text-xs font-mono px-2 py-1">{project.year}</span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-5">
+        <h3 className="text-lg font-medium text-neutral-900 mb-2 leading-tight">{project.title}</h3>
+        <p className={`text-sm text-neutral-500 leading-relaxed transition-all duration-500 ${
+          isExpanded ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}>
+          {project.description}
+        </p>
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-2 inline-flex items-center gap-1 text-xs text-orange-600 hover:text-orange-700 font-medium tracking-wider uppercase transition-colors"
+        >
+          {t.viewDetails}
+          <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+        </button>
+      </div>
+
+      {/* Bottom accent */}
+      <div className="h-1 bg-gradient-to-r from-orange-500 to-orange-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+    </div>
+  );
+};
 
 // Logo A4E - PNG Real embebido
 const A4ELogo = ({ className = "" }) => (
@@ -1284,10 +1396,26 @@ export default function A4ELanding() {
         </div>
       </section>
 
-      <section id="projects" className="relative py-20 md:py-28 bg-neutral-900 overflow-hidden">
+      <section id="projects" className="relative py-20 md:py-28 bg-neutral-100 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 relative">
+          <SectionHeader
+            label={t.highlighted}
+            title={t.highlightedTitle}
+            description={t.highlightedDesc}
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredProjectsData.map((project, index) => (
+              <FeaturedProjectCard key={project.id} project={project} index={index} t={t} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="track-record" className="relative py-20 md:py-28 bg-gradient-to-br from-orange-600 to-orange-700 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)',
             backgroundSize: '40px 40px'
           }} />
         </div>
@@ -1303,26 +1431,26 @@ export default function A4ELanding() {
           {/* Tabla 1: Desarrollo de Ingeniería Propio */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-6 bg-orange-500" />
+              <div className="w-1 h-6 bg-white" />
               <h3 className="text-lg font-medium text-white">{t.engineeringDev}</h3>
-              <span className="text-xs text-white/40 font-mono">{engineeringProjects.length}</span>
+              <span className="text-xs text-white/50 font-mono">{engineeringProjects.length}</span>
             </div>
 
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase w-20">{t.colYear}</th>
-                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase">{t.colProject}</th>
-                    <th className="text-right py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase w-32">{t.colClient}</th>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-white/80 uppercase w-20">{t.colYear}</th>
+                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-white/80 uppercase">{t.colProject}</th>
+                    <th className="text-right py-3 px-4 text-xs font-mono tracking-wider text-white/80 uppercase w-32">{t.colClient}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {engineeringProjects.map((p, i) => (
-                    <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-300 group">
-                      <td className="py-3 px-4 text-sm font-mono text-white/40 group-hover:text-orange-500 transition-colors">{p.year}</td>
-                      <td className="py-3 px-4 text-sm text-white/70 group-hover:text-white transition-colors">{p.project}</td>
-                      <td className="py-3 px-4 text-sm text-right font-medium text-white/50 group-hover:text-white/80 transition-colors">{p.client}</td>
+                    <tr key={i} className="border-b border-white/10 hover:bg-white/10 transition-colors duration-300 group">
+                      <td className="py-3 px-4 text-sm font-mono text-white/50 group-hover:text-white transition-colors">{p.year}</td>
+                      <td className="py-3 px-4 text-sm text-white/80 group-hover:text-white transition-colors">{p.project}</td>
+                      <td className="py-3 px-4 text-sm text-right font-medium text-white/60 group-hover:text-white transition-colors">{p.client}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -1333,26 +1461,26 @@ export default function A4ELanding() {
           {/* Tabla 2: Contraparte / Revisión */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-6 bg-orange-500" />
+              <div className="w-1 h-6 bg-white" />
               <h3 className="text-lg font-medium text-white">{t.counterpartReview}</h3>
-              <span className="text-xs text-white/40 font-mono">{counterpartProjects.length}</span>
+              <span className="text-xs text-white/50 font-mono">{counterpartProjects.length}</span>
             </div>
 
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase w-20">{t.colYear}</th>
-                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase">{t.colProject}</th>
-                    <th className="text-right py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase w-32">{t.colCompany}</th>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-white/80 uppercase w-20">{t.colYear}</th>
+                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-white/80 uppercase">{t.colProject}</th>
+                    <th className="text-right py-3 px-4 text-xs font-mono tracking-wider text-white/80 uppercase w-32">{t.colCompany}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {counterpartProjects.map((p, i) => (
-                    <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-300 group">
-                      <td className="py-3 px-4 text-sm font-mono text-white/40 group-hover:text-orange-500 transition-colors">{p.year}</td>
-                      <td className="py-3 px-4 text-sm text-white/70 group-hover:text-white transition-colors">{p.project}</td>
-                      <td className="py-3 px-4 text-sm text-right font-medium text-white/50 group-hover:text-white/80 transition-colors">{p.company}</td>
+                    <tr key={i} className="border-b border-white/10 hover:bg-white/10 transition-colors duration-300 group">
+                      <td className="py-3 px-4 text-sm font-mono text-white/50 group-hover:text-white transition-colors">{p.year}</td>
+                      <td className="py-3 px-4 text-sm text-white/80 group-hover:text-white transition-colors">{p.project}</td>
+                      <td className="py-3 px-4 text-sm text-right font-medium text-white/60 group-hover:text-white transition-colors">{p.company}</td>
                     </tr>
                   ))}
                 </tbody>
