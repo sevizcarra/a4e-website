@@ -382,11 +382,11 @@ const featuredProjectsData = [
   },
   {
     id: 4,
-    title: 'ILNSC - Columnas de Simulación',
-    client: 'HATCH',
-    year: '2023',
-    description: 'Revisión de contraparte de ingeniería para el proyecto de Innovación en Lixiviación con Nuevas Columnas de Simulación.',
-    image: null,
+    title: 'Flowsheets 3D de Procesos',
+    client: 'BHP-MEL',
+    year: '2019',
+    description: 'Desarrollo de diagramas de flujo tridimensionales para la visualización de sistemas y procesos completos, ejecutado por CHKING como base de ingeniería para BHP. El proyecto respondió a la necesidad de reemplazar los esquemas 2D tradicionales por representaciones 3D interactivas que permiten identificar equipos, correas transportadoras, silos y stockpiles con mayor claridad operacional, facilitando la toma de decisiones en terreno y la comunicación entre disciplinas.',
+    image: '/flowsheet-3d.jpg',
   },
 ];
 
