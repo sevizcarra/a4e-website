@@ -77,10 +77,14 @@ const translations = {
     pillar4Title: 'Modelo Flexible',
     pillar4Desc: 'Acceda a un equipo especializado de arquitectura solo cuando su proyecto lo requiera. Sin contrataciones, sin overhead permanente. Capacidad disponible para responder a sus plazos.',
     portfolio: 'Portafolio',
-    featuredProjects: 'Proyectos Destacados',
-    projectsDesc: 'Soluciones arquitectónicas integrales para proyectos de ingeniería minera e industrial a gran escala.',
-    comingSoon: 'Próximamente',
-    moreProjects: 'Más Proyectos',
+    featuredProjects: 'Trayectoria de Proyectos',
+    projectsDesc: 'Más de 20 proyectos ejecutados para la gran minería e industria desde 2017.',
+    engineeringDev: 'Desarrollo de Ingeniería Propio',
+    counterpartReview: 'Contraparte / Revisión',
+    colYear: 'Año',
+    colProject: 'Proyecto',
+    colClient: 'Cliente',
+    colCompany: 'Empresa Líder',
     services: 'Servicios',
     servicesTitle: 'Soluciones Especializadas',
     servicesDesc: 'Ofrecemos servicios arquitectónicos integrales diseñados específicamente para proyectos de ingeniería, instalaciones industriales y operaciones mineras a gran escala.',
@@ -138,10 +142,14 @@ const translations = {
     pillar4Title: 'Flexible Model',
     pillar4Desc: 'Access a specialized architecture team only when your project requires it. No hiring, no permanent overhead. Available capacity to meet your deadlines.',
     portfolio: 'Portfolio',
-    featuredProjects: 'Featured Projects',
-    projectsDesc: 'Comprehensive architectural solutions for large-scale mining and industrial engineering projects.',
-    comingSoon: 'Coming Soon',
-    moreProjects: 'More Projects',
+    featuredProjects: 'Project Track Record',
+    projectsDesc: 'Over 20 projects executed for large-scale mining and industry since 2017.',
+    engineeringDev: 'In-House Engineering Development',
+    counterpartReview: 'Counterpart / Review',
+    colYear: 'Year',
+    colProject: 'Project',
+    colClient: 'Client',
+    colCompany: 'Lead Company',
     services: 'Services',
     servicesTitle: 'Specialized Solutions',
     servicesDesc: 'We offer comprehensive architectural services specifically designed for engineering projects, industrial facilities, and large-scale mining operations.',
@@ -199,10 +207,14 @@ const translations = {
     pillar4Title: 'Modelo Flexível',
     pillar4Desc: 'Acesse uma equipe especializada de arquitetura apenas quando seu projeto necessitar. Sem contratações, sem overhead permanente. Capacidade disponível para atender seus prazos.',
     portfolio: 'Portfólio',
-    featuredProjects: 'Projetos Destacados',
-    projectsDesc: 'Soluções arquitetônicas integrais para projetos de engenharia de mineração e industrial em grande escala.',
-    comingSoon: 'Em Breve',
-    moreProjects: 'Mais Projetos',
+    featuredProjects: 'Trajetória de Projetos',
+    projectsDesc: 'Mais de 20 projetos executados para a grande mineração e indústria desde 2017.',
+    engineeringDev: 'Desenvolvimento de Engenharia Próprio',
+    counterpartReview: 'Contraparte / Revisão',
+    colYear: 'Ano',
+    colProject: 'Projeto',
+    colClient: 'Cliente',
+    colCompany: 'Empresa Líder',
     services: 'Serviços',
     servicesTitle: 'Soluções Especializadas',
     servicesDesc: 'Oferecemos serviços arquitetônicos integrais projetados especificamente para projetos de engenharia, instalações industriais e operações de mineração em grande escala.',
@@ -260,10 +272,14 @@ const translations = {
     pillar4Title: '灵活模式',
     pillar4Desc: '仅在您的项目需要时访问专业建筑团队。无需招聘，无永久开销。随时可用的能力来满足您的截止日期。',
     portfolio: '项目组合',
-    featuredProjects: '精选项目',
-    projectsDesc: '为大型采矿和工业工程项目提供全面的建筑解决方案。',
-    comingSoon: '即将推出',
-    moreProjects: '更多项目',
+    featuredProjects: '项目履历',
+    projectsDesc: '自2017年以来为大型采矿和工业执行了20多个项目。',
+    engineeringDev: '自有工程开发',
+    counterpartReview: '对方/审查',
+    colYear: '年份',
+    colProject: '项目',
+    colClient: '客户',
+    colCompany: '领头公司',
     services: '服务',
     servicesTitle: '专业解决方案',
     servicesDesc: '我们提供专门为工程项目、工业设施和大型采矿作业设计的全面建筑服务。',
@@ -300,36 +316,31 @@ const translations = {
   }
 };
 
-const projectNames = {
-  es: [
-    "Sala de Control Spence BHP",
-    "Ampliación Infraestructura Autonomía BHP",
-    "Remodelación Sala de Control GOM BHP",
-    "Remodelación CHO Puerto Coloso BHP",
-    "Remodelación Main Office Laguna Seca BHP"
-  ],
-  en: [
-    "Spence Control Room BHP",
-    "Autonomy Infrastructure Expansion BHP",
-    "GOM Control Room Remodeling BHP",
-    "CHO Puerto Coloso Remodeling BHP",
-    "Laguna Seca Main Office Remodeling BHP"
-  ],
-  pt: [
-    "Sala de Controle Spence BHP",
-    "Expansão Infraestrutura Autonomia BHP",
-    "Remodelação Sala de Controle GOM BHP",
-    "Remodelação CHO Puerto Coloso BHP",
-    "Remodelação Main Office Laguna Seca BHP"
-  ],
-  zh: [
-    "斯彭斯控制室 BHP",
-    "自主基础设施扩展 BHP",
-    "GOM控制室改造 BHP",
-    "CHO科洛索港改造 BHP",
-    "拉古纳塞卡主办公室改造 BHP"
-  ]
-};
+const engineeringProjects = [
+  { year: '2017', project: 'Sala de Control Concentradora Spence BHP', client: 'BHP' },
+  { year: '2017', project: 'Campamento Spence BHP', client: 'BHP' },
+  { year: '2018', project: 'Remodelación Sala de Control GOM', client: 'BHP' },
+  { year: '2018', project: 'Remodelación CHO Puerto Coloso', client: 'BHP' },
+  { year: '2019', project: 'Remodelación Main Office Laguna Seca', client: 'BHP' },
+  { year: '2020', project: 'Diseño Garita de Control Acceso Planta Spence BHP', client: 'BHP' },
+  { year: '2020', project: 'Master Plan SGO', client: 'BHP' },
+  { year: '2021', project: 'Ingeniería Básica Sala de Control CDA Los Colorados', client: 'BHP' },
+  { year: '2022', project: 'Ingeniería Planta Desaladora Mejillones', client: 'BHP' },
+  { year: '2022', project: 'Ingeniería Básica Truck Shop Los Colorados', client: 'BHP' },
+  { year: '2022', project: 'Ingeniería de Detalle Edificio Concentradora Spence', client: 'BHP' },
+  { year: '2023', project: 'Oficinas y Casa de Cambio Quecher', client: 'BHP' },
+  { year: '2023', project: 'Remodelación RESPEL Spence', client: 'BHP' },
+  { year: '2024', project: 'Infraestructura Autonomía Spence', client: 'BHP' },
+  { year: '2024', project: 'Sala de Control Radomiro Tomic', client: 'Codelco' },
+  { year: '2025', project: 'Estudio de Brechas Infraestructura OGP1', client: 'BHP' },
+];
+
+const counterpartProjects = [
+  { year: '2022', project: 'Revisión de Ingeniería Cerro Colorado', company: 'HATCH' },
+  { year: '2023', project: 'Revisión de Ingeniería Spence Concentradora', company: 'ARCADIS' },
+  { year: '2023', project: 'Revisión de Ingeniería Truck Shop Los Colorados', company: 'ATCO' },
+  { year: '2024', project: 'Revisión de Ingeniería Radomiro Tomic', company: 'HATCH' },
+];
 
 // Logo A4E - PNG Real embebido
 const A4ELogo = ({ className = "" }) => (
@@ -594,7 +605,7 @@ const ServicesVisual = ({ t }) => {
   );
 };
 
-const SectionHeader = ({ label, title, description, labelColor = "text-orange-600", titleColor = "text-neutral-900" }) => {
+const SectionHeader = ({ label, title, description, labelColor = "text-orange-600", titleColor = "text-neutral-900", dark = false }) => {
   const [ref, isVisible] = useScrollAnimation(0.2);
 
   return (
@@ -606,10 +617,10 @@ const SectionHeader = ({ label, title, description, labelColor = "text-orange-60
     >
       <div>
         <span className={`${labelColor} text-xs tracking-[0.25em] uppercase mb-3 block font-medium`}>{label}</span>
-        <h2 className={`text-3xl md:text-4xl ${titleColor} font-light tracking-tight`}>{title}</h2>
+        <h2 className={`text-3xl md:text-4xl ${dark ? 'text-white' : titleColor} font-light tracking-tight`}>{title}</h2>
       </div>
       {description && (
-        <p className="text-neutral-500 font-light max-w-md text-sm leading-relaxed">
+        <p className={`${dark ? 'text-white/50' : 'text-neutral-500'} font-light max-w-md text-sm leading-relaxed`}>
           {description}
         </p>
       )}
@@ -881,7 +892,7 @@ const AboutSection = ({ t }) => {
           <p className="text-neutral-600 font-light leading-relaxed text-base">{t.aboutText2}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4">
           {pillars.map((pillar, i) => (
             <div
               key={i}
@@ -1009,7 +1020,6 @@ export default function A4ELanding() {
   const [scrollY, setScrollY] = useState(0);
 
   const t = translations[lang];
-  const projects = projectNames[lang];
 
   useEffect(() => {
     // Hero starts fading in right after splash completes
@@ -1274,29 +1284,79 @@ export default function A4ELanding() {
         </div>
       </section>
 
-      <section id="projects" className="relative py-20 md:py-28 bg-neutral-100 overflow-hidden">
+      <section id="projects" className="relative py-20 md:py-28 bg-neutral-900 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+
         <div className="max-w-7xl mx-auto px-6 relative">
           <SectionHeader
             label={t.portfolio}
             title={t.featuredProjects}
             description={t.projectsDesc}
+            dark={true}
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} title={project} index={index} t={t} delay={index * 100} />
-            ))}
+          {/* Tabla 1: Desarrollo de Ingeniería Propio */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-1 h-6 bg-orange-500" />
+              <h3 className="text-lg font-medium text-white">{t.engineeringDev}</h3>
+              <span className="text-xs text-white/40 font-mono">{engineeringProjects.length}</span>
+            </div>
 
-            <div className="group relative bg-neutral-200/50 flex items-center justify-center min-h-44 border-2 border-dashed border-neutral-300 hover:border-orange-400 transition-all duration-500 cursor-pointer overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase w-20">{t.colYear}</th>
+                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase">{t.colProject}</th>
+                    <th className="text-right py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase w-32">{t.colClient}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {engineeringProjects.map((p, i) => (
+                    <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-300 group">
+                      <td className="py-3 px-4 text-sm font-mono text-white/40 group-hover:text-orange-500 transition-colors">{p.year}</td>
+                      <td className="py-3 px-4 text-sm text-white/70 group-hover:text-white transition-colors">{p.project}</td>
+                      <td className="py-3 px-4 text-sm text-right font-medium text-white/50 group-hover:text-white/80 transition-colors">{p.client}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-              <div className="text-center p-6 relative z-10">
-                <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-neutral-300 group-hover:bg-orange-500 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                  <span className="text-neutral-500 group-hover:text-white text-lg transition-colors duration-300">+</span>
-                </div>
-                <span className="text-neutral-400 text-xs tracking-widest uppercase block mb-2 font-medium group-hover:text-orange-600 transition-colors">{t.comingSoon}</span>
-                <span className="text-neutral-600 text-lg font-light group-hover:text-orange-600 transition-colors">{t.moreProjects}</span>
-              </div>
+          {/* Tabla 2: Contraparte / Revisión */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-1 h-6 bg-orange-500" />
+              <h3 className="text-lg font-medium text-white">{t.counterpartReview}</h3>
+              <span className="text-xs text-white/40 font-mono">{counterpartProjects.length}</span>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase w-20">{t.colYear}</th>
+                    <th className="text-left py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase">{t.colProject}</th>
+                    <th className="text-right py-3 px-4 text-xs font-mono tracking-wider text-orange-500 uppercase w-32">{t.colCompany}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {counterpartProjects.map((p, i) => (
+                    <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors duration-300 group">
+                      <td className="py-3 px-4 text-sm font-mono text-white/40 group-hover:text-orange-500 transition-colors">{p.year}</td>
+                      <td className="py-3 px-4 text-sm text-white/70 group-hover:text-white transition-colors">{p.project}</td>
+                      <td className="py-3 px-4 text-sm text-right font-medium text-white/50 group-hover:text-white/80 transition-colors">{p.company}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
