@@ -1397,9 +1397,11 @@ export default function A4ELanding() {
         </button>
       </section>
 
-      {/* Imagen BIM entre Hero y Nosotros */}
+      {/* Video BIM entre Hero y Nosotros */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden">
-        <img src="/hero-bg.jpg" alt="BIM Architecture Visualization" className="w-full h-full object-cover" />
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-transparent to-neutral-900/30" />
       </div>
 
