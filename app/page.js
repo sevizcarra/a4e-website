@@ -403,6 +403,22 @@ const featuredProjectsData = [
     ],
     image: '/garita-cerro-colorado.jpg',
   },
+  {
+    id: 5,
+    title: 'Proyecto Minero Las Yacas',
+    client: 'LAS YACAS',
+    year: '2025',
+    description: 'Servicio de ingeniería IPS/SPS para nuevo proyecto minero Las Yacas, desarrollo integral de infraestructura y espacios técnicos.',
+    image: null,
+  },
+  {
+    id: 6,
+    title: 'ILNSC - Columnas de Simulación',
+    client: 'HATCH',
+    year: '2023',
+    description: 'Revisión de contraparte de ingeniería para el proyecto de Innovación en Lixiviación con Nuevas Columnas de Simulación.',
+    image: null,
+  },
 ];
 
 const FeaturedProjectCard = ({ project, index, t }) => {
@@ -1439,7 +1455,7 @@ export default function A4ELanding() {
             description={t.highlightedDesc}
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjectsData.map((project, index) => (
               <FeaturedProjectCard key={project.id} project={project} index={index} t={t} />
             ))}
