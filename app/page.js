@@ -1294,12 +1294,16 @@ export default function A4ELanding() {
       </section>
 
       <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-[2000ms] ease-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700" />
+        {/* Hero background image */}
+        <div className="absolute inset-0">
+          <img src="/hero-bg.jpg" alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/85 via-neutral-900/70 to-neutral-900/50" />
+        </div>
 
         {/* Efecto de onda animado */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.1) 35px, rgba(255,255,255,0.1) 70px)',
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.05) 35px, rgba(255,255,255,0.05) 70px)',
             animation: 'wave 20s linear infinite',
           }} />
         </div>
@@ -1320,9 +1324,9 @@ export default function A4ELanding() {
           }
         `}</style>
 
-        {/* Resplandor dinámico */}
-        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-orange-400 rounded-full blur-[120px] opacity-30 animate-pulse" />
-        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-orange-500 rounded-full blur-[120px] opacity-20 animate-pulse delay-1000" style={{animationDelay: '2s'}} />
+        {/* Resplandor sutil */}
+        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-orange-500 rounded-full blur-[120px] opacity-10 animate-pulse" />
+        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-orange-600 rounded-full blur-[120px] opacity-10 animate-pulse delay-1000" style={{animationDelay: '2s'}} />
 
         {/* Partículas flotantes */}
         <FloatingParticles />
