@@ -493,20 +493,15 @@ const SplashScreen = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className={`fixed inset-0 z-[100] flex items-center justify-center transition-all duration-1500 ${
+    <div className={`fixed inset-0 z-[100] bg-white flex items-center justify-center transition-all duration-1500 ${
       fadeOut ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
     }`}>
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img src="/hero-bg.jpg" alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-neutral-900/70" />
-      </div>
       {/* Logo simple y elegante */}
-      <div className={`relative z-10 flex flex-col items-center gap-4 transition-all duration-1200 ease-out ${
+      <div className={`flex flex-col items-center gap-4 transition-all duration-1200 ease-out ${
         logoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
       }`}>
         <A4ELogo className="h-20 md:h-24 w-auto" style={{
-          filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.3))'
+          filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.08))'
         }} />
 
         {/* Loading dots */}
@@ -1401,6 +1396,12 @@ export default function A4ELanding() {
           <ChevronDown className="w-5 h-5 text-white/40 hover:text-white transition-colors" />
         </button>
       </section>
+
+      {/* Imagen BIM entre Hero y Nosotros */}
+      <div className="relative w-full h-64 md:h-96 overflow-hidden">
+        <img src="/hero-bg.jpg" alt="BIM Architecture Visualization" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-transparent to-neutral-900/30" />
+      </div>
 
       <AboutSection t={t} />
 
