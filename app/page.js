@@ -421,28 +421,81 @@ const featuredProjectsData = [
   },
 ];
 
-const FeaturedProjectCard = ({ project, index, t }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const ProjectModal = ({ project, t, onClose }) => {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    const handleEsc = (e) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', handleEsc);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, [onClose]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8" onClick={onClose}>
+      <div className="absolute inset-0 bg-neutral-900/80 backdrop-blur-sm" />
+      <div className="relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl"
+        onClick={(e) => e.stopPropagation()}>
+        {/* Close button */}
+        <button onClick={onClose}
+          className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-neutral-900/60 hover:bg-neutral-900/80 text-white rounded-full transition-colors">
+          ✕
+        </button>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          {/* Image */}
+          <div className="relative h-64 md:h-full min-h-[300px] bg-gradient-to-br from-neutral-100 to-neutral-200">
+            {project.image ? (
+              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <Building2 className="w-16 h-16 text-neutral-300 mx-auto mb-2" strokeWidth={1} />
+                  <span className="text-neutral-400 text-xs tracking-widest uppercase">Imagen referencial</span>
+                </div>
+              </div>
+            )}
+            <div className="absolute top-4 left-4 flex gap-2">
+              <span className="bg-orange-500 text-white text-xs font-medium px-3 py-1.5">{project.client}</span>
+              <span className="bg-neutral-900/70 text-white text-xs font-mono px-3 py-1.5">{project.year}</span>
+            </div>
+          </div>
+          {/* Content */}
+          <div className="p-8 md:p-10 flex flex-col justify-center">
+            <h3 className="text-2xl font-medium text-neutral-900 mb-4 leading-tight">{project.title}</h3>
+            <p className="text-sm text-neutral-500 leading-relaxed">{project.description}</p>
+            {project.credits && (
+              <div className="mt-6 pt-4 border-t border-neutral-100 flex flex-wrap gap-x-5 gap-y-2">
+                {project.credits.map((c, i) => (
+                  <span key={i} className="text-xs text-neutral-400">
+                    <span className="text-neutral-600 font-medium">{c.role}:</span> {c.company}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
   const [ref, isVisible] = useScrollAnimation(0.1);
 
   return (
     <div
       ref={ref}
-      className={`group relative bg-white overflow-hidden transition-all duration-700 hover:shadow-2xl ${
+      className={`group relative bg-white overflow-hidden transition-all duration-700 hover:shadow-2xl cursor-pointer ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
       style={{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }}
+      onClick={() => onSelect(project)}
     >
       {/* Image */}
-      <div className={`relative bg-gradient-to-br from-neutral-100 to-neutral-200 overflow-hidden cursor-pointer transition-all duration-500 ${
-        isExpanded ? 'h-72 md:h-96' : 'h-52'
-      }`}
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
+      <div className="relative h-52 bg-gradient-to-br from-neutral-100 to-neutral-200 overflow-hidden">
         {project.image ? (
-          <img src={project.image} alt={project.title} className={`w-full h-full transition-all duration-500 ${
-            isExpanded ? 'object-contain bg-white' : 'object-cover'
-          }`} />
+          <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
@@ -466,29 +519,19 @@ const FeaturedProjectCard = ({ project, index, t }) => {
       {/* Content */}
       <div className="p-5">
         <h3 className="text-lg font-medium text-neutral-900 mb-2 leading-tight">{project.title}</h3>
-        <div className={`transition-all duration-500 overflow-hidden ${
-          isExpanded ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
-        }`}>
-          <p className="text-sm text-neutral-500 leading-relaxed">
-            {project.description}
-          </p>
-          {project.credits && (
-            <div className="mt-3 pt-3 border-t border-neutral-100 flex flex-wrap gap-x-4 gap-y-1">
-              {project.credits.map((c, i) => (
-                <span key={i} className="text-xs text-neutral-400">
-                  <span className="text-neutral-500 font-medium">{c.role}:</span> {c.company}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-3 inline-flex items-center gap-1 text-xs text-orange-600 hover:text-orange-700 font-medium tracking-wider uppercase transition-colors"
-        >
+        <span className="inline-flex items-center gap-1 text-xs text-orange-600 font-medium tracking-wider uppercase">
           {t.viewDetails}
-          <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
-        </button>
+          <ChevronDown className="w-3 h-3 -rotate-90" />
+        </span>
+        {project.credits && (
+          <div className="mt-3 pt-3 border-t border-neutral-100 flex flex-wrap gap-x-4 gap-y-1">
+            {project.credits.map((c, i) => (
+              <span key={i} className="text-xs text-neutral-400">
+                <span className="text-neutral-500 font-medium">{c.role}:</span> {c.company}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Bottom accent */}
@@ -1172,6 +1215,7 @@ export default function A4ELanding() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroVisible, setHeroVisible] = useState(false);
   const [lang, setLang] = useState('es');
+  const [selectedProject, setSelectedProject] = useState(null);
   const [scrollY, setScrollY] = useState(0);
 
   const t = translations[lang];
@@ -1457,11 +1501,15 @@ export default function A4ELanding() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjectsData.map((project, index) => (
-              <FeaturedProjectCard key={project.id} project={project} index={index} t={t} />
+              <FeaturedProjectCard key={project.id} project={project} index={index} t={t} onSelect={setSelectedProject} />
             ))}
           </div>
         </div>
       </section>
+
+      {selectedProject && (
+        <ProjectModal project={selectedProject} t={t} onClose={() => setSelectedProject(null)} />
+      )}
 
       <section id="track-record" className="relative py-20 md:py-28 bg-gradient-to-br from-orange-600 to-orange-700 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
