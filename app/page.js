@@ -388,6 +388,17 @@ const featuredProjectsData = [
     description: 'Desarrollo de diagramas de flujo tridimensionales para la visualización de sistemas y procesos completos. El proyecto respondió a la necesidad de reemplazar los esquemas 2D tradicionales por representaciones 3D interactivas que permiten identificar equipos, correas transportadoras, silos y stockpiles con mayor claridad operacional, facilitando la toma de decisiones en terreno y la comunicación entre disciplinas.',
     image: '/flowsheet-3d.jpg',
   },
+  {
+    id: 4,
+    title: 'Propuesta Garita Acceso Cerro Colorado',
+    client: 'BHP - C. COLORADO',
+    year: '2018',
+    description: 'Propuesta arquitectónica para garita de acceso en faena minera Cerro Colorado. El diseño se resolvió mediante un sistema modular basado en contenedores marítimos reciclados con estructura metálica expuesta en color corporativo, cubierta inclinada de zinc-alum con cerchas reticuladas a la vista, celosías verticales de acero para ventilación y control solar, rampa de acceso universal con barandas normativas y piso técnico elevado. La solución priorizó rapidez de montaje, transportabilidad y resistencia a condiciones climáticas extremas del desierto de Atacama.',
+    credits: [
+      { role: 'Arquitectura', company: 'A4E' },
+    ],
+    image: '/garita-cerro-colorado.jpg',
+  },
 ];
 
 const FeaturedProjectCard = ({ project, index, t }) => {
@@ -1424,7 +1435,7 @@ export default function A4ELanding() {
             description={t.highlightedDesc}
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProjectsData.map((project, index) => (
               <FeaturedProjectCard key={project.id} project={project} index={index} t={t} />
             ))}
