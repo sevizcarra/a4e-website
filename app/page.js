@@ -358,11 +358,12 @@ const counterpartProjects = [
 const featuredProjectsData = [
   {
     id: 1,
-    title: 'Facilities Autonomía MEL',
+    title: 'Ingeniería SPS/DPS Facilities E-AT Stripping',
     client: 'BHP-MEL',
     year: '2022-2024',
     description: 'Desarrollo de arquitectura para las Facilities del programa de Camiones Autónomos (EN-AT) en Minera Escondida. El proyecto requirió diseñar con criterio estético las instalaciones de soporte para la operación autónoma, incluyendo la Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera en pilares y muros, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Se desarrolló ingeniería Interim con diseños aptos para construcción, definiendo distribución interior, accesos, iluminación técnica y requerimientos constructivos de cada facility.',
     credits: [
+      { role: 'Arquitectura', company: 'A4E' },
       { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/facilities-enat.jpg',
@@ -386,6 +387,9 @@ const featuredProjectsData = [
     client: 'BHP-MEL',
     year: '2019',
     description: 'Desarrollo de diagramas de flujo tridimensionales para la visualización de sistemas y procesos completos. El proyecto respondió a la necesidad de reemplazar los esquemas 2D tradicionales por representaciones 3D interactivas que permiten identificar equipos, correas transportadoras, silos y stockpiles con mayor claridad operacional, facilitando la toma de decisiones en terreno y la comunicación entre disciplinas.',
+    credits: [
+      { role: 'Desarrollo', company: 'A4E' },
+    ],
     image: '/flowsheet-3d.jpg',
   },
   {
