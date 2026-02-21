@@ -1215,7 +1215,7 @@ export default function A4ELanding() {
   const [showSplash, setShowSplash] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroVisible, setHeroVisible] = useState(false);
-  const [lang, setLang] = useState('es');
+  const [lang, setLang] = useState('en');
   const [selectedProject, setSelectedProject] = useState(null);
   const [scrollY, setScrollY] = useState(0);
 
