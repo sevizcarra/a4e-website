@@ -340,6 +340,7 @@ const engineeringProjects = [
   { year: '2023', project: 'Edificio Puerta Sur', client: 'MECASFY' },
   { year: '2022', project: 'Ingeniería Interim Facilities Autonomía MEL', client: 'BHP-MEL' },
   { year: '2022', project: 'Ingeniería DPS EN-AT', client: 'BHP-MEL' },
+  { year: '2022', project: 'Sala de Control SMH', client: 'BHP - SPENCE' },
   { year: '2021', project: 'Logistic Solutions', client: 'BHP-MEL' },
   { year: '2019', project: 'Flowsheets 3D de Procesos', client: 'BHP-MEL' },
   { year: '2019', project: 'Idea Campamento Cerro Colorado', client: 'BHP - C. COLORADO' },
