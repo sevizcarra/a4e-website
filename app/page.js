@@ -333,7 +333,7 @@ const translations = {
 };
 
 const engineeringProjects = [
-  { year: '2025', project: 'Servicio Ingeniería IPS/SPS Proyecto Minero Las Yacas', client: 'LAS YACAS' },
+  { year: '2025', project: 'Servicio Ingeniería IPS/SPS Proyecto Minero Las Yacas', client: 'CMM' },
   { year: '2025', project: 'Ingeniería Remediación Edificio CHO - Puerto Coloso (Delivery)', client: 'BHP-COLOSO' },
   { year: '2024', project: 'Ingeniería SPS/DPS Facilities E-AT Stripping', client: 'BHP-MEL' },
   { year: '2024', project: 'AS Built EN-AT - Facilities Autonomía MEL', client: 'BHP-MEL' },
@@ -359,18 +359,6 @@ const counterpartProjects = [
 const featuredProjectsData = [
   {
     id: 1,
-    title: 'Ingeniería SPS/DPS Facilities E-AT Stripping',
-    client: 'BHP-MEL',
-    year: '2022-2024',
-    description: 'Desarrollo de arquitectura para las Facilities del programa de Camiones Autónomos (EN-AT) en Minera Escondida. El proyecto requirió diseñar con criterio estético las instalaciones de soporte para la operación autónoma, incluyendo la Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera en pilares y muros, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Se desarrolló ingeniería Interim con diseños aptos para construcción, definiendo distribución interior, accesos, iluminación técnica y requerimientos constructivos de cada facility.',
-    credits: [
-      { role: 'Arquitectura', company: 'A4E' },
-      { role: 'Ingeniería', company: 'CHKING' },
-    ],
-    image: '/facilities-enat.jpg',
-  },
-  {
-    id: 2,
     title: 'Ingeniería Remediación Edificio CHO',
     client: 'BHP-COLOSO',
     year: '2025',
@@ -383,7 +371,47 @@ const featuredProjectsData = [
     image: '/edificio-cho.jpg',
   },
   {
+    id: 2,
+    title: 'Proyecto Minero Las Yacas',
+    client: 'CMM',
+    year: '2025',
+    description: 'Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas en la comuna de Vicuña. El alcance contempló la definición de oficinas administrativas, control de ingreso, baños y salas de cambio para personal operativo, con una distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Se desarrollaron layouts de emplazamiento, estacionamientos y accesos vehiculares, integrando la arquitectura al plan general de la faena que incluye chancado, lixiviación, SX-EW y servicios auxiliares.',
+    credits: [
+      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Ingeniería', company: 'CHKING' },
+    ],
+    image: '/las-yacas.jpg',
+  },
+  {
     id: 3,
+    title: 'Ingeniería SPS/DPS Facilities E-AT Stripping',
+    client: 'BHP-MEL',
+    year: '2024',
+    description: 'Desarrollo de arquitectura para las Facilities del programa de Camiones Autónomos (EN-AT) en Minera Escondida. El proyecto requirió diseñar con criterio estético las instalaciones de soporte para la operación autónoma, incluyendo la Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera en pilares y muros, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Se desarrolló ingeniería Interim con diseños aptos para construcción, definiendo distribución interior, accesos, iluminación técnica y requerimientos constructivos de cada facility.',
+    credits: [
+      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Ingeniería', company: 'CHKING' },
+    ],
+    image: '/facilities-enat.jpg',
+  },
+  {
+    id: 4,
+    title: 'Ingeniería Sala de Control SMH',
+    client: 'BHP - SPENCE',
+    year: '2022',
+    description: 'Próximamente.',
+    image: null,
+  },
+  {
+    id: 5,
+    title: 'Edificio Puerta Sur',
+    client: 'MECASFY',
+    year: '2023',
+    description: 'Próximamente.',
+    image: null,
+  },
+  {
+    id: 6,
     title: 'Flowsheets 3D de Procesos',
     client: 'BHP-MEL',
     year: '2019',
@@ -394,7 +422,7 @@ const featuredProjectsData = [
     image: '/flowsheet-3d.jpg',
   },
   {
-    id: 4,
+    id: 7,
     title: 'Propuesta Garita Acceso Cerro Colorado',
     client: 'BHP - C. COLORADO',
     year: '2018',
@@ -403,22 +431,6 @@ const featuredProjectsData = [
       { role: 'Arquitectura', company: 'A4E' },
     ],
     image: '/garita-cerro-colorado.jpg',
-  },
-  {
-    id: 5,
-    title: 'Proyecto Minero Las Yacas',
-    client: 'LAS YACAS',
-    year: '2025',
-    description: 'Servicio de ingeniería IPS/SPS para nuevo proyecto minero Las Yacas, desarrollo integral de infraestructura y espacios técnicos.',
-    image: null,
-  },
-  {
-    id: 6,
-    title: 'ILNSC - Columnas de Simulación',
-    client: 'HATCH',
-    year: '2023',
-    description: 'Revisión de contraparte de ingeniería para el proyecto de Innovación en Lixiviación con Nuevas Columnas de Simulación.',
-    image: null,
   },
 ];
 
