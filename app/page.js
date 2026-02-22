@@ -127,7 +127,7 @@ const translations = {
     nav: ['Home', 'About', 'Services', 'Projects', 'Contact'],
     tagline: 'Architecture outsourcing for your engineering',
     heroTitle1: 'YOUR ARCHITECTURE TEAM',
-    heroTitle2: 'INTEGRATED INTO YOUR ENGINEERING',
+    heroTitle2: 'INTEGRATED INTO YOUR ENGINEERING PROCESS',
     heroDesc: 'We integrate into your project team as an extension of your engineering, adopting your coding, manuals, and delivery standards. We develop projects, technical documents, and construction solutions coordinated with your disciplines.',
     heroSubdesc: 'We operate under your internal processes, coding, and deadlines. The result: interference-free deliverables, construction-ready and compatible with your client\'s standards.',
     viewProjects: 'View Projects',
