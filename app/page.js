@@ -338,6 +338,7 @@ const engineeringProjects = [
   { year: '2024', project: 'Ingeniería SPS/DPS Facilities E-AT Stripping', client: 'BHP-MEL' },
   { year: '2024', project: 'AS Built EN-AT - Facilities Autonomía MEL', client: 'BHP-MEL' },
   { year: '2023', project: 'Edificio Puerta Sur', client: 'MECASFY' },
+  { year: '2022', project: 'Oficinas Corporativas GT Chile', client: 'GT CHILE' },
   { year: '2022', project: 'Ingeniería Interim Facilities Autonomía MEL', client: 'BHP-MEL' },
   { year: '2022', project: 'Ingeniería DPS EN-AT', client: 'BHP-MEL' },
   { year: '2022', project: 'Ingeniería Sala de Control SMH', client: 'BHP - SPENCE' },
@@ -372,6 +373,17 @@ const featuredProjectsData = [
   },
   {
     id: 2,
+    title: 'Oficinas Corporativas GT Chile',
+    client: 'GT CHILE',
+    year: '2022',
+    description: 'Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. El proyecto contempló un diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes, y estaciones de trabajo colaborativas. Se priorizó la luz natural, la calidez de los materiales y una distribución abierta que fomenta el trabajo en equipo.',
+    credits: [
+      { role: 'Arquitectura', company: 'A4E' },
+    ],
+    image: '/gt-chile.jpg',
+  },
+  {
+    id: 3,
     title: 'Proyecto Minero Las Yacas',
     client: 'CMM',
     year: '2025',
@@ -383,7 +395,7 @@ const featuredProjectsData = [
     image: '/las-yacas.jpg',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Ingeniería SPS/DPS Facilities E-AT Stripping',
     client: 'BHP-MEL',
     year: '2024',
@@ -395,7 +407,7 @@ const featuredProjectsData = [
     image: '/facilities-enat.jpg',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Ingeniería Sala de Control SMH',
     client: 'BHP - SPENCE',
     year: '2022',
@@ -403,7 +415,7 @@ const featuredProjectsData = [
     image: null,
   },
   {
-    id: 5,
+    id: 6,
     title: 'Edificio Puerta Sur',
     client: 'MECASFY',
     year: '2023',
@@ -411,7 +423,7 @@ const featuredProjectsData = [
     image: null,
   },
   {
-    id: 6,
+    id: 7,
     title: 'Flowsheets 3D de Procesos',
     client: 'BHP-MEL',
     year: '2019',
@@ -422,7 +434,7 @@ const featuredProjectsData = [
     image: '/flowsheet-3d.jpg',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Propuesta Garita Acceso Cerro Colorado',
     client: 'BHP - C. COLORADO',
     year: '2018',
