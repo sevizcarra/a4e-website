@@ -379,6 +379,7 @@ const featuredProjectsData = [
     description: 'Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. El proyecto contempló un diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes, y estaciones de trabajo colaborativas. Se priorizó la luz natural, la calidez de los materiales y una distribución abierta que fomenta el trabajo en equipo.',
     credits: [
       { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Mobiliario', company: 'QUEBRADA' },
     ],
     image: '/gt-chile.jpg',
   },
