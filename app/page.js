@@ -121,6 +121,7 @@ const translations = {
     submitMessage: 'Enviar Mensaje',
         intranet: 'Acceso Equipo',
     allRights: 'Todos los derechos reservados',
+    downloadPortfolio: 'Descargar Portafolio',
     description: 'Especialistas en soluciones de ingeniería'
   },
   en: {
@@ -190,6 +191,7 @@ const translations = {
     submitMessage: 'Send Message',
         intranet: 'Team Access',
     allRights: 'All rights reserved',
+    downloadPortfolio: 'Download Portfolio',
     description: 'Engineering solutions specialists'
   },
   pt: {
@@ -259,6 +261,7 @@ const translations = {
     submitMessage: 'Enviar Mensagem',
         intranet: 'Acesso da Equipe',
     allRights: 'Todos os direitos reservados',
+    downloadPortfolio: 'Baixar Portfólio',
     description: 'Especialistas em soluções de engenharia'
   },
   zh: {
@@ -328,6 +331,7 @@ const translations = {
     submitMessage: '发送消息',
         intranet: '团队访问',
     allRights: '版权所有',
+    downloadPortfolio: '下载作品集',
     description: '工程解决方案专家'
   }
 };
@@ -489,7 +493,7 @@ const ProjectModal = ({ project, t, onClose }) => {
           {/* Content */}
           <div className="p-8 md:p-10 flex flex-col justify-center">
             <h3 className="text-2xl font-medium text-neutral-900 mb-4 leading-tight">{project.title}</h3>
-            <p className="text-sm text-neutral-500 leading-relaxed">{project.description}</p>
+            <p className="text-sm text-neutral-500 leading-relaxed text-justify">{project.description}</p>
             {project.credits && (
               <div className="mt-6 pt-4 border-t border-neutral-100 flex flex-wrap gap-x-5 gap-y-2">
                 {project.credits.map((c, i) => (
@@ -1111,9 +1115,9 @@ const AboutSection = ({ t }) => {
         >
           <span className="text-orange-600 text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.about}</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-neutral-900 font-light tracking-tight mb-6">{t.aboutTitle}</h2>
-          <p className="text-orange-600 font-medium text-lg mb-8">{t.aboutSubtitle}</p>
-          <p className="text-neutral-600 font-light leading-relaxed text-base mb-4">{t.aboutText1}</p>
-          <p className="text-neutral-600 font-light leading-relaxed text-base">{t.aboutText2}</p>
+          <p className="text-orange-600 font-medium text-lg mb-8 text-justify">{t.aboutSubtitle}</p>
+          <p className="text-neutral-600 font-light leading-relaxed text-base mb-4 text-justify">{t.aboutText1}</p>
+          <p className="text-neutral-600 font-light leading-relaxed text-base text-justify">{t.aboutText2}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-3">
@@ -1163,7 +1167,7 @@ const AboutSection = ({ t }) => {
                     {pillar.title}
                   </h3>
 
-                  <p className={`text-sm leading-relaxed transition-colors duration-300 ${
+                  <p className={`text-sm leading-relaxed text-justify transition-colors duration-300 ${
                     hoveredPillar === i ? 'text-white/90' : 'text-white/60'
                   }`}>
                     {pillar.desc}
@@ -1211,6 +1215,18 @@ const Footer = ({ t }) => {
           }`} />
 
           <div className="flex items-center gap-6">
+            <a
+              href="/A4E_Dossier_2025.pdf"
+              download
+              className={`text-white/60 hover:text-orange-500 text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
+                isVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              {t.downloadPortfolio}
+            </a>
+
+            <div className="h-3 w-px bg-white/20" />
+
             <a
               href="https://intranet.a4e.cl"
               target="_blank"
@@ -1456,11 +1472,11 @@ export default function A4ELanding() {
               <span className="font-normal">{t.heroTitle2}</span>
             </h1>
 
-            <p className={`text-white/90 text-lg font-light max-w-xl mb-4 leading-relaxed transition-all duration-[2500ms] delay-[1200ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+            <p className={`text-white/90 text-lg font-light max-w-xl mb-4 leading-relaxed text-justify transition-all duration-[2500ms] delay-[1200ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
               {t.heroDesc}
             </p>
 
-            <p className={`text-white/70 text-sm font-light max-w-lg mb-10 transition-all duration-[2500ms] delay-[1800ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+            <p className={`text-white/70 text-sm font-light max-w-lg mb-10 text-justify transition-all duration-[2500ms] delay-[1800ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
               {t.heroSubdesc}
             </p>
 
