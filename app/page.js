@@ -424,8 +424,11 @@ const featuredProjectsData = [
     title: 'Edificio Puerta Sur',
     client: 'MECASFY',
     year: '2023',
-    description: 'Próximamente.',
-    image: null,
+    description: 'Diseño arquitectónico de edificio industrial y corporativo para Mecasfy en el sector Santa Alejandra. El proyecto contempló el desarrollo de una nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.',
+    credits: [
+      { role: 'Arquitectura', company: 'A4E' },
+    ],
+    image: '/santa-alejandra.jpg',
   },
   {
     id: 7,
