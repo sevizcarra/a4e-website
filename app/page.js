@@ -412,14 +412,6 @@ const featuredProjectsData = [
     image: '/facilities-enat.jpg',
   },
   {
-    id: 5,
-    title: 'Ingeniería Sala de Control SMH',
-    client: 'BHP - SPENCE',
-    year: '2022',
-    description: 'Próximamente.',
-    image: null,
-  },
-  {
     id: 6,
     title: 'Edificio Puerta Sur',
     client: 'MECASFY',
@@ -429,17 +421,6 @@ const featuredProjectsData = [
       { role: 'Arquitectura', company: 'A4E' },
     ],
     image: '/santa-alejandra.jpg',
-  },
-  {
-    id: 7,
-    title: 'Flowsheets 3D de Procesos',
-    client: 'BHP-MEL',
-    year: '2019',
-    description: 'Desarrollo de diagramas de flujo tridimensionales para la visualización de sistemas y procesos completos. El proyecto respondió a la necesidad de reemplazar los esquemas 2D tradicionales por representaciones 3D interactivas que permiten identificar equipos, correas transportadoras, silos y stockpiles con mayor claridad operacional, facilitando la toma de decisiones en terreno y la comunicación entre disciplinas.',
-    credits: [
-      { role: 'Desarrollo', company: 'A4E' },
-    ],
-    image: '/flowsheet-3d.jpg',
   },
   {
     id: 8,
