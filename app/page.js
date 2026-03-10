@@ -1186,15 +1186,6 @@ export default function A4ELanding() {
   const t = translations[lang];
 
   useEffect(() => {
-    // Hero starts fading in right after splash completes
-    return () => clearTimeout(timer);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   }
 
   return (
@@ -1300,6 +1291,7 @@ export default function A4ELanding() {
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-transparent to-neutral-900/30" />
       </div>
+
 
       <section id="projects" className="relative py-20 md:py-28 bg-neutral-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
