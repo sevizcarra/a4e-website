@@ -1305,196 +1305,45 @@ export default function A4ELanding() {
         </div>
       </header>
 
-      {/* Sección de Inicio con Logo - Elegante */}
-      <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
-        {/* Elementos decorativos modernos */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Líneas diagonales elegantes */}
-          <div className={`absolute top-0 right-0 w-px h-64 bg-gradient-to-b from-transparent via-orange-500/10 to-transparent transform rotate-45 origin-top transition-all duration-1000 delay-200 ${
-            heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
-          }`} style={{ right: '20%' }} />
-          <div className={`absolute bottom-0 left-0 w-px h-64 bg-gradient-to-b from-transparent via-orange-500/10 to-transparent transform -rotate-45 origin-bottom transition-all duration-1000 delay-300 ${
-            heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
-          }`} style={{ left: '25%' }} />
-
-          {/* Puntos decorativos */}
-          <div className={`absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-orange-500/20 transition-all duration-1000 delay-400 ${
-            heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
-          }`} />
-          <div className={`absolute bottom-1/3 right-1/3 w-1.5 h-1.5 rounded-full bg-orange-500/15 transition-all duration-1000 delay-500 ${
-            heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
-          }`} />
-          <div className={`absolute top-1/2 right-1/4 w-1 h-1 rounded-full bg-orange-500/10 transition-all duration-1000 delay-600 ${
-            heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
-          }`} />
+      {/* Hero Principal con Imagen de Fondo */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img src="/hero-cover.jpg" alt="A4E Industrial" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/85 via-neutral-900/60 to-neutral-900/40" />
         </div>
 
-        <div className="relative z-10 flex flex-col items-center px-6">
-          {/* Logo con efecto de resplandor y floating */}
-          <div
-            className={`relative transition-all duration-1500 ease-out ${
-              heroVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-12'
-            }`}
-            style={{
-              animation: heroVisible ? 'float 6s ease-in-out infinite' : 'none'
-            }}
-          >
-            {/* Resplandor detrás del logo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-orange-600/20 to-orange-500/20 blur-3xl opacity-50 scale-110" />
-
-            <A4ELogo className="h-64 md:h-80 lg:h-96 w-auto relative z-10 drop-shadow-2xl" />
-          </div>
-
-          {/* Línea decorativa con animación */}
-          <div className="relative mt-16 w-full max-w-2xl flex items-center justify-center">
-            <div
-              className={`h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent transition-all duration-1500 delay-500 ${
-                heroVisible ? 'w-full opacity-100 scale-x-100' : 'w-0 opacity-0 scale-x-0'
-              }`}
-            />
-            <div
-              className={`absolute w-3 h-3 bg-orange-500 rounded-full transition-all duration-1000 delay-700 ${
-                heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
-              }`}
-              style={{
-                boxShadow: '0 0 20px rgba(234, 88, 12, 0.5)'
-              }}
-            />
-          </div>
-
-          {/* Tagline con efecto elegante */}
-          <p
-            className={`mt-12 text-neutral-800 text-base md:text-lg tracking-[0.4em] uppercase font-medium transition-all duration-1500 delay-900 ${
-              heroVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 translate-y-12 blur-sm'
-            }`}
-          >
-            Architecture for Engineering
-          </p>
-        </div>
-
-        {/* Botón de scroll con efecto */}
-        <button
-          onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
-          className={`absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer group transition-all duration-700 delay-1200 ${
-            heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <div className="relative">
-            <div className="absolute inset-0 bg-orange-500/20 rounded-full blur-xl group-hover:bg-orange-500/30 transition-all" />
-            <ChevronDown className="w-8 h-8 text-orange-500/70 group-hover:text-orange-500 transition-all relative z-10 animate-bounce" />
-          </div>
-        </button>
-
-        {/* Estilos de animación */}
-        <style>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-          }
-        `}</style>
-      </section>
-
-      <section id="home" className={`relative min-h-screen flex items-center overflow-hidden transition-all duration-[2000ms] ease-out ${heroVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-700" />
-
-        {/* Efecto de onda animado */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.1) 35px, rgba(255,255,255,0.1) 70px)',
-            animation: 'wave 20s linear infinite',
-          }} />
-        </div>
-        <style jsx>{`
-          @keyframes wave {
-            0% { transform: translateX(0) translateY(0); }
-            100% { transform: translateX(-70px) translateY(70px); }
-          }
-          @keyframes loading-bounce {
-            0%, 80%, 100% {
-              transform: scale(0);
-              opacity: 0.3;
-            }
-            40% {
-              transform: scale(1);
-              opacity: 1;
-            }
-          }
-        `}</style>
-
-        {/* Resplandor dinámico */}
-        <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-orange-400 rounded-full blur-[120px] opacity-30 animate-pulse" />
-        <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-orange-500 rounded-full blur-[120px] opacity-20 animate-pulse delay-1000" style={{animationDelay: '2s'}} />
-
-        {/* Partículas flotantes */}
-        <FloatingParticles />
-
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute -top-1/4 -right-1/4 w-1/2 h-full bg-neutral-900/10 transform rotate-12"
-            style={{ transform: `rotate(12deg) translateY(${scrollY * 0.1}px)` }}
-          />
-
-          <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-            backgroundSize: '60px 60px'
-          }} />
-        </div>
-
-        <div
-          className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 w-full"
-        >
-          <div className="max-w-3xl">
-            <div className={`transition-all duration-[2500ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-              <span className="inline-block text-white/90 text-xs tracking-[0.25em] uppercase mb-6 font-medium">
-                {t.tagline}
-              </span>
+        {/* Content - Logo Left, Text Right */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            {/* Logo Left */}
+            <div className="flex-shrink-0">
+              <A4ELogo className="h-48 md:h-64 lg:h-80 w-auto drop-shadow-2xl brightness-0 invert opacity-95" />
             </div>
 
-            <h1 className={`text-5xl md:text-6xl lg:text-7xl text-white font-light tracking-tight leading-none mb-8 transition-all duration-[2500ms] delay-[600ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-              {t.heroTitle1}
-              <br />
-              <span className="font-normal">{t.heroTitle2}</span>
-            </h1>
-
-            <p className={`text-white/90 text-lg font-light max-w-xl mb-4 leading-relaxed text-justify transition-all duration-[2500ms] delay-[1200ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-              {t.heroDesc}
-            </p>
-
-            <p className={`text-white/70 text-sm font-light max-w-lg mb-10 text-justify transition-all duration-[2500ms] delay-[1800ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-              {t.heroSubdesc}
-            </p>
-
-            <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-[2500ms] delay-[2400ms] ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-              <a
-                href="#projects"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="group inline-flex items-center justify-center gap-3 bg-neutral-900 text-white px-8 py-4 text-xs tracking-widest uppercase font-medium hover:bg-neutral-800 transition-all duration-300"
-              >
-                {t.viewProjects}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm text-white px-8 py-4 text-xs tracking-widest uppercase font-medium hover:bg-white/20 transition-all duration-300 border border-white/20"
-              >
-                {t.contactUs}
-              </a>
+            {/* Text Right */}
+            <div className="flex-1 text-center md:text-right max-w-2xl">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white tracking-tight leading-tight mb-6">
+                <span className="block">{t.heroTitle1}</span>
+                <span className="block text-orange-500 font-medium">{t.heroTitle2}</span>
+              </h1>
+              <div className="w-24 h-px bg-orange-500 mb-6 ml-auto hidden md:block" />
+              <p className="text-white/80 text-base md:text-lg font-light leading-relaxed mb-4 text-justify">
+                {t.heroDesc}
+              </p>
+              <p className="text-white/60 text-sm font-light leading-relaxed text-justify">
+                {t.heroSubdesc}
+              </p>
             </div>
           </div>
         </div>
 
+        {/* Scroll indicator */}
         <button
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer z-10"
         >
-          <ChevronDown className="w-5 h-5 text-white/40 hover:text-white transition-colors" />
+          <ChevronDown className="w-6 h-6 text-white/50 hover:text-white transition-colors" />
         </button>
       </section>
 
