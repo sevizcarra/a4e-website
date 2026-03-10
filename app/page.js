@@ -563,66 +563,6 @@ const A4ELogo = ({ className = "" }) => (
   />
 );
 
-// Componente Splash Screen con efecto de entrada
-const SplashScreen = ({ onComplete }) => {
-  const [logoVisible, setLogoVisible] = useState(false);
-  const [fadeOut, setFadeOut] = useState(false);
-
-  useEffect(() => {
-    const logoTimer = setTimeout(() => setLogoVisible(true), 400);
-    const fadeTimer = setTimeout(() => setFadeOut(true), 2800);
-    const completeTimer = setTimeout(() => onComplete(), 3800);
-
-    return () => {
-      clearTimeout(logoTimer);
-      clearTimeout(fadeTimer);
-      clearTimeout(completeTimer);
-    };
-  }, [onComplete]);
-
-  return (
-    <div className={`fixed inset-0 z-[100] bg-white flex items-center justify-center transition-all duration-1500 ${
-      fadeOut ? 'opacity-0 scale-105' : 'opacity-100 scale-100'
-    }`}>
-      {/* Logo simple y elegante */}
-      <div className={`flex flex-col items-center gap-4 transition-all duration-1200 ease-out ${
-        logoVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
-      }`}>
-        <A4ELogo className="h-20 md:h-24 w-auto" style={{
-          filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.08))'
-        }} />
-
-        {/* Loading dots */}
-        <div className="flex gap-1.5">
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className="w-2 h-2 rounded-full bg-orange-500"
-              style={{
-                animation: `splash-bounce 1.4s ease-in-out infinite`,
-                animationDelay: `${i * 0.16}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      <style jsx>{`
-        @keyframes splash-bounce {
-          0%, 80%, 100% {
-            transform: scale(0);
-            opacity: 0.3;
-          }
-          40% {
-            transform: scale(1);
-            opacity: 1;
-          }
-        }
-      `}</style>
-    </div>
-  );
-};
-
 const ProjectCard = ({ title, index, t, delay = 0 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [ref, isVisible] = useScrollAnimation(0.1);
@@ -1237,7 +1177,6 @@ const Footer = ({ t }) => {
 };
 
 export default function A4ELanding() {
-  const [showSplash, setShowSplash] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroVisible, setHeroVisible] = useState(false);
   const [lang, setLang] = useState('en');
@@ -1248,9 +1187,7 @@ export default function A4ELanding() {
 
   useEffect(() => {
     // Hero starts fading in right after splash completes
-    const timer = setTimeout(() => setHeroVisible(true), showSplash ? 3900 : 300);
     return () => clearTimeout(timer);
-  }, [showSplash]);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -1258,9 +1195,6 @@ export default function A4ELanding() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Mostrar splash screen al cargar
-  if (showSplash) {
-    return <SplashScreen onComplete={() => setShowSplash(false)} />;
   }
 
   return (
@@ -1347,13 +1281,6 @@ export default function A4ELanding() {
         </button>
       </section>
 
-      {/* Video BIM entre Hero y Nosotros */}
-      <div className="relative w-full h-64 md:h-96 overflow-hidden">
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-transparent to-neutral-900/30" />
-      </div>
 
       <AboutSection t={t} />
 
@@ -1365,6 +1292,14 @@ export default function A4ELanding() {
           </div>
         </div>
       </section>
+
+      {/* Video BIM entre Hero y Nosotros */}
+      <div className="relative w-full h-64 md:h-96 overflow-hidden">
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-transparent to-neutral-900/30" />
+      </div>
 
       <section id="projects" className="relative py-20 md:py-28 bg-neutral-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
