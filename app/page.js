@@ -563,6 +563,7 @@ const A4ELogo = ({ className = "" }) => (
   />
 );
 
+
 const ProjectCard = ({ title, index, t, delay = 0 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [ref, isVisible] = useScrollAnimation(0.1);
@@ -1178,7 +1179,6 @@ const Footer = ({ t }) => {
 
 export default function A4ELanding() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [heroVisible, setHeroVisible] = useState(false);
   const [lang, setLang] = useState('en');
   const [selectedProject, setSelectedProject] = useState(null);
   const [scrollY, setScrollY] = useState(0);
@@ -1186,7 +1186,10 @@ export default function A4ELanding() {
   const t = translations[lang];
 
   useEffect(() => {
-  }
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-neutral-900 antialiased scroll-smooth" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
@@ -1271,8 +1274,6 @@ export default function A4ELanding() {
           <ChevronDown className="w-6 h-6 text-white/50 hover:text-white transition-colors" />
         </button>
       </section>
-
-
       <AboutSection t={t} />
 
       <section id="services" className="relative py-20 md:py-28 bg-neutral-900 overflow-hidden">
@@ -1284,14 +1285,14 @@ export default function A4ELanding() {
         </div>
       </section>
 
-      {/* Video BIM entre Hero y Nosotros */}
+
+      {/* Video BIM entre Servicios y Proyectos */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden">
         <video autoPlay loop muted playsInline className="w-full h-full object-cover">
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-transparent to-neutral-900/30" />
       </div>
-
 
       <section id="projects" className="relative py-20 md:py-28 bg-neutral-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
@@ -1404,3 +1405,4 @@ export default function A4ELanding() {
     </div>
   );
 }
+
