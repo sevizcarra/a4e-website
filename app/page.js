@@ -1256,10 +1256,10 @@ export default function A4ELanding() {
                 <span className="block text-orange-500 font-medium">{t.heroTitle2}</span>
               </h1>
               <div className="w-24 h-px bg-orange-500 mb-6 ml-auto hidden md:block" />
-              <p className="text-white/80 text-base md:text-lg font-light leading-relaxed mb-4 text-justify">
+              <p className="text-white/90 text-base md:text-lg font-normal leading-relaxed mb-4 text-justify">
                 {t.heroDesc}
               </p>
-              <p className="text-white/60 text-sm font-light leading-relaxed text-justify">
+              <p className="text-white/70 text-sm font-normal leading-relaxed text-justify">
                 {t.heroSubdesc}
               </p>
             </div>
@@ -1405,4 +1405,5 @@ export default function A4ELanding() {
     </div>
   );
 }
+
 
