@@ -337,8 +337,8 @@ const translations = {
 };
 
 const engineeringProjects = [
-  { year: '2025', project: 'Servicio Ingeniería IPS/SPS Proyecto Minero Las Yacas', client: 'CMM' },
-  { year: '2025', project: 'Ingeniería Remediación Edificio CHO - Puerto Coloso (Delivery)', client: 'BHP-COLOSO' },
+  { year: '2025', project: 'Servicio Ingeniería IPS/SPS Ingeniería IPS/SPS Proyecto Minero Las Yacas', client: 'CMM' },
+  { year: '2025', project: 'Ingeniería DELIVERY Remediación Edificio CHO - Puerto Coloso (Delivery)', client: 'BHP-COLOSO' },
   { year: '2024', project: 'Ingeniería SPS/DPS Facilities E-AT Stripping', client: 'BHP-MEL' },
   { year: '2024', project: 'AS Built EN-AT - Facilities Autonomía MEL', client: 'BHP-MEL' },
   { year: '2023', project: 'Edificio Puerta Sur', client: 'MECASFY' },
@@ -364,7 +364,7 @@ const counterpartProjects = [
 const featuredProjectsData = [
   {
     id: 1,
-    title: 'Ingeniería Remediación Edificio CHO',
+    title: 'Ingeniería DELIVERY Remediación Edificio CHO',
     client: 'BHP-COLOSO',
     year: '2025',
     description: 'Definición arquitectónica y habilitación de espacios para la Remediación del Edificio CHO en Puerto Coloso. El proyecto contempló la reconversión de todo el edificio (420 m²) en una instalación técnica de alta disponibilidad, incluyendo distribución interna, accesos, sala técnica para equipos eléctricos, UPS, oficinas, espacios de CoWork y mejoras generales arquitectónicas en cielos, mobiliario y otras adecuaciones.',
@@ -389,7 +389,7 @@ const featuredProjectsData = [
   },
   {
     id: 3,
-    title: 'Proyecto Minero Las Yacas',
+    title: 'Ingeniería IPS/SPS Proyecto Minero Las Yacas',
     client: 'CMM',
     year: '2025',
     description: 'Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas en la comuna de Vicuña. El alcance contempló la definición de oficinas administrativas, control de ingreso, baños y salas de cambio para personal operativo, con una distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Se desarrollaron layouts de emplazamiento, estacionamientos y accesos vehiculares, integrando la arquitectura al plan general de la faena que incluye chancado, lixiviación, SX-EW y servicios auxiliares.',
@@ -426,13 +426,13 @@ const featuredProjectsData = [
     id: 8,
     title: 'Ingeniería DPS Sala de Control GOM',
     client: 'BHP - EN-AT',
-    year: '2024',
+    year: '2022',
     description: 'Ingeniería de Detalles para la Sala de Control GOM del proyecto EN-AT. Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. El diseño prioriza la concentración operacional, confort acústico, control lumínico y continuidad visual para jornadas extendidas de monitoreo de procesos mineros.',
     credits: [
       { role: 'Arquitectura', company: 'AFOR' },
       { role: 'Ingeniería', company: 'CHKING' },
     ],
-    image: '/Ingenier%C3%ADa%20DPS%20EN-AT.jpg',
+    image: '/Ingeniería DPS EN-AT.jpg',
   },
 ];
 
