@@ -1,18 +1,22 @@
 import './globals.css'
+import { Audiowide } from 'next/font/google'
+
+const audiowide = Audiowide({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-audiowide',
+})
 
 export const metadata = {
-  title: 'A4E - Architecture for Engineering',
+  title: 'AFOR - Architecture for Engineering',
   description: 'Soluciones de arquitectura industrial especializadas en ingeniería de precisión',
   keywords: 'arquitectura, ingeniería, industrial, construcción, Chile',
-  icons: {
-    icon: '/logo-a4e.png',
-    apple: '/logo-a4e.png',
-  },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
+    <html lang="es" className={audiowide.variable}>
       <body>{children}</body>
     </html>
   )
