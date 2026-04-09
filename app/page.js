@@ -433,7 +433,7 @@ const featuredProjectsData = [
       { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/gom-enat.jpg',
-    imagePosition: 'center 70%',
+    imagePosition: 'center 30%',
   },
 ];
 
@@ -559,6 +559,33 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
 // Logo AFOR - Audiowide font
 const A4ELogo = ({ className = "" }) => {
   return <span style={{fontFamily: "var(--font-audiowide), sans-serif"}} className={`tracking-wider leading-none inline-block ${className}`}>AFOR</span>;
+};
+
+// Rotating tagline under logo
+const RotatingTagline = () => {
+  const words = ['Engineering', 'Processes', 'Mining Projects', 'Industrial Projects'];
+  const [index, setIndex] = React.useState(0);
+  const [fade, setFade] = React.useState(true);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setIndex(prev => (prev + 1) % words.length);
+        setFade(true);
+      }, 400);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+  return (
+    <div className="text-center mt-2">
+      <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
+        Architecture for{' '}
+        <span className="text-orange-400 font-normal transition-opacity duration-400" style={{opacity: fade ? 1 : 0}}>
+          {words[index]}
+        </span>
+      </span>
+    </div>
+  );
 };
 
 
@@ -1243,8 +1270,9 @@ export default function A4ELanding() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Logo Left */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex flex-col items-center">
               <A4ELogo className="text-7xl md:text-8xl lg:text-9xl text-white drop-shadow-2xl" />
+              <RotatingTagline />
             </div>
 
             {/* Text Right */}
