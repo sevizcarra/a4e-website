@@ -593,7 +593,7 @@ const RotatingTagline = () => {
     <div className="text-center mt-2" style={{overflow: 'hidden', height: '1.8em'}}>
       <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
         Architecture for{' '}
-        <span className="text-orange-400 font-normal" style={wordStyle}>
+        <span className="text-orange-500 font-normal" style={wordStyle}>
           {words[index]}
         </span>
       </span>
