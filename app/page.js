@@ -570,7 +570,7 @@ const A4ELogo = ({ className = "" }) => {
 
 // Rotating tagline under logo
 const RotatingTagline = () => {
-  const words = ['Engineering', 'Processes', 'Mining Projects', 'Industrial Projects'];
+  const words = ['Engineering', 'Processes'];
   const [index, setIndex] = React.useState(0);
   const [phase, setPhase] = React.useState('in');
   React.useEffect(() => {
@@ -590,10 +590,12 @@ const RotatingTagline = () => {
     opacity: phase === 'in' ? 1 : 0,
   };
   return (
-    <div className="text-center mt-2" style={{overflow: 'hidden', height: '1.8em'}}>
+    <div className="mt-2 text-left" style={{width: '100%'}}>
       <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
         Architecture for{' '}
-        <span className="text-orange-500 font-normal" style={wordStyle}>
+      </span>
+      <span className="overflow-hidden" style={{display: 'inline-block', verticalAlign: 'bottom', height: '1.4em'}}>
+        <span className="text-orange-500 font-normal text-sm md:text-base lg:text-lg tracking-widest uppercase" style={{...wordStyle, fontFamily: 'system-ui, -apple-system, sans-serif'}}>
           {words[index]}
         </span>
       </span>
@@ -1283,7 +1285,7 @@ export default function A4ELanding() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Logo Left */}
-            <div className="flex-shrink-0 flex flex-col items-center">
+            <div className="flex-shrink-0 flex flex-col items-start">
               <A4ELogo className="text-7xl md:text-8xl lg:text-9xl text-white drop-shadow-2xl" />
               <RotatingTagline />
             </div>
