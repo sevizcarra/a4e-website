@@ -583,21 +583,19 @@ const RotatingTagline = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-  const wordStyle = {
-    display: 'inline-block',
-    transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-    transform: phase === 'in' ? 'translateY(0)' : 'translateY(20px)',
-    opacity: phase === 'in' ? 1 : 0,
-  };
   return (
-    <div className="mt-2 text-left" style={{width: '100%'}}>
+    <div className="mt-2 text-left whitespace-nowrap">
       <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
         Architecture for{' '}
       </span>
-      <span className="overflow-hidden" style={{display: 'inline-block', verticalAlign: 'bottom', height: '1.4em'}}>
-        <span className="text-orange-500 font-normal text-sm md:text-base lg:text-lg tracking-widest uppercase" style={{...wordStyle, fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-          {words[index]}
-        </span>
+      <span className="text-orange-500 font-normal text-sm md:text-base lg:text-lg tracking-widest uppercase" style={{
+        fontFamily: 'system-ui, -apple-system, sans-serif',
+        display: 'inline-block',
+        transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+        transform: phase === 'in' ? 'translateY(0)' : 'translateY(15px)',
+        opacity: phase === 'in' ? 1 : 0,
+      }}>
+        {words[index]}
       </span>
     </div>
   );
