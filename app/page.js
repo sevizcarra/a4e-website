@@ -556,16 +556,7 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
 
 // Logo AFOR - Audiowide font
 const A4ELogo = ({ className = "" }) => {
-  React.useEffect(() => {
-    if (typeof document !== "undefined" && !document.getElementById("audiowide-font")) {
-      const link = document.createElement("link");
-      link.id = "audiowide-font";
-      link.rel = "stylesheet";
-      link.href = "https://fonts.googleapis.com/css2?family=Audiowide&display=swap";
-      document.head.appendChild(link);
-    }
-  }, []);
-  return <span style={{fontFamily: "'Audiowide', cursive"}} className={`tracking-wider leading-none inline-block ${className}`}>AFOR</span>;
+  return <span style={{fontFamily: "var(--font-audiowide), sans-serif"}} className={`tracking-wider leading-none inline-block ${className}`}>AFOR</span>;
 };
 
 
