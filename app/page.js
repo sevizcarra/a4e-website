@@ -432,7 +432,7 @@ const featuredProjectsData = [
       { role: 'Arquitectura', company: 'AFOR' },
       { role: 'Ingeniería', company: 'CHKING' },
     ],
-    image: '/gom-enat.jpg',
+    image: '/Ingenier%C3%ADa%20DPS%20EN-AT.jpg',
   },
 ];
 
