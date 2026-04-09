@@ -424,14 +424,15 @@ const featuredProjectsData = [
   },
   {
     id: 8,
-    title: 'Propuesta Garita Acceso Cerro Colorado',
-    client: 'BHP - C. COLORADO',
-    year: '2018',
-    description: 'Propuesta arquitectónica para garita de acceso en faena minera Cerro Colorado. El diseño se resolvió mediante un sistema modular basado en contenedores marítimos reciclados con estructura metálica expuesta en color corporativo, cubierta inclinada de zinc-alum con cerchas reticuladas a la vista, celosías verticales de acero para ventilación y control solar, rampa de acceso universal con barandas normativas y piso técnico elevado. La solución priorizó rapidez de montaje, transportabilidad y resistencia a condiciones climáticas extremas del desierto de Atacama.',
+    title: 'Ingeniería DPS Sala de Control GOM',
+    client: 'BHP - EN-AT',
+    year: '2024',
+    description: 'Ingeniería de Detalles para la Sala de Control GOM del proyecto EN-AT. Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. El diseño prioriza la concentración operacional, confort acústico, control lumínico y continuidad visual para jornadas extendidas de monitoreo de procesos mineros.',
     credits: [
       { role: 'Arquitectura', company: 'AFOR' },
+      { role: 'Ingeniería', company: 'CHKING' },
     ],
-    image: '/garita-cerro-colorado.jpg',
+    image: '/gom-enat.jpg',
   },
 ];
 
