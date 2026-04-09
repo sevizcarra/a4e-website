@@ -425,7 +425,7 @@ const featuredProjectsData = [
   {
     id: 8,
     title: 'Ingeniería DPS Sala de Control GOM',
-    client: 'BHP - EN-AT',
+    client: 'BHP - MEL',
     year: '2022',
     description: 'Ingeniería de Detalles para la Sala de Control GOM del proyecto EN-AT. Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. El diseño prioriza la concentración operacional, confort acústico, control lumínico y continuidad visual para jornadas extendidas de monitoreo de procesos mineros.',
     credits: [
@@ -433,6 +433,7 @@ const featuredProjectsData = [
       { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/gom-enat.jpg',
+    imagePosition: 'center 30%',
   },
 ];
 
@@ -461,7 +462,7 @@ const ProjectModal = ({ project, t, onClose }) => {
           {/* Image */}
           <div className="relative h-64 md:h-full min-h-[300px] bg-gradient-to-br from-neutral-100 to-neutral-200">
             {project.image ? (
-              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+              <img src={project.image} alt={project.title} style={{objectPosition: project.imagePosition || 'center'}} className="w-full h-full object-cover" />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
@@ -510,7 +511,7 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
       {/* Image */}
       <div className="relative h-52 bg-gradient-to-br from-neutral-100 to-neutral-200 overflow-hidden">
         {project.image ? (
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <img src={project.image} alt={project.title} style={{objectPosition: project.imagePosition || 'center'}} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
