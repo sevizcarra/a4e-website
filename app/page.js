@@ -369,7 +369,7 @@ const featuredProjectsData = [
     year: '2025',
     description: 'Definición arquitectónica y habilitación de espacios para la Remediación del Edificio CHO en Puerto Coloso. El proyecto contempló la reconversión de todo el edificio (420 m²) en una instalación técnica de alta disponibilidad, incluyendo distribución interna, accesos, sala técnica para equipos eléctricos, UPS, oficinas, espacios de CoWork y mejoras generales arquitectónicas en cielos, mobiliario y otras adecuaciones.',
     credits: [
-      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Arquitectura', company: 'AFOR' },
       { role: 'Ingeniería', company: 'CHKING' },
       { role: 'Mobiliario', company: '3D Concept' },
     ],
@@ -382,7 +382,7 @@ const featuredProjectsData = [
     year: '2022',
     description: 'Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. El proyecto contempló un diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes, y estaciones de trabajo colaborativas. Se priorizó la luz natural, la calidez de los materiales y una distribución abierta que fomenta el trabajo en equipo.',
     credits: [
-      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Arquitectura', company: 'AFOR' },
       { role: 'Mobiliario', company: 'QUEBRADA' },
     ],
     image: '/gt-chile.jpg',
@@ -394,7 +394,7 @@ const featuredProjectsData = [
     year: '2025',
     description: 'Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas en la comuna de Vicuña. El alcance contempló la definición de oficinas administrativas, control de ingreso, baños y salas de cambio para personal operativo, con una distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Se desarrollaron layouts de emplazamiento, estacionamientos y accesos vehiculares, integrando la arquitectura al plan general de la faena que incluye chancado, lixiviación, SX-EW y servicios auxiliares.',
     credits: [
-      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Arquitectura', company: 'AFOR' },
       { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/las-yacas.jpg',
@@ -406,7 +406,7 @@ const featuredProjectsData = [
     year: '2024',
     description: 'Desarrollo de arquitectura para las Facilities del programa de Camiones Autónomos (EN-AT) en Minera Escondida. El proyecto requirió diseñar con criterio estético las instalaciones de soporte para la operación autónoma, incluyendo la Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera en pilares y muros, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Se desarrolló ingeniería Interim con diseños aptos para construcción, definiendo distribución interior, accesos, iluminación técnica y requerimientos constructivos de cada facility.',
     credits: [
-      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Arquitectura', company: 'AFOR' },
       { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/facilities-enat.jpg',
@@ -418,7 +418,7 @@ const featuredProjectsData = [
     year: '2023',
     description: 'Diseño arquitectónico de edificio industrial y corporativo para Mecasfy en el sector Santa Alejandra. El proyecto contempló el desarrollo de una nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.',
     credits: [
-      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Arquitectura', company: 'AFOR' },
     ],
     image: '/santa-alejandra.jpg',
   },
@@ -429,7 +429,7 @@ const featuredProjectsData = [
     year: '2018',
     description: 'Propuesta arquitectónica para garita de acceso en faena minera Cerro Colorado. El diseño se resolvió mediante un sistema modular basado en contenedores marítimos reciclados con estructura metálica expuesta en color corporativo, cubierta inclinada de zinc-alum con cerchas reticuladas a la vista, celosías verticales de acero para ventilación y control solar, rampa de acceso universal con barandas normativas y piso técnico elevado. La solución priorizó rapidez de montaje, transportabilidad y resistencia a condiciones climáticas extremas del desierto de Atacama.',
     credits: [
-      { role: 'Arquitectura', company: 'A4E' },
+      { role: 'Arquitectura', company: 'AFOR' },
     ],
     image: '/garita-cerro-colorado.jpg',
   },
