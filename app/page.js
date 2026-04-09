@@ -433,7 +433,7 @@ const featuredProjectsData = [
       { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/gom-enat.jpg',
-    imagePosition: 'center 30%',
+    imagePosition: 'center 70%',
   },
 ];
 
