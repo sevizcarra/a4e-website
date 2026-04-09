@@ -364,7 +364,8 @@ const counterpartProjects = [
 const featuredProjectsData = [
   {
     id: 1,
-    title: 'Ingeniería DELIVERY Remediación Edificio CHO',
+    title: 'Remediación Edificio CHO',
+    subtitle: 'Ingeniería DELIVERY (ejecutado)',
     client: 'BHP-COLOSO',
     year: '2025',
     description: 'Definición arquitectónica y habilitación de espacios para la Remediación del Edificio CHO en Puerto Coloso. El proyecto contempló la reconversión de todo el edificio (420 m²) en una instalación técnica de alta disponibilidad, incluyendo distribución interna, accesos, sala técnica para equipos eléctricos, UPS, oficinas, espacios de CoWork y mejoras generales arquitectónicas en cielos, mobiliario y otras adecuaciones.',
@@ -378,6 +379,7 @@ const featuredProjectsData = [
   {
     id: 2,
     title: 'Oficinas Corporativas GT Chile',
+    subtitle: 'Ingeniería DPS (ejecutado)',
     client: 'GT CHILE',
     year: '2022',
     description: 'Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. El proyecto contempló un diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes, y estaciones de trabajo colaborativas. Se priorizó la luz natural, la calidez de los materiales y una distribución abierta que fomenta el trabajo en equipo.',
@@ -389,7 +391,8 @@ const featuredProjectsData = [
   },
   {
     id: 3,
-    title: 'Ingeniería IPS/SPS Proyecto Minero Las Yacas',
+    title: 'Proyecto Minero Las Yacas',
+    subtitle: 'Ingeniería IPS/SPS (estudio)',
     client: 'CMM',
     year: '2025',
     description: 'Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas en la comuna de Vicuña. El alcance contempló la definición de oficinas administrativas, control de ingreso, baños y salas de cambio para personal operativo, con una distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Se desarrollaron layouts de emplazamiento, estacionamientos y accesos vehiculares, integrando la arquitectura al plan general de la faena que incluye chancado, lixiviación, SX-EW y servicios auxiliares.',
@@ -401,7 +404,8 @@ const featuredProjectsData = [
   },
   {
     id: 4,
-    title: 'Ingeniería SPS/DPS Facilities E-AT Stripping',
+    title: 'Facilities E-AT Stripping',
+    subtitle: 'Ingeniería SPS/DPS (ejecutado)',
     client: 'BHP-MEL',
     year: '2024',
     description: 'Desarrollo de arquitectura para las Facilities del programa de Camiones Autónomos (EN-AT) en Minera Escondida. El proyecto requirió diseñar con criterio estético las instalaciones de soporte para la operación autónoma, incluyendo la Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera en pilares y muros, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Se desarrolló ingeniería Interim con diseños aptos para construcción, definiendo distribución interior, accesos, iluminación técnica y requerimientos constructivos de cada facility.',
@@ -414,6 +418,7 @@ const featuredProjectsData = [
   {
     id: 6,
     title: 'Edificio Puerta Sur',
+    subtitle: 'Ingeniería DPS (permisología)',
     client: 'MECASFY',
     year: '2023',
     description: 'Diseño arquitectónico de edificio industrial y corporativo para Mecasfy en el sector Santa Alejandra. El proyecto contempló el desarrollo de una nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.',
@@ -424,7 +429,8 @@ const featuredProjectsData = [
   },
   {
     id: 8,
-    title: 'Ingeniería DPS Sala de Control GOM',
+    title: 'Sala de Control GOM EN-AT',
+    subtitle: 'Ingeniería DPS (ejecutado)',
     client: 'BHP - MEL',
     year: '2022',
     description: 'Ingeniería de Detalles para la Sala de Control GOM del proyecto EN-AT. Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. El diseño prioriza la concentración operacional, confort acústico, control lumínico y continuidad visual para jornadas extendidas de monitoreo de procesos mineros.',
@@ -534,7 +540,8 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-lg font-medium text-neutral-900 mb-2 leading-tight">{project.title}</h3>
+        <h3 className="text-lg font-medium text-neutral-900 leading-tight">{project.title}</h3>
+        {project.subtitle && <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase mt-1 mb-2">{project.subtitle}</p>}
         <span className="inline-flex items-center gap-1 text-xs text-orange-600 font-medium tracking-wider uppercase">
           {t.viewDetails}
           <ChevronDown className="w-3 h-3 -rotate-90" />
