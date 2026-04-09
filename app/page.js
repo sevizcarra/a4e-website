@@ -439,7 +439,7 @@ const featuredProjectsData = [
       { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/gom-enat.jpg',
-    imagePosition: 'center 30%',
+    imagePosition: 'center 70%',
   },
 ];
 
@@ -572,22 +572,28 @@ const A4ELogo = ({ className = "" }) => {
 const RotatingTagline = () => {
   const words = ['Engineering', 'Processes', 'Mining Projects', 'Industrial Projects'];
   const [index, setIndex] = React.useState(0);
-  const [fade, setFade] = React.useState(true);
+  const [phase, setPhase] = React.useState('in');
   React.useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false);
+      setPhase('out');
       setTimeout(() => {
         setIndex(prev => (prev + 1) % words.length);
-        setFade(true);
-      }, 400);
+        setPhase('in');
+      }, 500);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+  const wordStyle = {
+    display: 'inline-block',
+    transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+    transform: phase === 'in' ? 'translateY(0)' : 'translateY(20px)',
+    opacity: phase === 'in' ? 1 : 0,
+  };
   return (
-    <div className="text-center mt-2">
+    <div className="text-center mt-2" style={{overflow: 'hidden', height: '1.8em'}}>
       <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
         Architecture for{' '}
-        <span className="text-orange-400 font-normal transition-opacity duration-400" style={{opacity: fade ? 1 : 0}}>
+        <span className="text-orange-400 font-normal" style={wordStyle}>
           {words[index]}
         </span>
       </span>
