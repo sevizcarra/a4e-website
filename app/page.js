@@ -686,7 +686,7 @@ const LanguageSelector = ({ currentLang, setLang }) => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-white/80 hover:text-white text-xs tracking-wider uppercase transition-colors px-3 py-2 border border-white/20 hover:border-white/40"
+        className="flex items-center gap-2 text-white/80 hover:text-white text-xs tracking-wider uppercase transition-colors px-2 py-1"
       >
         <Globe className="w-3.5 h-3.5" />
         {langs.find(l => l.code === currentLang)?.label}
@@ -1096,7 +1096,7 @@ const AboutSection = ({ t }) => {
               <div className={`relative h-full p-6 md:p-6 overflow-hidden transition-all duration-500 ${
                 hoveredPillar === i
                   ? 'bg-gradient-to-br from-orange-600 to-orange-700 shadow-2xl shadow-orange-500/30 -translate-y-2'
-                  : 'bg-neutral-900'
+                  : 'bg-[#444c59]'
               }`}>
                 <div className={`absolute inset-0 opacity-10 transition-opacity duration-500 ${hoveredPillar === i ? 'opacity-20' : ''}`}>
                   <div className="absolute inset-0" style={{
