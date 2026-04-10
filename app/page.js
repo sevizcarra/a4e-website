@@ -484,7 +484,7 @@ const ProjectModal = ({ project, t, onClose }) => {
           </div>
           {/* Content */}
           <div className="p-8 md:p-10 flex flex-col justify-center">
-            <h3 className="text-2xl font-medium text-[#444c59] mb-4 leading-tight">{project.title}</h3>
+            <h3 className="text-2xl font-medium text-[#434c59] mb-4 leading-tight">{project.title}</h3>
             <p className="text-sm text-neutral-500 leading-relaxed text-justify">{project.description}</p>
             {project.credits && (
               <div className="mt-6 pt-4 border-t border-neutral-100 flex flex-wrap gap-x-5 gap-y-2">
@@ -540,7 +540,7 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-lg font-medium text-[#444c59] leading-tight">{project.title}</h3>
+        <h3 className="text-lg font-medium text-[#434c59] leading-tight">{project.title}</h3>
         {project.subtitle && <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase mt-1 mb-2">{project.subtitle}</p>}
         <span className="inline-flex items-center gap-1 text-xs text-orange-600 font-medium tracking-wider uppercase">
           {t.viewDetails}
@@ -664,7 +664,7 @@ const ProjectCard = ({ title, index, t, delay = 0 }) => {
           <span className="text-xs font-medium tracking-widest text-orange-600 uppercase mb-2 block">
             BHP
           </span>
-          <h3 className="text-sm font-normal text-[#444c59] leading-snug">
+          <h3 className="text-sm font-normal text-[#434c59] leading-snug">
             {title}
           </h3>
         </div>
@@ -795,7 +795,7 @@ const ServicesVisual = ({ t }) => {
   );
 };
 
-const SectionHeader = ({ label, title, description, labelColor = "text-orange-600", titleColor = "text-[#444c59]", dark = false }) => {
+const SectionHeader = ({ label, title, description, labelColor = "text-orange-600", titleColor = "text-[#434c59]", dark = false }) => {
   const [ref, isVisible] = useScrollAnimation(0.2);
 
   return (
@@ -832,7 +832,7 @@ const ContactInfo = ({ t }) => {
     <div ref={ref}>
       <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <span className="text-orange-600 text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.contact}</span>
-        <h2 className="text-3xl md:text-4xl text-[#444c59] font-light tracking-tight mb-8">{t.contactTitle}</h2>
+        <h2 className="text-3xl md:text-4xl text-[#434c59] font-light tracking-tight mb-8">{t.contactTitle}</h2>
         <p className="text-neutral-500 font-light leading-relaxed mb-12 max-w-md text-base">
           {t.contactDesc}
         </p>
@@ -866,7 +866,7 @@ const ContactInfo = ({ t }) => {
                   hoveredItem === i ? 'text-orange-600' : 'text-neutral-400'
                 }`}>{item.label}</span>
                 <span className={`font-light transition-colors duration-300 ${
-                  hoveredItem === i ? 'text-orange-600' : 'text-[#444c59]'
+                  hoveredItem === i ? 'text-orange-600' : 'text-[#434c59]'
                 }`}>{item.value}</span>
               </div>
 
@@ -908,7 +908,7 @@ const ContactForm = ({ t }) => {
           <div className="relative">
             <input
               type="text"
-              className="w-full bg-neutral-50 border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#444c59] font-light focus:outline-none focus:border-orange-500 focus:bg-orange-50/30 transition-all duration-300"
+              className="w-full bg-neutral-50 border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#434c59] font-light focus:outline-none focus:border-orange-500 focus:bg-orange-50/30 transition-all duration-300"
               placeholder={t.formPlaceholderName}
               onFocus={() => setFocusedField('name')}
               onBlur={() => setFocusedField(null)}
@@ -926,7 +926,7 @@ const ContactForm = ({ t }) => {
           <div className="relative">
             <input
               type="email"
-              className="w-full bg-neutral-50 border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#444c59] font-light focus:outline-none focus:border-orange-500 focus:bg-orange-50/30 transition-all duration-300"
+              className="w-full bg-neutral-50 border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#434c59] font-light focus:outline-none focus:border-orange-500 focus:bg-orange-50/30 transition-all duration-300"
               placeholder={t.formPlaceholderEmail}
               onFocus={() => setFocusedField('email')}
               onBlur={() => setFocusedField(null)}
@@ -964,7 +964,7 @@ const ContactForm = ({ t }) => {
           <div className="relative">
             <textarea
               rows={4}
-              className="w-full bg-neutral-50 border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#444c59] font-light focus:outline-none focus:border-orange-500 focus:bg-orange-50/30 transition-all duration-300 resize-none"
+              className="w-full bg-neutral-50 border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#434c59] font-light focus:outline-none focus:border-orange-500 focus:bg-orange-50/30 transition-all duration-300 resize-none"
               placeholder={t.formPlaceholderMsg}
               onFocus={() => setFocusedField('message')}
               onBlur={() => setFocusedField(null)}
@@ -1076,7 +1076,7 @@ const AboutSection = ({ t }) => {
           }`}
         >
           <span className="text-orange-600 text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.about}</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#444c59] font-light tracking-tight mb-6">{t.aboutTitle}</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#434c59] font-light tracking-tight mb-6">{t.aboutTitle}</h2>
           <p className="text-orange-600 font-medium text-lg mb-8 text-justify">{t.aboutSubtitle}</p>
           <p className="text-neutral-600 font-light leading-relaxed text-base mb-4 text-justify">{t.aboutText1}</p>
           <p className="text-neutral-600 font-light leading-relaxed text-base text-justify">{t.aboutText2}</p>
@@ -1096,7 +1096,7 @@ const AboutSection = ({ t }) => {
               <div className={`relative h-full p-6 md:p-6 overflow-hidden transition-all duration-500 ${
                 hoveredPillar === i
                   ? 'bg-gradient-to-br from-orange-600 to-orange-700 shadow-2xl shadow-orange-500/30 -translate-y-2'
-                  : 'bg-[#444c59]'
+                  : 'bg-[#434c59]'
               }`}>
                 <div className={`absolute inset-0 opacity-10 transition-opacity duration-500 ${hoveredPillar === i ? 'opacity-20' : ''}`}>
                   <div className="absolute inset-0" style={{
@@ -1153,7 +1153,7 @@ const Footer = ({ t }) => {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   return (
-    <footer ref={ref} className="relative bg-[#444c59] py-12 border-t border-neutral-700 overflow-hidden">
+    <footer ref={ref} className="relative bg-[#434c59] py-12 border-t border-neutral-700 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-neutral-800" />
 
       <div className={`absolute top-0 left-1/4 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl transition-all duration-1000 ${
@@ -1340,7 +1340,7 @@ export default function A4ELanding() {
       </section>
       <AboutSection t={t} />
 
-      <section id="services" className="relative py-20 md:py-28 bg-[#444c59] overflow-hidden">
+      <section id="services" className="relative py-20 md:py-28 bg-[#434c59] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ServicesContent t={t} />
