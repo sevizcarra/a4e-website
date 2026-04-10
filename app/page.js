@@ -56,73 +56,73 @@ const AnimatedNumber = ({ value, duration = 2000, isVisible }) => {
 const translations = {
   es: {
     nav: ['Inicio', 'Nosotros', 'Servicios', 'Proyectos', 'Contacto'],
-    tagline: 'El outsourcing de arquitectura para su ingenierÃ­a',
+    tagline: 'El outsourcing de arquitectura para su ingeniería',
     heroTitle1: 'SU EQUIPO DE ARQUITECTURA',
-    heroTitle2: 'INTEGRADO A SU INGENIERÃA',
-    heroDesc: 'Nos acoplamos a su equipo de proyecto como una extensiÃ³n de su ingenierÃ­a, adoptando su codificaciÃ³n, manuales y estÃ¡ndares de entrega. Desarrollamos proyectos, expedientes tÃ©cnicos y soluciones constructivas coordinadas con sus disciplinas.',
-    heroSubdesc: 'Operamos bajo sus procesos internos, codificaciÃ³n y plazos. El resultado: entregables libres de interferencias, listos para construcciÃ³n y compatibles con el estÃ¡ndar de su mandante.',
+    heroTitle2: 'INTEGRADO A SU INGENIERÍA',
+    heroDesc: 'Nos acoplamos a su equipo de proyecto como una extensión de su ingeniería, adoptando su codificación, manuales y estándares de entrega. Desarrollamos proyectos, expedientes técnicos y soluciones constructivas coordinadas con sus disciplinas.',
+    heroSubdesc: 'Operamos bajo sus procesos internos, codificación y plazos. El resultado: entregables libres de interferencias, listos para construcción y compatibles con el estándar de su mandante.',
     viewProjects: 'Ver Proyectos',
-    contactUs: 'ContÃ¡ctenos',
+    contactUs: 'Contáctenos',
     about: 'Nosotros',
-    aboutTitle: 'ConsultorÃ­a TÃ©cnica en Arquitectura para empresas de IngenierÃ­a',
-    aboutSubtitle: 'MÃ¡s de 10 aÃ±os de experiencia profesional integrando la arquitectura como disciplina crÃ­tica en proyectos mineros e industriales.',
-    aboutText1: 'Somos una oficina especializada en el desarrollo de infraestructura para la gran minerÃ­a e industria. Nos diferenciamos por abordar la arquitectura no solo como un fin estÃ©tico, sino como un componente clave operacional que debe responder a la exigencias de la  producciÃ³n, seguridad y mantenimiento de sus procesos.',
-    aboutText2: 'Entendemos el lenguaje de la ingenierÃ­a. Nuestro trabajo se integra fluidamente con las especialidades estructurales, elÃ©ctricas, mecÃ¡nicas y PMO, garantizando entregables libres de interferencias, compatibles con la codificaciÃ³n del mandante y optimizados para el ciclo de vida de los activos.',
+    aboutTitle: 'Consultoría Técnica en Arquitectura para empresas de Ingeniería',
+    aboutSubtitle: 'Más de 10 años de experiencia profesional integrando la arquitectura como disciplina crítica en proyectos mineros e industriales.',
+    aboutText1: 'Somos una oficina especializada en el desarrollo de infraestructura para la gran minería e industria. Nos diferenciamos por abordar la arquitectura no solo como un fin estético, sino como un componente clave operacional que debe responder a la exigencias de la  producción, seguridad y mantenimiento de sus procesos.',
+    aboutText2: 'Entendemos el lenguaje de la ingeniería. Nuestro trabajo se integra fluidamente con las especialidades estructurales, eléctricas, mecánicas y PMO, garantizando entregables libres de interferencias, compatibles con la codificación del mandante y optimizados para el ciclo de vida de los activos.',
     pillar1Title: 'Enfoque en Procesos',
-    pillar1Desc: 'DiseÃ±amos desde la lÃ³gica del proceso productivo. Cada metro cuadrado se planifica para facilitar la operaciÃ³n, el flujo de personal y la continuidad del servicio.',
+    pillar1Desc: 'Diseñamos desde la lógica del proceso productivo. Cada metro cuadrado se planifica para facilitar la operación, el flujo de personal y la continuidad del servicio.',
     pillar2Title: 'Rigor Normativo',
-    pillar2Desc: 'Dominio de normativas y estÃ¡ndares de seguridad para la gran minerÃ­a e industria. Entregamos expedientes completos para obtener las aprobaciones necesarias para la ejecuciÃ³n.',
-    pillar3Title: 'CoordinaciÃ³n Multidisciplinaria',
-    pillar3Desc: 'Trabajamos en Revit/BIM y entregamos modelos coordinados en el formato y codificaciÃ³n que su proyecto requiera. Nos integramos con las disciplinas estructural, mecÃ¡nica, elÃ©ctrica e instrumentaciÃ³n sin generar interferencias ni reprocesos.',
+    pillar2Desc: 'Dominio de normativas y estándares de seguridad para la gran minería e industria. Entregamos expedientes completos para obtener las aprobaciones necesarias para la ejecución.',
+    pillar3Title: 'Coordinación Multidisciplinaria',
+    pillar3Desc: 'Trabajamos en Revit/BIM y entregamos modelos coordinados en el formato y codificación que su proyecto requiera. Nos integramos con las disciplinas estructural, mecánica, eléctrica e instrumentación sin generar interferencias ni reprocesos.',
     pillar4Title: 'Modelo Flexible',
     pillar4Desc: 'Acceda a un equipo especializado de arquitectura solo cuando su proyecto lo requiera. Sin overhead permanentes y con capacidad disponible para responder a sus plazos y acoplarnos a sus procesos internos de manuales y codificaciones.',
     highlighted: 'Proyectos',
     highlightedTitle: 'Proyectos Destacados',
-    highlightedDesc: 'Algunos de nuestros proyectos mÃ¡s representativos en la gran minerÃ­a.',
+    highlightedDesc: 'Algunos de nuestros proyectos más representativos en la gran minería.',
     viewDetails: 'Ver Detalles',
     portfolio: 'Portafolio',
     featuredProjects: 'Trayectoria de Proyectos',
-    projectsDesc: 'MÃ¡s de 20 proyectos ejecutados para la gran minerÃ­a e industria desde 2017.',
-    engineeringDev: 'Desarrollo de IngenierÃ­a Propio (via CHKING)',
-    counterpartReview: 'Contraparte / RevisiÃ³n (via CHKING)',
-    colYear: 'AÃ±o',
+    projectsDesc: 'Más de 20 proyectos ejecutados para la gran minería e industria desde 2017.',
+    engineeringDev: 'Desarrollo de Ingeniería Propio (via CHKING)',
+    counterpartReview: 'Contraparte / Revisión (via CHKING)',
+    colYear: 'Año',
     colProject: 'Proyecto',
     colClient: 'Cliente',
-    colCompany: 'Empresa LÃ­der',
+    colCompany: 'Empresa Líder',
     services: 'Servicios',
     servicesTitle: 'Soluciones Especializadas',
-    servicesDesc: 'Ofrecemos servicios arquitectÃ³nicos integrales diseÃ±ados especÃ­ficamente para proyectos de ingenierÃ­a, instalaciones industriales y operaciones mineras a gran escala.',
+    servicesDesc: 'Ofrecemos servicios arquitectónicos integrales diseñados específicamente para proyectos de ingeniería, instalaciones industriales y operaciones mineras a gran escala.',
     servicesList: [
       'Master Plan de Arquitectura para estudio de Faenas e Instalaciones',
-      'EdificaciÃ³n y remodelaciÃ³n de espacios claves como Oficinas y Casas de Cambio',
-      'Salas de Control, de Servidores, ElÃ©ctricas y TÃ©cnicas.',
-      'EdificaciÃ³n tÃ©cnica para RESPEL, Almacenamiento y Truck Shops',
-      'RevisiÃ³n de contraparte de planos y documentos.',
-      'SupervisiÃ³n de Terreno de ejecuciÃ³n y avances'
+      'Edificación y remodelación de espacios claves como Oficinas y Casas de Cambio',
+      'Salas de Control, de Servidores, Eléctricas y Técnicas.',
+      'Edificación técnica para RESPEL, Almacenamiento y Truck Shops',
+      'Revisión de contraparte de planos y documentos.',
+      'Supervisión de Terreno de ejecución y avances'
     ],
-    yearsExp: 'AÃ±os de Experiencia',
+    yearsExp: 'Años de Experiencia',
     contact: 'Contacto',
     contactTitle: 'Construyamos Juntos',
-    contactDesc: 'Â¿Listo para iniciar su prÃ³ximo proyecto de infraestructura industrial o minera? ContÃ¡ctenos para una consulta.',
+    contactDesc: '¿Listo para iniciar su próximo proyecto de infraestructura industrial o minera? Contáctenos para una consulta.',
     formName: 'Nombre',
     formEmail: 'Correo',
     formProject: 'Tipo de Proyecto',
     formMessage: 'Mensaje',
     formPlaceholderName: 'Su nombre completo',
     formPlaceholderEmail: 'correo@ejemplo.com',
-    formPlaceholderMessage: 'CuÃ©ntenos sobre su proyecto...',
+    formPlaceholderMessage: 'Cuéntenos sobre su proyecto...',
     formProjectTypes: [
-      'InstalaciÃ³n Industrial',
+      'Instalación Industrial',
       'Infraestructura Minera',
       'Salas de Control',
-      'ExpansiÃ³n de Planta',
+      'Expansión de Planta',
       'Otro'
     ],
     submitMessage: 'Enviar Mensaje',
         intranet: 'Acceso Equipo',
     allRights: 'Todos los derechos reservados',
     downloadPortfolio: 'Descargar Portafolio',
-    description: 'Especialistas en soluciones de ingenierÃ­a'
+    description: 'Especialistas en soluciones de ingeniería'
   },
   en: {
     nav: ['Home', 'About', 'Services', 'Projects', 'Contact'],
@@ -195,55 +195,55 @@ const translations = {
     description: 'Engineering solutions specialists'
   },
   pt: {
-    nav: ['InÃ­cio', 'Sobre', 'ServiÃ§os', 'Projetos', 'Contato'],
+    nav: ['Início', 'Sobre', 'Serviços', 'Projetos', 'Contato'],
     tagline: 'Outsourcing de arquitetura para sua engenharia',
     heroTitle1: 'SUA EQUIPE DE ARQUITETURA',
-    heroTitle2: 'INTEGRADA Ã SUA ENGENHARIA',
-    heroDesc: 'Nos acoplamos Ã  sua equipe de projeto como uma extensÃ£o da sua engenharia, adotando sua codificaÃ§Ã£o, manuais e padrÃµes de entrega. Desenvolvemos projetos, expedientes tÃ©cnicos e soluÃ§Ãµes construtivas coordenadas com suas disciplinas.',
-    heroSubdesc: 'Operamos sob seus processos internos, codificaÃ§Ã£o e prazos. O resultado: entregÃ¡veis livres de interferÃªncias, prontos para construÃ§Ã£o e compatÃ­veis com o padrÃ£o do seu mandante.',
+    heroTitle2: 'INTEGRADA À SUA ENGENHARIA',
+    heroDesc: 'Nos acoplamos à sua equipe de projeto como uma extensão da sua engenharia, adotando sua codificação, manuais e padrões de entrega. Desenvolvemos projetos, expedientes técnicos e soluções construtivas coordenadas com suas disciplinas.',
+    heroSubdesc: 'Operamos sob seus processos internos, codificação e prazos. O resultado: entregáveis livres de interferências, prontos para construção e compatíveis com o padrão do seu mandante.',
     viewProjects: 'Ver Projetos',
     contactUs: 'Contate-nos',
     about: 'Sobre',
-    aboutTitle: 'Consultoria TÃ©cnica em Arquitetura para empresas de Engenharia',
-    aboutSubtitle: 'Mais de 10 anos de experiÃªncia profissional integrando a arquitetura como disciplina crÃ­tica em projetos de mineraÃ§Ã£o e industriais.',
-    aboutText1: 'Somos um escritÃ³rio especializado no desenvolvimento de infraestrutura para a grande mineraÃ§Ã£o e indÃºstria. Nos diferenciamos ao abordar a arquitetura nÃ£o apenas como um fim estÃ©tico, mas como um componente chave operacional que deve responder Ã s exigÃªncias da produÃ§Ã£o, seguranÃ§a e manutenÃ§Ã£o de seus processos.',
-    aboutText2: 'Entendemos a linguagem da engenharia. Nosso trabalho se integra fluidamente com as especialidades estruturais, elÃ©tricas, mecÃ¢nicas e PMO, garantindo entregÃ¡veis livres de interferÃªncias, compatÃ­veis com a codificaÃ§Ã£o do cliente e otimizados para o ciclo de vida dos ativos.',
+    aboutTitle: 'Consultoria Técnica em Arquitetura para empresas de Engenharia',
+    aboutSubtitle: 'Mais de 10 anos de experiência profissional integrando a arquitetura como disciplina crítica em projetos de mineração e industriais.',
+    aboutText1: 'Somos um escritório especializado no desenvolvimento de infraestrutura para a grande mineração e indústria. Nos diferenciamos ao abordar a arquitetura não apenas como um fim estético, mas como um componente chave operacional que deve responder às exigências da produção, segurança e manutenção de seus processos.',
+    aboutText2: 'Entendemos a linguagem da engenharia. Nosso trabalho se integra fluidamente com as especialidades estruturais, elétricas, mecânicas e PMO, garantindo entregáveis livres de interferências, compatíveis com a codificação do cliente e otimizados para o ciclo de vida dos ativos.',
     pillar1Title: 'Foco em Processos',
-    pillar1Desc: 'Projetamos a partir da lÃ³gica do processo produtivo. Cada metro quadrado Ã© planejado para facilitar a operaÃ§Ã£o, o fluxo de pessoal e a continuidade do serviÃ§o.',
+    pillar1Desc: 'Projetamos a partir da lógica do processo produtivo. Cada metro quadrado é planejado para facilitar a operação, o fluxo de pessoal e a continuidade do serviço.',
     pillar2Title: 'Rigor Normativo',
-    pillar2Desc: 'DomÃ­nio de normativas e padrÃµes de seguranÃ§a para a grande mineraÃ§Ã£o e indÃºstria. Entregamos expedientes completos para obter as aprovaÃ§Ãµes necessÃ¡rias para a execuÃ§Ã£o.',
-    pillar3Title: 'CoordenaÃ§Ã£o Multidisciplinar',
-    pillar3Desc: 'Trabalhamos em Revit/BIM e entregamos modelos coordenados no formato e codificaÃ§Ã£o que seu projeto requeira. Integramo-nos com as disciplinas estrutural, mecÃ¢nica, elÃ©trica e instrumentaÃ§Ã£o sem gerar interferÃªncias nem retrabalhos.',
-    pillar4Title: 'Modelo FlexÃ­vel',
-    pillar4Desc: 'Acesse uma equipe especializada de arquitetura apenas quando seu projeto necessitar. Sem overhead permanente e com capacidade disponÃ­vel para atender seus prazos e nos acoplarmos aos seus processos internos de manuais e codificaÃ§Ãµes.',
+    pillar2Desc: 'Domínio de normativas e padrões de segurança para a grande mineração e indústria. Entregamos expedientes completos para obter as aprovações necessárias para a execução.',
+    pillar3Title: 'Coordenação Multidisciplinar',
+    pillar3Desc: 'Trabalhamos em Revit/BIM e entregamos modelos coordenados no formato e codificação que seu projeto requeira. Integramo-nos com as disciplinas estrutural, mecânica, elétrica e instrumentação sem gerar interferências nem retrabalhos.',
+    pillar4Title: 'Modelo Flexível',
+    pillar4Desc: 'Acesse uma equipe especializada de arquitetura apenas quando seu projeto necessitar. Sem overhead permanente e com capacidade disponível para atender seus prazos e nos acoplarmos aos seus processos internos de manuais e codificações.',
     highlighted: 'Projetos',
     highlightedTitle: 'Projetos Destacados',
-    highlightedDesc: 'Alguns dos nossos projetos mais representativos na grande mineraÃ§Ã£o.',
+    highlightedDesc: 'Alguns dos nossos projetos mais representativos na grande mineração.',
     viewDetails: 'Ver Detalhes',
-    portfolio: 'PortfÃ³lio',
-    featuredProjects: 'TrajetÃ³ria de Projetos',
-    projectsDesc: 'Mais de 20 projetos executados para a grande mineraÃ§Ã£o e indÃºstria desde 2017.',
-    engineeringDev: 'Desenvolvimento de Engenharia PrÃ³prio (via CHKING)',
-    counterpartReview: 'Contraparte / RevisÃ£o (via CHKING)',
+    portfolio: 'Portfólio',
+    featuredProjects: 'Trajetória de Projetos',
+    projectsDesc: 'Mais de 20 projetos executados para a grande mineração e indústria desde 2017.',
+    engineeringDev: 'Desenvolvimento de Engenharia Próprio (via CHKING)',
+    counterpartReview: 'Contraparte / Revisão (via CHKING)',
     colYear: 'Ano',
     colProject: 'Projeto',
     colClient: 'Cliente',
-    colCompany: 'Empresa LÃ­der',
-    services: 'ServiÃ§os',
-    servicesTitle: 'SoluÃ§Ãµes Especializadas',
-    servicesDesc: 'Oferecemos serviÃ§os arquitetÃ´nicos integrais projetados especificamente para projetos de engenharia, instalaÃ§Ãµes industriais e operaÃ§Ãµes de mineraÃ§Ã£o em grande escala.',
+    colCompany: 'Empresa Líder',
+    services: 'Serviços',
+    servicesTitle: 'Soluções Especializadas',
+    servicesDesc: 'Oferecemos serviços arquitetônicos integrais projetados especificamente para projetos de engenharia, instalações industriais e operações de mineração em grande escala.',
     servicesList: [
-      'Master Plan de Arquitetura para estudo de InstalaÃ§Ãµes e Canteiros',
-      'EdificaÃ§Ã£o e remodelaÃ§Ã£o de espaÃ§os chave como EscritÃ³rios e VestiÃ¡rios',
-      'Salas de Controle, de Servidores, ElÃ©tricas e TÃ©cnicas',
-      'EdificaÃ§Ã£o tÃ©cnica para RESPEL, Armazenamento e Truck Shops',
-      'RevisÃ£o de contraparte de plantas e documentos',
-      'SupervisÃ£o de Campo de execuÃ§Ã£o e avanÃ§os'
+      'Master Plan de Arquitetura para estudo de Instalações e Canteiros',
+      'Edificação e remodelação de espaços chave como Escritórios e Vestiários',
+      'Salas de Controle, de Servidores, Elétricas e Técnicas',
+      'Edificação técnica para RESPEL, Armazenamento e Truck Shops',
+      'Revisão de contraparte de plantas e documentos',
+      'Supervisão de Campo de execução e avanços'
     ],
-    yearsExp: 'Anos de ExperiÃªncia',
+    yearsExp: 'Anos de Experiência',
     contact: 'Contato',
     contactTitle: 'Vamos Construir Juntos',
-    contactDesc: 'Pronto para iniciar seu prÃ³ximo projeto de infraestrutura industrial ou de mineraÃ§Ã£o? Entre em contato conosco para uma consulta.',
+    contactDesc: 'Pronto para iniciar seu próximo projeto de infraestrutura industrial ou de mineração? Entre em contato conosco para uma consulta.',
     formName: 'Nome',
     formEmail: 'E-mail',
     formProject: 'Tipo de Projeto',
@@ -252,126 +252,126 @@ const translations = {
     formPlaceholderEmail: 'email@exemplo.com',
     formPlaceholderMessage: 'Conte-nos sobre seu projeto...',
     formProjectTypes: [
-      'InstalaÃ§Ã£o Industrial',
-      'Infraestrutura de MineraÃ§Ã£o',
+      'Instalação Industrial',
+      'Infraestrutura de Mineração',
       'Salas de Controle',
-      'ExpansÃ£o de Planta',
+      'Expansão de Planta',
       'Outro'
     ],
     submitMessage: 'Enviar Mensagem',
         intranet: 'Acesso da Equipe',
     allRights: 'Todos os direitos reservados',
-    downloadPortfolio: 'Baixar PortfÃ³lio',
-    description: 'Especialistas em soluÃ§Ãµes de engenharia'
+    downloadPortfolio: 'Baixar Portfólio',
+    description: 'Especialistas em soluções de engenharia'
   },
   zh: {
-    nav: ['é¦é¡µ', 'å³äº', 'æå¡', 'é¡¹ç®', 'èç³»'],
-    tagline: 'ä¸ºæ¨çå·¥ç¨æä¾å»ºç­å¤åæå¡',
-    heroTitle1: 'æ¨çå»ºç­å¢é',
-    heroTitle2: 'èå¥æ¨çå·¥ç¨',
-    heroDesc: 'æä»¬ä½ä¸ºå·¥ç¨çå»¶ä¼¸èå¥æ¨çé¡¹ç®å¢éï¼éç¨æ¨çç¼ç ãæååäº¤ä»æ åãæä»¬å¼åé¡¹ç®ãææ¯æä»¶åä¸æ¨åå­¦ç§åè°çæ½å·¥è§£å³æ¹æ¡ã',
-    heroSubdesc: 'æä»¬æç§æ¨çåé¨æµç¨ãç¼ç åæ¶é´è¡¨è¿ä½ãç»æï¼æ å¹²æ°çäº¤ä»ç©ï¼å¯ç«å³æ½å·¥ï¼ç¬¦åæ¨ä¸ä¸»çæ åã',
-    viewProjects: 'æ¥çé¡¹ç®',
-    contactUs: 'èç³»æä»¬',
-    about: 'å³äºæä»¬',
-    aboutTitle: 'å·¥ç¨å¬å¸ææ¯å»ºç­å¨è¯¢',
-    aboutSubtitle: '10å¤å¹´çä¸ä¸ç»éªï¼å°å»ºç­ä½ä¸ºéç¿åå·¥ä¸é¡¹ç®ä¸­çå³é®å­¦ç§è¿è¡æ´åã',
-    aboutText1: 'æä»¬æ¯ä¸å®¶ä¸é¨ä»äºå¤§åéç¿åå·¥ä¸åºç¡è®¾æ½å¼åçåå¬å®¤ãæä»¬çä¸åä¹å¤å¨äºï¼æä»¬ä¸ä»å°å»ºç­è§ä¸ºå®¡ç¾ç®çï¼èä¸ä½ä¸ºå¿é¡»ååºæ¨æµç¨ççäº§ãå®å¨åç»´æ¤è¦æ±çå³é®è¿è¥ç»ä»¶ã',
-    aboutText2: 'æä»¬çè§£å·¥ç¨è¯­è¨ãæä»¬çå·¥ä½ä¸ç»æãçµæ°ãæºæ¢°åPMOä¸ä¸æµçéæï¼ç¡®ä¿äº¤ä»æææ å¹²æ°ãä¸å®¢æ·ç¼ç æ åå¼å®¹å¹¶éå¯¹èµäº§çå½å¨æè¿è¡ä¼åã',
-    pillar1Title: 'æµç¨éç¹',
-    pillar1Desc: 'æä»¬ä»çäº§æµç¨çé»è¾åºåè¿è¡è®¾è®¡ãæ¯å¹³æ¹ç±³é½ç»è¿è§åï¼ä»¥ä¿è¿è¿è¥ãäººåæµå¨åæå¡è¿ç»­æ§ã',
-    pillar2Title: 'è§èä¸¥è°¨',
-    pillar2Desc: 'ç²¾éå¤§åéç¿åå·¥ä¸çæ³è§åå®å¨æ åãæä»¬äº¤ä»å®æ´çæä»¶ä»¥è·å¾æ§è¡æéçæ¹åã',
-    pillar3Title: 'å¤å­¦ç§åè°',
-    pillar3Desc: 'æä»¬ä½¿ç¨Revit/BIMå·¥ä½ï¼æç§æ¨é¡¹ç®è¦æ±çæ ¼å¼åç¼ç äº¤ä»åè°æ¨¡åãæä»¬ä¸ç»æãæºæ¢°ãçµæ°åä»ªè¡¨å­¦ç§éæï¼ä¸äº§çå¹²æ°æè¿å·¥ã',
-    pillar4Title: 'çµæ´»æ¨¡å¼',
-    pillar4Desc: 'ä»å¨æ¨çé¡¹ç®éè¦æ¶è®¿é®ä¸ä¸å»ºç­å¢éãæ æ°¸ä¹å¼éï¼éæ¶å¯ç¨çè½åæ¥æ»¡è¶³æ¨çæªæ­¢æ¥æï¼å¹¶èå¥æ¨çåé¨æååç¼ç æµç¨ã',
-    highlighted: 'é¡¹ç®',
-    highlightedTitle: 'ç²¾éé¡¹ç®',
-    highlightedDesc: 'æä»¬å¨å¤§åéç¿é¢åæå·ä»£è¡¨æ§çé¨åé¡¹ç®ã',
-    viewDetails: 'æ¥çè¯¦æ',
-    portfolio: 'é¡¹ç®ç»å',
-    featuredProjects: 'é¡¹ç®å±¥å',
-    projectsDesc: 'èª2017å¹´ä»¥æ¥ä¸ºå¤§åéç¿åå·¥ä¸æ§è¡äº20å¤ä¸ªé¡¹ç®ã',
-    engineeringDev: 'èªæå·¥ç¨å¼å (via CHKING)',
-    counterpartReview: 'å¯¹æ¹/å®¡æ¥ (via CHKING)',
-    colYear: 'å¹´ä»½',
-    colProject: 'é¡¹ç®',
-    colClient: 'å®¢æ·',
-    colCompany: 'é¢å¤´å¬å¸',
-    services: 'æå¡',
-    servicesTitle: 'ä¸ä¸è§£å³æ¹æ¡',
-    servicesDesc: 'æä»¬æä¾ä¸é¨ä¸ºå·¥ç¨é¡¹ç®ãå·¥ä¸è®¾æ½åå¤§åéç¿ä½ä¸è®¾è®¡çå¨é¢å»ºç­æå¡ã',
+    nav: ['首页', '关于', '服务', '项目', '联系'],
+    tagline: '为您的工程提供建筑外包服务',
+    heroTitle1: '您的建筑团队',
+    heroTitle2: '融入您的工程',
+    heroDesc: '我们作为工程的延伸融入您的项目团队，采用您的编码、手册和交付标准。我们开发项目、技术文件和与您各学科协调的施工解决方案。',
+    heroSubdesc: '我们按照您的内部流程、编码和时间表运作。结果：无干扰的交付物，可立即施工，符合您业主的标准。',
+    viewProjects: '查看项目',
+    contactUs: '联系我们',
+    about: '关于我们',
+    aboutTitle: '工程公司技术建筑咨询',
+    aboutSubtitle: '10多年的专业经验，将建筑作为采矿和工业项目中的关键学科进行整合。',
+    aboutText1: '我们是一家专门从事大型采矿和工业基础设施开发的办公室。我们的不同之处在于，我们不仅将建筑视为审美目的，而且作为必须响应您流程的生产、安全和维护要求的关键运营组件。',
+    aboutText2: '我们理解工程语言。我们的工作与结构、电气、机械和PMO专业流畅集成，确保交付成果无干扰、与客户编码标准兼容并针对资产生命周期进行优化。',
+    pillar1Title: '流程重点',
+    pillar1Desc: '我们从生产流程的逻辑出发进行设计。每平方米都经过规划，以促进运营、人员流动和服务连续性。',
+    pillar2Title: '规范严谨',
+    pillar2Desc: '精通大型采矿和工业的法规和安全标准。我们交付完整的文件以获得执行所需的批准。',
+    pillar3Title: '多学科协调',
+    pillar3Desc: '我们使用Revit/BIM工作，按照您项目要求的格式和编码交付协调模型。我们与结构、机械、电气和仪表学科集成，不产生干扰或返工。',
+    pillar4Title: '灵活模式',
+    pillar4Desc: '仅在您的项目需要时访问专业建筑团队。无永久开销，随时可用的能力来满足您的截止日期，并融入您的内部手册和编码流程。',
+    highlighted: '项目',
+    highlightedTitle: '精选项目',
+    highlightedDesc: '我们在大型采矿领域最具代表性的部分项目。',
+    viewDetails: '查看详情',
+    portfolio: '项目组合',
+    featuredProjects: '项目履历',
+    projectsDesc: '自2017年以来为大型采矿和工业执行了20多个项目。',
+    engineeringDev: '自有工程开发 (via CHKING)',
+    counterpartReview: '对方/审查 (via CHKING)',
+    colYear: '年份',
+    colProject: '项目',
+    colClient: '客户',
+    colCompany: '领头公司',
+    services: '服务',
+    servicesTitle: '专业解决方案',
+    servicesDesc: '我们提供专门为工程项目、工业设施和大型采矿作业设计的全面建筑服务。',
     servicesList: [
-      'å·¥å°åè®¾æ½ç ç©¶å»ºç­æ»ä½è§å',
-      'å³é®ç©ºé´çå»ºè®¾åæ¹é ï¼å¦åå¬å®¤åæ´è¡£å®¤',
-      'æ§å¶å®¤ãæå¡å¨å®¤ãçµæ°å®¤åææ¯å®¤',
-      'HAZMATãä»å¨åå¡è½¦è½¦é´çææ¯å»ºè®¾',
-      'å¾çº¸åæä»¶çå¯¹æ¹å®¡æ¥',
-      'ç°åºæ§è¡åè¿åº¦çç£'
+      '工地和设施研究建筑总体规划',
+      '关键空间的建设和改造，如办公室和更衣室',
+      '控制室、服务器室、电气室和技术室',
+      'HAZMAT、仓储和卡车车间的技术建设',
+      '图纸和文件的对方审查',
+      '现场执行和进度监督'
     ],
-    yearsExp: 'å¹´ç»éª',
-    contact: 'èç³»æ¹å¼',
-    contactTitle: 'è®©æä»¬ä¸èµ·å»ºè®¾',
-    contactDesc: 'åå¤å¼å§æ¨çä¸ä¸ä¸ªå·¥ä¸æéç¿åºç¡è®¾æ½é¡¹ç®äºåï¼è¯·èç³»æä»¬è¿è¡å¨è¯¢ã',
-    formName: 'å§å',
-    formEmail: 'çµå­é®ä»¶',
-    formProject: 'é¡¹ç®ç±»å',
-    formMessage: 'ä¿¡æ¯',
-    formPlaceholderName: 'æ¨çå¨å',
+    yearsExp: '年经验',
+    contact: '联系方式',
+    contactTitle: '让我们一起建设',
+    contactDesc: '准备开始您的下一个工业或采矿基础设施项目了吗？请联系我们进行咨询。',
+    formName: '姓名',
+    formEmail: '电子邮件',
+    formProject: '项目类型',
+    formMessage: '信息',
+    formPlaceholderName: '您的全名',
     formPlaceholderEmail: 'email@example.com',
-    formPlaceholderMessage: 'åè¯æä»¬æ¨çé¡¹ç®...',
+    formPlaceholderMessage: '告诉我们您的项目...',
     formProjectTypes: [
-      'å·¥ä¸è®¾æ½',
-      'éç¿åºç¡è®¾æ½',
-      'æ§å¶å®¤',
-      'å·¥åæ©å»º',
-      'å¶ä»'
+      '工业设施',
+      '采矿基础设施',
+      '控制室',
+      '工厂扩建',
+      '其他'
     ],
-    submitMessage: 'åéæ¶æ¯',
-        intranet: 'å¢éè®¿é®',
-    allRights: 'çæææ',
-    downloadPortfolio: 'ä¸è½½ä½åé',
-    description: 'å·¥ç¨è§£å³æ¹æ¡ä¸å®¶'
+    submitMessage: '发送消息',
+        intranet: '团队访问',
+    allRights: '版权所有',
+    downloadPortfolio: '下载作品集',
+    description: '工程解决方案专家'
   }
 };
 
 const engineeringProjects = [
-  { year: '2025', project: 'Servicio IngenierÃ­a IPS/SPS IngenierÃ­a IPS/SPS Proyecto Minero Las Yacas', client: 'CMM' },
-  { year: '2025', project: 'IngenierÃ­a DELIVERY RemediaciÃ³n Edificio CHO - Puerto Coloso (Delivery)', client: 'BHP-COLOSO' },
-  { year: '2024', project: 'IngenierÃ­a SPS/DPS Facilities E-AT Stripping', client: 'BHP-MEL' },
-  { year: '2024', project: 'AS Built EN-AT - Facilities AutonomÃ­a MEL', client: 'BHP-MEL' },
+  { year: '2025', project: 'Servicio Ingeniería IPS/SPS Ingeniería IPS/SPS Proyecto Minero Las Yacas', client: 'CMM' },
+  { year: '2025', project: 'Ingeniería DELIVERY Remediación Edificio CHO - Puerto Coloso (Delivery)', client: 'BHP-COLOSO' },
+  { year: '2024', project: 'Ingeniería SPS/DPS Facilities E-AT Stripping', client: 'BHP-MEL' },
+  { year: '2024', project: 'AS Built EN-AT - Facilities Autonomía MEL', client: 'BHP-MEL' },
   { year: '2023', project: 'Edificio Puerta Sur', client: 'MECASFY' },
   { year: '2022', project: 'Oficinas Corporativas GT Chile', client: 'GT CHILE' },
-  { year: '2022', project: 'IngenierÃ­a Interim Facilities AutonomÃ­a MEL', client: 'BHP-MEL' },
-  { year: '2022', project: 'IngenierÃ­a DPS EN-AT', client: 'BHP-MEL' },
-  { year: '2022', project: 'IngenierÃ­a Sala de Control SMH', client: 'BHP - SPENCE' },
+  { year: '2022', project: 'Ingeniería Interim Facilities Autonomía MEL', client: 'BHP-MEL' },
+  { year: '2022', project: 'Ingeniería DPS EN-AT', client: 'BHP-MEL' },
+  { year: '2022', project: 'Ingeniería Sala de Control SMH', client: 'BHP - SPENCE' },
   { year: '2021', project: 'Logistic Solutions', client: 'BHP-MEL' },
   { year: '2019', project: 'Flowsheets 3D de Procesos', client: 'BHP-MEL' },
   { year: '2019', project: 'Idea Campamento Cerro Colorado', client: 'BHP - C. COLORADO' },
-  { year: '2019', project: 'AmpliaciÃ³n Oficinas MECASFY', client: 'MECASFY' },
+  { year: '2019', project: 'Ampliación Oficinas MECASFY', client: 'MECASFY' },
   { year: '2018', project: 'Garita de Accesos Cerro Colorado', client: 'BHP - C. COLORADO' },
   { year: '2018', project: 'Diagramas de Flujo Cal Alianza', client: 'CAL ALIANZA' },
 ];
 
 const counterpartProjects = [
-  { year: '2023', project: 'ILNSC - InnovaciÃ³n LixiviaciÃ³n Nuevas Columnas de SimulaciÃ³n', company: 'HATCH' },
+  { year: '2023', project: 'ILNSC - Innovación Lixiviación Nuevas Columnas de Simulación', company: 'HATCH' },
   { year: '2019', project: 'Bodega y Muestrera - Spence Growth Options', company: 'ARCADIS' },
-  { year: '2018', project: 'Sala de Control LixiviaciÃ³n - Spence Growth Options', company: 'ATCO' },
+  { year: '2018', project: 'Sala de Control Lixiviación - Spence Growth Options', company: 'ATCO' },
   { year: '2017', project: 'Instalaciones Auxiliares (Truckshop, RESPEL, etc.) - Spence Growth Options', company: 'ARCADIS' },
 ];
 
 const featuredProjectsData = [
   {
     id: 1,
-    title: 'RemediaciÃ³n Edificio CHO',
-    subtitle: 'IngenierÃ­a DELIVERY (ejecutado)',
+    title: 'Remediación Edificio CHO',
+    subtitle: 'Ingeniería DELIVERY (ejecutado)',
     client: 'BHP-COLOSO',
     year: '2025',
-    description: 'DefiniciÃ³n arquitectÃ³nica y habilitaciÃ³n de espacios para la RemediaciÃ³n del Edificio CHO en Puerto Coloso. El proyecto contemplÃ³ la reconversiÃ³n de todo el edificio (420 mÂ²) en una instalaciÃ³n tÃ©cnica de alta disponibilidad, incluyendo distribuciÃ³n interna, accesos, sala tÃ©cnica para equipos elÃ©ctricos, UPS, oficinas, espacios de CoWork y mejoras generales arquitectÃ³nicas en cielos, mobiliario y otras adecuaciones.',
+    description: 'Definición arquitectónica y habilitación de espacios para la Remediación del Edificio CHO en Puerto Coloso. El proyecto contempló la reconversión de todo el edificio (420 m²) en una instalación técnica de alta disponibilidad, incluyendo distribución interna, accesos, sala técnica para equipos eléctricos, UPS, oficinas, espacios de CoWork y mejoras generales arquitectónicas en cielos, mobiliario y otras adecuaciones.',
     credits: [
       { role: 'Arquitectura', company: 'AFOR' },
-      { role: 'IngenierÃ­a', company: 'CHKING' },
+      { role: 'Ingeniería', company: 'CHKING' },
       { role: 'Mobiliario', company: '3D Concept' },
     ],
     image: '/edificio-cho.jpg',
@@ -379,10 +379,10 @@ const featuredProjectsData = [
   {
     id: 2,
     title: 'Oficinas Corporativas GT Chile',
-    subtitle: 'IngenierÃ­a DPS (ejecutado)',
+    subtitle: 'Ingeniería DPS (ejecutado)',
     client: 'GT CHILE',
     year: '2022',
-    description: 'HabilitaciÃ³n de nuevas oficinas corporativas para Grant Thornton Chile. El proyecto contemplÃ³ un diseÃ±o elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminaciÃ³n lineal LED, estanterÃ­as metÃ¡licas con vegetaciÃ³n integrada como separadores de ambientes, y estaciones de trabajo colaborativas. Se priorizÃ³ la luz natural, la calidez de los materiales y una distribuciÃ³n abierta que fomenta el trabajo en equipo.',
+    description: 'Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. El proyecto contempló un diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes, y estaciones de trabajo colaborativas. Se priorizó la luz natural, la calidez de los materiales y una distribución abierta que fomenta el trabajo en equipo.',
     credits: [
       { role: 'Arquitectura', company: 'AFOR' },
       { role: 'Mobiliario', company: 'QUEBRADA' },
@@ -392,36 +392,36 @@ const featuredProjectsData = [
   {
     id: 3,
     title: 'Proyecto Minero Las Yacas',
-    subtitle: 'IngenierÃ­a IPS/SPS (estudio)',
+    subtitle: 'Ingeniería IPS/SPS (estudio)',
     client: 'CMM',
     year: '2025',
-    description: 'DiseÃ±o arquitectÃ³nico del barrio cÃ­vico e infraestructura de apoyo para el proyecto minero Las Yacas en la comuna de VicuÃ±a. El alcance contemplÃ³ la definiciÃ³n de oficinas administrativas, control de ingreso, baÃ±os y salas de cambio para personal operativo, con una distribuciÃ³n modular orientada a optimizar flujos de circulaciÃ³n y cumplimiento normativo. Se desarrollaron layouts de emplazamiento, estacionamientos y accesos vehiculares, integrando la arquitectura al plan general de la faena que incluye chancado, lixiviaciÃ³n, SX-EW y servicios auxiliares.',
+    description: 'Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas en la comuna de Vicuña. El alcance contempló la definición de oficinas administrativas, control de ingreso, baños y salas de cambio para personal operativo, con una distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Se desarrollaron layouts de emplazamiento, estacionamientos y accesos vehiculares, integrando la arquitectura al plan general de la faena que incluye chancado, lixiviación, SX-EW y servicios auxiliares.',
     credits: [
       { role: 'Arquitectura', company: 'AFOR' },
-      { role: 'IngenierÃ­a', company: 'CHKING' },
+      { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/las-yacas.jpg',
   },
   {
     id: 4,
     title: 'Facilities E-AT Stripping',
-    subtitle: 'IngenierÃ­a SPS/DPS (ejecutado)',
+    subtitle: 'Ingeniería SPS/DPS (ejecutado)',
     client: 'BHP-MEL',
     year: '2024',
-    description: 'Desarrollo de arquitectura para las Facilities del programa de Camiones AutÃ³nomos (EN-AT) en Minera Escondida. El proyecto requiriÃ³ diseÃ±ar con criterio estÃ©tico las instalaciones de soporte para la operaciÃ³n autÃ³noma, incluyendo la Sala de Control de Perforadoras con piso tÃ©cnico elevado, revestimientos de madera en pilares y muros, estaciones de monitoreo multiscreen, climatizaciÃ³n de precisiÃ³n y seÃ±alÃ©tica normativa. Se desarrollÃ³ ingenierÃ­a Interim con diseÃ±os aptos para construcciÃ³n, definiendo distribuciÃ³n interior, accesos, iluminaciÃ³n tÃ©cnica y requerimientos constructivos de cada facility.',
+    description: 'Desarrollo de arquitectura para las Facilities del programa de Camiones Autónomos (EN-AT) en Minera Escondida. El proyecto requirió diseñar con criterio estético las instalaciones de soporte para la operación autónoma, incluyendo la Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera en pilares y muros, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Se desarrolló ingeniería Interim con diseños aptos para construcción, definiendo distribución interior, accesos, iluminación técnica y requerimientos constructivos de cada facility.',
     credits: [
       { role: 'Arquitectura', company: 'AFOR' },
-      { role: 'IngenierÃ­a', company: 'CHKING' },
+      { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/facilities-enat.jpg',
   },
   {
     id: 6,
     title: 'Edificio Puerta Sur',
-    subtitle: 'IngenierÃ­a DPS (permisologÃ­a)',
+    subtitle: 'Ingeniería DPS (permisología)',
     client: 'MECASFY',
     year: '2023',
-    description: 'DiseÃ±o arquitectÃ³nico de edificio industrial y corporativo para Mecasfy en el sector Santa Alejandra. El proyecto contemplÃ³ el desarrollo de una nave industrial con oficinas administrativas integradas, fachada de policarbonato translÃºcido con estructura metÃ¡lica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.',
+    description: 'Diseño arquitectónico de edificio industrial y corporativo para Mecasfy en el sector Santa Alejandra. El proyecto contempló el desarrollo de una nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.',
     credits: [
       { role: 'Arquitectura', company: 'AFOR' },
     ],
@@ -430,13 +430,13 @@ const featuredProjectsData = [
   {
     id: 8,
     title: 'Sala de Control GOM EN-AT',
-    subtitle: 'IngenierÃ­a DPS (ejecutado)',
+    subtitle: 'Ingeniería DPS (ejecutado)',
     client: 'BHP - MEL',
     year: '2022',
-    description: 'IngenierÃ­a de Detalles para la Sala de Control GOM del proyecto EN-AT. IntervenciÃ³n integral del recinto con cielo metÃ¡lico lineal, revestimiento mural en listonerÃ­a de madera, iluminaciÃ³n LED lineal empotrada y distribuciÃ³n ergonÃ³mica de puestos de operaciÃ³n con brazos articulados y monitores multipantalla. El diseÃ±o prioriza la concentraciÃ³n operacional, confort acÃºstico, control lumÃ­nico y continuidad visual para jornadas extendidas de monitoreo de procesos mineros.',
+    description: 'Ingeniería de Detalles para la Sala de Control GOM del proyecto EN-AT. Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. El diseño prioriza la concentración operacional, confort acústico, control lumínico y continuidad visual para jornadas extendidas de monitoreo de procesos mineros.',
     credits: [
       { role: 'Arquitectura', company: 'AFOR' },
-      { role: 'IngenierÃ­a', company: 'CHKING' },
+      { role: 'Ingeniería', company: 'CHKING' },
     ],
     image: '/gom-enat.jpg',
     imagePosition: 'center 70%',
@@ -462,7 +462,7 @@ const ProjectModal = ({ project, t, onClose }) => {
         {/* Close button */}
         <button onClick={onClose}
           className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-neutral-900/60 hover:bg-neutral-900/80 text-white rounded-full transition-colors">
-          â
+          ✕
         </button>
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image */}
@@ -676,10 +676,10 @@ const ProjectCard = ({ title, index, t, delay = 0 }) => {
 const LanguageSelector = ({ currentLang, setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const langs = [
-    { code: 'es', label: 'ES', full: 'EspaÃ±ol', flag: 'ðªð¸' },
-    { code: 'en', label: 'EN', full: 'English', flag: 'ðºð¸' },
-    { code: 'pt', label: 'PT', full: 'PortuguÃªs', flag: 'ð§ð·' },
-    { code: 'zh', label: 'ZH', full: 'ä¸­æ', flag: 'ð¨ð³' }
+    { code: 'es', label: 'ES', full: 'Español', flag: '🇪🇸' },
+    { code: 'en', label: 'EN', full: 'English', flag: '🇺🇸' },
+    { code: 'pt', label: 'PT', full: 'Português', flag: '🇧🇷' },
+    { code: 'zh', label: 'ZH', full: '中文', flag: '🇨🇳' }
   ];
 
   return (
@@ -715,7 +715,7 @@ const LanguageSelector = ({ currentLang, setLang }) => {
 };
 
 
-// Componente de partÃ­culas flotantes para el hero
+// Componente de partículas flotantes para el hero
 const FloatingParticles = () => {
   return (
     <>
@@ -1205,7 +1205,7 @@ const Footer = ({ t }) => {
             <p className={`text-white/50 text-xs font-light text-center md:text-right transition-all duration-700 delay-300 ${
               isVisible ? 'opacity-100' : 'opacity-0'
             }`}>
-              Â© 2025 A4E. {t.allRights}
+              © 2025 A4E. {t.allRights}
             </p>
           </div>
         </div>
@@ -1394,7 +1394,7 @@ export default function A4ELanding() {
             dark={true}
           />
 
-          {/* Tabla 1: Desarrollo de IngenierÃ­a Propio */}
+          {/* Tabla 1: Desarrollo de Ingeniería Propio */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-6 bg-white" />
@@ -1424,7 +1424,7 @@ export default function A4ELanding() {
             </div>
           </div>
 
-          {/* Tabla 2: Contraparte / RevisiÃ³n */}
+          {/* Tabla 2: Contraparte / Revisión */}
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-6 bg-white" />
