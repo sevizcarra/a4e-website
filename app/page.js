@@ -1398,7 +1398,7 @@ export default function A4ELanding() {
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-6 bg-white" />
-              <h3 className="text-lg font-medium text-white">{t.engineeringDev}</h3>
+              <h3 className="text-lg font-medium text-white">{t.engineeringDev.split('CHKING')[0]}<a href="https://chking.cl/" target="_blank" rel="noopener noreferrer" className="underline hover:text-orange-300 transition-colors">CHKING</a>{t.engineeringDev.split('CHKING')[1]}</h3>
               <span className="text-xs text-white/50 font-mono">{engineeringProjects.length}</span>
             </div>
 
@@ -1428,7 +1428,7 @@ export default function A4ELanding() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-6 bg-white" />
-              <h3 className="text-lg font-medium text-white">{t.counterpartReview}</h3>
+              <h3 className="text-lg font-medium text-white">{t.counterpartReview.split('CHKING')[0]}<a href="https://chking.cl/" target="_blank" rel="noopener noreferrer" className="underline hover:text-orange-300 transition-colors">CHKING</a>{t.counterpartReview.split('CHKING')[1]}</h3>
               <span className="text-xs text-white/50 font-mono">{counterpartProjects.length}</span>
             </div>
 
