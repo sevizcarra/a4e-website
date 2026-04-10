@@ -1153,7 +1153,7 @@ const Footer = ({ t }) => {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   return (
-    <footer ref={ref} className="relative bg-neutral-800 py-12 border-t border-neutral-700 overflow-hidden">
+    <footer ref={ref} className="relative bg-[#444c59] py-12 border-t border-neutral-700 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-neutral-800" />
 
       <div className={`absolute top-0 left-1/4 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl transition-all duration-1000 ${
@@ -1340,7 +1340,7 @@ export default function A4ELanding() {
       </section>
       <AboutSection t={t} />
 
-      <section id="services" className="relative py-20 md:py-28 bg-neutral-900 overflow-hidden">
+      <section id="services" className="relative py-20 md:py-28 bg-[#444c59] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ServicesContent t={t} />
