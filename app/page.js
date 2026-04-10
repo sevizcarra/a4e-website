@@ -570,7 +570,7 @@ const A4ELogo = ({ className = "" }) => {
 
 // Rotating tagline under logo
 const RotatingTagline = () => {
-  const words = ['Engineering', 'Processes'];
+  const words = ['Engineering', 'Your Processes'];
   const [index, setIndex] = React.useState(0);
   const [phase, setPhase] = React.useState('in');
   React.useEffect(() => {
