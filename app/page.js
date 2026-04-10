@@ -584,7 +584,7 @@ const RotatingTagline = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="mt-2 text-left whitespace-nowrap">
+    <div className="mt-2 text-left whitespace-nowrap" style={{minWidth: "300px"}}>
       <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
         Architecture for{' '}
       </span>
@@ -693,7 +693,7 @@ const LanguageSelector = ({ currentLang, setLang }) => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 bg-neutral-900 border border-white/20 shadow-xl min-w-[160px] z-50">
+        <div className="absolute top-full right-0 mt-2 bg-neutral-900 border border-white/20 shadow-xl min-w-[80px] z-50">
           {langs.map((lang) => (
             <button
               key={lang.code}
@@ -705,8 +705,7 @@ const LanguageSelector = ({ currentLang, setLang }) => {
                 currentLang === lang.code ? 'bg-orange-600/10 text-orange-400' : 'text-white/70 hover:text-white'
               }`}
             >
-              <span className="text-lg">{lang.flag}</span>
-              <span className="text-sm font-medium">{lang.full}</span>
+              <span className="text-sm font-medium tracking-wider">{lang.label}</span>
             </button>
           ))}
         </div>
@@ -1271,6 +1270,32 @@ export default function A4ELanding() {
         </div>
       </header>
 
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-40 bg-neutral-900/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8 md:hidden">
+          <nav className="flex flex-col items-center gap-6">
+            {t.nav.map(function(item, i) {
+              return (
+                <a
+                  key={i}
+                  href={'#' + ['home', 'about', 'services', 'projects', 'contact'][i]}
+                  onClick={function(e) {
+                    e.preventDefault();
+                    var target = document.getElementById(['home', 'about', 'services', 'projects', 'contact'][i]);
+                    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+                    setMenuOpen(false);
+                  }}
+                  className="text-white/80 hover:text-orange-500 text-lg tracking-widest uppercase transition-colors"
+                >
+                  {item}
+                </a>
+              );
+            })}
+          </nav>
+          <LanguageSelector currentLang={lang} setLang={setLang} />
+        </div>
+      )}
+
       {/* Hero Principal con Imagen de Fondo */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
@@ -1290,7 +1315,7 @@ export default function A4ELanding() {
 
             {/* Text Right */}
             <div className="flex-1 text-center md:text-right max-w-2xl">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white tracking-tight leading-tight mb-6">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-light text-white tracking-tight leading-tight mb-6">
                 <span className="block">{t.heroTitle1}</span>
                 <span className="block text-orange-500 font-medium">{t.heroTitle2}</span>
               </h1>
