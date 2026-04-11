@@ -452,8 +452,8 @@ const ProjectModal = ({ project, t, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8" onClick={onClose}>
-      <div className="absolute inset-0 bg-neutral-900/80 backdrop-blur-sm" />
-      <div className="relative bg-[#FFF6EE] w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl"
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+      <div className="relative bg-[#ECF0EB] w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl"
         onClick={(e) => e.stopPropagation()}>
         {/* Close button */}
         <button onClick={onClose}
@@ -474,13 +474,13 @@ const ProjectModal = ({ project, t, onClose }) => {
               </div>
             )}
             <div className="absolute top-4 left-4 flex gap-2">
-              <span className="bg-[#EB5324] text-white text-xs font-medium px-3 py-1.5">{project.client}</span>
+              <span className="bg-[#FF4B24] text-white text-xs font-medium px-3 py-1.5">{project.client}</span>
               <span className="bg-neutral-900/70 text-white text-xs font-mono px-3 py-1.5">{project.year}</span>
             </div>
           </div>
           {/* Content */}
           <div className="p-8 md:p-10 flex flex-col justify-center">
-            <h3 className="text-2xl font-medium text-[#27324a] mb-4 leading-tight">{project.title}</h3>
+            <h3 className="text-2xl font-medium text-[#000000] mb-4 leading-tight">{project.title}</h3>
             <p className="text-sm text-neutral-500 leading-relaxed text-justify">{project.description}</p>
             {project.credits && (
               <div className="mt-6 pt-4 border-t border-neutral-100 flex flex-wrap gap-x-5 gap-y-2">
@@ -504,7 +504,7 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
   return (
     <div
       ref={ref}
-      className={`group relative bg-[#FFF6EE] overflow-hidden transition-all duration-700 hover:shadow-2xl cursor-pointer ${
+      className={`group relative bg-[#ECF0EB] overflow-hidden transition-all duration-700 hover:shadow-2xl cursor-pointer ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
       style={{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }}
@@ -527,7 +527,7 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
           </div>
         )}
         <div className="absolute top-3 left-3">
-          <span className="bg-[#EB5324] text-white text-xs font-medium px-2.5 py-1">{project.client}</span>
+          <span className="bg-[#FF4B24] text-white text-xs font-medium px-2.5 py-1">{project.client}</span>
         </div>
         <div className="absolute top-3 right-3">
           <span className="bg-neutral-900/70 text-white text-xs font-mono px-2 py-1">{project.year}</span>
@@ -536,9 +536,9 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-lg font-medium text-[#27324a] leading-tight">{project.title}</h3>
+        <h3 className="text-lg font-medium text-[#000000] leading-tight">{project.title}</h3>
         {project.subtitle && <p className="text-xs text-neutral-400 font-medium tracking-wide uppercase mt-1 mb-2">{project.subtitle}</p>}
-        <span className="inline-flex items-center gap-1 text-xs text-[#c4441d] font-medium tracking-wider uppercase">
+        <span className="inline-flex items-center gap-1 text-xs text-[#FF4B24] font-medium tracking-wider uppercase">
           {t.viewDetails}
           <ChevronDown className="w-3 h-3 -rotate-90" />
         </span>
@@ -554,7 +554,7 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
       </div>
 
       {/* Bottom accent */}
-      <div className="h-1 bg-gradient-to-r from-[#EB5324] to-[#c4441d] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+      <div className="h-1 bg-gradient-to-r from-[#FF4B24] to-[#FF4B24] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
     </div>
   );
 };
@@ -584,7 +584,7 @@ const RotatingTagline = () => {
       <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
         Architecture for{' '}
       </span>
-      <span className="text-[#EB5324] font-normal text-sm md:text-base lg:text-lg tracking-widest uppercase" style={{
+      <span className="text-[#FF4B24] font-normal text-sm md:text-base lg:text-lg tracking-widest uppercase" style={{
         fontFamily: 'system-ui, -apple-system, sans-serif',
         display: 'inline-block',
         transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -605,14 +605,14 @@ const ProjectCard = ({ title, index, t, delay = 0 }) => {
   return (
     <div
       ref={ref}
-      className={`group relative bg-[#FFF6EE] overflow-hidden cursor-pointer transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 ${
+      className={`group relative bg-[#ECF0EB] overflow-hidden cursor-pointer transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
       }`}
       style={{ transitionDelay: isVisible ? `${delay}ms` : '0ms' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`bg-gradient-to-r from-[#c4441d] to-[#EB5324] transition-all duration-500 ${
+      <div className={`bg-gradient-to-r from-[#FF4B24] to-[#FF4B24] transition-all duration-500 ${
         isHovered ? 'h-2' : 'h-1'
       }`} />
 
@@ -626,7 +626,7 @@ const ProjectCard = ({ title, index, t, delay = 0 }) => {
 
         <div className="absolute top-4 left-4">
           <span className={`text-4xl font-light tracking-tighter transition-all duration-500 inline-block ${
-            isHovered ? 'text-[#EB5324] scale-110' : 'text-neutral-200 scale-100'
+            isHovered ? 'text-[#FF4B24] scale-110' : 'text-neutral-200 scale-100'
           }`} style={{ transformOrigin: 'left' }}>
             {String(index + 1).padStart(2, '0')}
           </span>
@@ -635,7 +635,7 @@ const ProjectCard = ({ title, index, t, delay = 0 }) => {
         <div className={`absolute bottom-4 right-4 transition-all duration-500 ${
           isHovered ? 'opacity-100 scale-110 rotate-6' : 'opacity-20 scale-100 rotate-0'
         }`}>
-          <Building2 className="w-10 h-10 text-[#c4441d]" strokeWidth={1} />
+          <Building2 className="w-10 h-10 text-[#FF4B24]" strokeWidth={1} />
         </div>
 
         <div className={`absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent transition-all duration-500 ${
@@ -651,16 +651,16 @@ const ProjectCard = ({ title, index, t, delay = 0 }) => {
         </div>
       </div>
 
-      <div className="p-5 bg-[#FFF6EE] relative overflow-hidden">
-        <div className={`absolute inset-0 bg-[#FFF6EE] transition-transform duration-500 ease-out ${
+      <div className="p-5 bg-[#ECF0EB] relative overflow-hidden">
+        <div className={`absolute inset-0 bg-[#ECF0EB] transition-transform duration-500 ease-out ${
           isHovered ? 'translate-x-0' : '-translate-x-full'
         }`} />
 
         <div className="relative">
-          <span className="text-xs font-medium tracking-widest text-[#c4441d] uppercase mb-2 block">
+          <span className="text-xs font-medium tracking-widest text-[#FF4B24] uppercase mb-2 block">
             BHP
           </span>
-          <h3 className="text-sm font-normal text-[#27324a] leading-snug">
+          <h3 className="text-sm font-normal text-[#000000] leading-snug">
             {title}
           </h3>
         </div>
@@ -697,8 +697,8 @@ const LanguageSelector = ({ currentLang, setLang }) => {
                 setLang(lang.code);
                 setIsOpen(false);
               }}
-              className={`w-full px-4 py-3 text-left flex items-center gap-3 hover:bg-[#c4441d]/20 transition-colors ${
-                currentLang === lang.code ? 'bg-[#c4441d]/10 text-[#EB5324]' : 'text-white/70 hover:text-white'
+              className={`w-full px-4 py-3 text-left flex items-center gap-3 hover:bg-[#FF4B24]/20 transition-colors ${
+                currentLang === lang.code ? 'bg-[#FF4B24]/10 text-[#FF4B24]' : 'text-white/70 hover:text-white'
               }`}
             >
               <span className="text-sm font-medium tracking-wider">{lang.label}</span>
@@ -718,7 +718,7 @@ const FloatingParticles = () => {
       {[...Array(15)].map((_, i) => (
         <div
           key={i}
-          className="absolute rounded-full bg-[#FFF6EE]/10"
+          className="absolute rounded-full bg-[#ECF0EB]/10"
           style={{
             width: Math.random() * 6 + 2 + 'px',
             height: Math.random() * 6 + 2 + 'px',
@@ -752,9 +752,9 @@ const ServicesVisual = ({ t }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`aspect-square bg-gradient-to-br from-[#c4441d] to-[#a33818] overflow-hidden relative transition-all duration-700 ${
+      <div className={`aspect-square bg-gradient-to-br from-[#FF4B24] to-[#000000] overflow-hidden relative transition-all duration-700 ${
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-      } ${isHovered ? 'shadow-2xl shadow-[#EB5324]/20' : ''}`}>
+      } ${isHovered ? 'shadow-2xl shadow-[#FF4B24]/20' : ''}`}>
         <div className={`absolute inset-0 transition-opacity duration-500 ${isHovered ? 'opacity-30' : 'opacity-20'}`} style={{
           backgroundImage: 'linear-gradient(rgba(0,0,0,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.2) 1px, transparent 1px)',
           backgroundSize: '40px 40px'
@@ -791,7 +791,7 @@ const ServicesVisual = ({ t }) => {
   );
 };
 
-const SectionHeader = ({ label, title, description, labelColor = "text-[#c4441d]", titleColor = "text-[#27324a]", dark = false }) => {
+const SectionHeader = ({ label, title, description, labelColor = "text-[#FF4B24]", titleColor = "text-[#000000]", dark = false }) => {
   const [ref, isVisible] = useScrollAnimation(0.2);
 
   return (
@@ -827,8 +827,8 @@ const ContactInfo = ({ t }) => {
   return (
     <div ref={ref}>
       <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <span className="text-[#c4441d] text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.contact}</span>
-        <h2 className="text-3xl md:text-4xl text-[#27324a] font-light tracking-tight mb-8">{t.contactTitle}</h2>
+        <span className="text-[#FF4B24] text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.contact}</span>
+        <h2 className="text-3xl md:text-4xl text-[#000000] font-light tracking-tight mb-8">{t.contactTitle}</h2>
         <p className="text-neutral-500 font-light leading-relaxed mb-12 max-w-md text-base">
           {t.contactDesc}
         </p>
@@ -846,12 +846,12 @@ const ContactInfo = ({ t }) => {
             onMouseLeave={() => setHoveredItem(null)}
           >
             <div className={`flex items-center gap-5 p-4 rounded-xl transition-all duration-500 ${
-              hoveredItem === i ? 'bg-[#FFF6EE] shadow-lg shadow-[#EB5324]/10' : 'bg-transparent'
+              hoveredItem === i ? 'bg-[#ECF0EB] shadow-lg shadow-[#FF4B24]/10' : 'bg-transparent'
             }`}>
               <div className={`relative w-14 h-14 flex items-center justify-center transition-all duration-500 ${
                 hoveredItem === i ? 'scale-110' : 'scale-100'
               }`}>
-                <div className={`absolute inset-0 bg-gradient-to-br from-[#c4441d] to-[#EB5324] transition-all duration-500 ${
+                <div className={`absolute inset-0 bg-gradient-to-br from-[#FF4B24] to-[#FF4B24] transition-all duration-500 ${
                   hoveredItem === i ? 'rotate-6 rounded-xl' : 'rotate-0 rounded-lg'
                 }`} />
                 {item.icon === 'whatsapp' ? <svg className="w-5 h-5 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.627.616l4.584-1.208A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.339 0-4.508-.793-6.235-2.126l-.436-.347-2.858.753.766-2.797-.379-.604A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg> : <item.icon className="w-5 h-5 text-white relative z-10" />}
@@ -859,15 +859,15 @@ const ContactInfo = ({ t }) => {
 
               <div className={`transition-all duration-300 ${hoveredItem === i ? 'translate-x-2' : ''}`}>
                 <span className={`text-xs uppercase tracking-wider block font-medium transition-colors duration-300 ${
-                  hoveredItem === i ? 'text-[#c4441d]' : 'text-neutral-400'
+                  hoveredItem === i ? 'text-[#FF4B24]' : 'text-neutral-400'
                 }`}>{item.label}</span>
                 <span className={`font-light transition-colors duration-300 ${
-                  hoveredItem === i ? 'text-[#c4441d]' : 'text-[#27324a]'
-                }`}>{item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-[#EB5324] transition-colors">{item.value}</a> : item.value}</span>
+                  hoveredItem === i ? 'text-[#FF4B24]' : 'text-[#000000]'
+                }`}>{item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-[#FF4B24] transition-colors">{item.value}</a> : item.value}</span>
               </div>
 
               <ArrowRight className={`w-4 h-4 ml-auto transition-all duration-300 ${
-                hoveredItem === i ? 'opacity-100 translate-x-0 text-[#EB5324]' : 'opacity-0 -translate-x-4'
+                hoveredItem === i ? 'opacity-100 translate-x-0 text-[#FF4B24]' : 'opacity-0 -translate-x-4'
               }`} />
             </div>
           </div>
@@ -885,13 +885,13 @@ const ContactForm = ({ t }) => {
   return (
     <div
       ref={ref}
-      className={`relative bg-[#FFF6EE] p-8 md:p-10 transition-all duration-700 ${
+      className={`relative bg-[#ECF0EB] p-8 md:p-10 transition-all duration-700 ${
         isVisible ? 'opacity-100 translate-y-0 shadow-2xl shadow-neutral-200/50' : 'opacity-0 translate-y-12 shadow-none'
       }`}
       style={{ transitionDelay: '200ms' }}
     >
       <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden">
-        <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#EB5324] to-[#c4441d] transform rotate-45 translate-x-20 -translate-y-20 transition-all duration-500 ${
+        <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#FF4B24] to-[#FF4B24] transform rotate-45 translate-x-20 -translate-y-20 transition-all duration-500 ${
           isVisible ? 'translate-x-20 -translate-y-20' : 'translate-x-40 -translate-y-40'
         }`} />
       </div>
@@ -899,17 +899,17 @@ const ContactForm = ({ t }) => {
       <div className="space-y-6 relative">
         <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '300ms' }}>
           <label className={`text-xs uppercase tracking-wider block mb-2 font-medium transition-all duration-300 ${
-            focusedField === 'name' ? 'text-[#c4441d] translate-x-1' : 'text-neutral-500'
+            focusedField === 'name' ? 'text-[#FF4B24] translate-x-1' : 'text-neutral-500'
           }`}>{t.formName}</label>
           <div className="relative">
             <input
               type="text"
-              className="w-full bg-[#FFF6EE] border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#27324a] font-light focus:outline-none focus:border-[#EB5324] focus:bg-[#FFF6EE]/30 transition-all duration-300"
+              className="w-full bg-[#ECF0EB] border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#000000] font-light focus:outline-none focus:border-[#FF4B24] focus:bg-[#ECF0EB]/30 transition-all duration-300"
               placeholder={t.formPlaceholderName}
               onFocus={() => setFocusedField('name')}
               onBlur={() => setFocusedField(null)}
             />
-            <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#EB5324] to-[#59BABD] transition-all duration-500 ${
+            <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#FF4B24] to-[#5F6468] transition-all duration-500 ${
               focusedField === 'name' ? 'w-full' : 'w-0'
             }`} />
           </div>
@@ -917,17 +917,17 @@ const ContactForm = ({ t }) => {
 
         <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '400ms' }}>
           <label className={`text-xs uppercase tracking-wider block mb-2 font-medium transition-all duration-300 ${
-            focusedField === 'email' ? 'text-[#c4441d] translate-x-1' : 'text-neutral-500'
+            focusedField === 'email' ? 'text-[#FF4B24] translate-x-1' : 'text-neutral-500'
           }`}>{t.formEmail}</label>
           <div className="relative">
             <input
               type="email"
-              className="w-full bg-[#FFF6EE] border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#27324a] font-light focus:outline-none focus:border-[#EB5324] focus:bg-[#FFF6EE]/30 transition-all duration-300"
+              className="w-full bg-[#ECF0EB] border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#000000] font-light focus:outline-none focus:border-[#FF4B24] focus:bg-[#ECF0EB]/30 transition-all duration-300"
               placeholder={t.formPlaceholderEmail}
               onFocus={() => setFocusedField('email')}
               onBlur={() => setFocusedField(null)}
             />
-            <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#EB5324] to-[#59BABD] transition-all duration-500 ${
+            <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#FF4B24] to-[#5F6468] transition-all duration-500 ${
               focusedField === 'email' ? 'w-full' : 'w-0'
             }`} />
           </div>
@@ -935,11 +935,11 @@ const ContactForm = ({ t }) => {
 
         <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '500ms' }}>
           <label className={`text-xs uppercase tracking-wider block mb-2 font-medium transition-all duration-300 ${
-            focusedField === 'project' ? 'text-[#c4441d] translate-x-1' : 'text-neutral-500'
+            focusedField === 'project' ? 'text-[#FF4B24] translate-x-1' : 'text-neutral-500'
           }`}>{t.formProject}</label>
           <div className="relative">
             <select
-              className="w-full bg-[#FFF6EE] border-0 border-b-2 border-neutral-200 px-4 py-3 text-neutral-600 font-light focus:outline-none focus:border-[#EB5324] focus:bg-[#FFF6EE]/30 transition-all duration-300"
+              className="w-full bg-[#ECF0EB] border-0 border-b-2 border-neutral-200 px-4 py-3 text-neutral-600 font-light focus:outline-none focus:border-[#FF4B24] focus:bg-[#ECF0EB]/30 transition-all duration-300"
               onFocus={() => setFocusedField('project')}
               onBlur={() => setFocusedField(null)}
             >
@@ -947,7 +947,7 @@ const ContactForm = ({ t }) => {
                 <option key={i}>{type}</option>
               ))}
             </select>
-            <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#EB5324] to-[#59BABD] transition-all duration-500 ${
+            <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#FF4B24] to-[#5F6468] transition-all duration-500 ${
               focusedField === 'project' ? 'w-full' : 'w-0'
             }`} />
           </div>
@@ -955,17 +955,17 @@ const ContactForm = ({ t }) => {
 
         <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '600ms' }}>
           <label className={`text-xs uppercase tracking-wider block mb-2 font-medium transition-all duration-300 ${
-            focusedField === 'message' ? 'text-[#c4441d] translate-x-1' : 'text-neutral-500'
+            focusedField === 'message' ? 'text-[#FF4B24] translate-x-1' : 'text-neutral-500'
           }`}>{t.formMessage}</label>
           <div className="relative">
             <textarea
               rows={4}
-              className="w-full bg-[#FFF6EE] border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#27324a] font-light focus:outline-none focus:border-[#EB5324] focus:bg-[#FFF6EE]/30 transition-all duration-300 resize-none"
+              className="w-full bg-[#ECF0EB] border-0 border-b-2 border-neutral-200 px-4 py-3 text-[#000000] font-light focus:outline-none focus:border-[#FF4B24] focus:bg-[#ECF0EB]/30 transition-all duration-300 resize-none"
               placeholder={t.formPlaceholderMsg}
               onFocus={() => setFocusedField('message')}
               onBlur={() => setFocusedField(null)}
             />
-            <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#EB5324] to-[#59BABD] transition-all duration-500 ${
+            <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#FF4B24] to-[#5F6468] transition-all duration-500 ${
               focusedField === 'message' ? 'w-full' : 'w-0'
             }`} />
           </div>
@@ -973,9 +973,9 @@ const ContactForm = ({ t }) => {
 
         <button
           type="button"
-          className={`group relative w-full overflow-hidden bg-gradient-to-r from-[#c4441d] to-[#EB5324] text-white py-4 text-xs tracking-widest uppercase font-medium transition-all duration-500 mt-4 ${
+          className={`group relative w-full overflow-hidden bg-gradient-to-r from-[#FF4B24] to-[#FF4B24] text-white py-4 text-xs tracking-widest uppercase font-medium transition-all duration-500 mt-4 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          } ${isSubmitHovered ? 'shadow-xl shadow-[#EB5324]/30 scale-[1.02]' : 'shadow-lg shadow-[#EB5324]/20'}`}
+          } ${isSubmitHovered ? 'shadow-xl shadow-[#FF4B24]/30 scale-[1.02]' : 'shadow-lg shadow-[#FF4B24]/20'}`}
           style={{ transitionDelay: '700ms' }}
           onMouseEnter={() => setIsSubmitHovered(true)}
           onMouseLeave={() => setIsSubmitHovered(false)}
@@ -1000,7 +1000,7 @@ const ServicesContent = ({ t }) => {
   return (
     <div ref={ref}>
       <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <span className="text-[#EB5324] text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.services}</span>
+        <span className="text-[#FF4B24] text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.services}</span>
         <h2 className="text-3xl md:text-4xl text-white font-light tracking-tight mb-8">{t.servicesTitle}</h2>
         <p className="text-white/60 font-light leading-relaxed mb-10 text-base">
           {t.servicesDesc}
@@ -1019,15 +1019,15 @@ const ServicesContent = ({ t }) => {
             onMouseLeave={() => setHoveredService(null)}
           >
             <div className={`flex items-center gap-4 p-4 rounded-lg transition-all duration-500 ${
-              hoveredService === i ? 'bg-[#FFF6EE]/10 backdrop-blur-sm' : 'bg-transparent'
+              hoveredService === i ? 'bg-[#ECF0EB]/10 backdrop-blur-sm' : 'bg-transparent'
             }`}>
               <span className={`text-xs font-mono transition-all duration-300 ${
-                hoveredService === i ? 'text-[#EB5324] scale-125' : 'text-white/30'
+                hoveredService === i ? 'text-[#FF4B24] scale-125' : 'text-white/30'
               }`}>
                 {String(i + 1).padStart(2, '0')}
               </span>
 
-              <div className={`h-px bg-gradient-to-r from-[#EB5324] to-[#59BABD] transition-all duration-500 ${
+              <div className={`h-px bg-gradient-to-r from-[#FF4B24] to-[#5F6468] transition-all duration-500 ${
                 hoveredService === i ? 'w-8' : 'w-4'
               }`} />
 
@@ -1038,7 +1038,7 @@ const ServicesContent = ({ t }) => {
               </span>
 
               <ArrowRight className={`w-4 h-4 transition-all duration-300 ${
-                hoveredService === i ? 'opacity-100 translate-x-0 text-[#EB5324]' : 'opacity-0 -translate-x-4'
+                hoveredService === i ? 'opacity-100 translate-x-0 text-[#FF4B24]' : 'opacity-0 -translate-x-4'
               }`} />
             </div>
           </div>
@@ -1060,9 +1060,9 @@ const AboutSection = ({ t }) => {
   ];
 
   return (
-    <section id="about" className="relative py-20 md:py-28 bg-[#FFF6EE] overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#EB5324]/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#FFF6EE]0/5 rounded-full blur-3xl" />
+    <section id="about" className="relative py-20 md:py-28 bg-[#ECF0EB] overflow-hidden">
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#FF4B24]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#ECF0EB]0/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <div
@@ -1071,9 +1071,9 @@ const AboutSection = ({ t }) => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-[#c4441d] text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.about}</span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#27324a] font-light tracking-tight mb-6">{t.aboutTitle}</h2>
-          <p className="text-[#c4441d] font-medium text-lg mb-8 text-justify">{t.aboutSubtitle}</p>
+          <span className="text-[#FF4B24] text-xs tracking-[0.25em] uppercase mb-3 block font-medium">{t.about}</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#000000] font-light tracking-tight mb-6">{t.aboutTitle}</h2>
+          <p className="text-[#FF4B24] font-medium text-lg mb-8 text-justify">{t.aboutSubtitle}</p>
           <p className="text-neutral-600 font-light leading-relaxed text-base mb-4 text-justify">{t.aboutText1}</p>
           <p className="text-neutral-600 font-light leading-relaxed text-base text-justify">{t.aboutText2}</p>
         </div>
@@ -1091,8 +1091,8 @@ const AboutSection = ({ t }) => {
             >
               <div className={`relative h-full p-6 md:p-6 overflow-hidden transition-all duration-500 ${
                 hoveredPillar === i
-                  ? 'bg-gradient-to-br from-[#c4441d] to-[#a33818] shadow-2xl shadow-[#EB5324]/30 -translate-y-2'
-                  : 'bg-[#27324a]'
+                  ? 'bg-gradient-to-br from-[#FF4B24] to-[#000000] shadow-2xl shadow-[#FF4B24]/30 -translate-y-2'
+                  : 'bg-[#000000]'
               }`}>
                 <div className={`absolute inset-0 opacity-10 transition-opacity duration-500 ${hoveredPillar === i ? 'opacity-20' : ''}`}>
                   <div className="absolute inset-0" style={{
@@ -1114,10 +1114,10 @@ const AboutSection = ({ t }) => {
                 <div className="relative z-10">
                   <div className={`inline-flex items-center gap-2 mb-6 transition-colors duration-300`}>
                     <span className={`text-xs font-mono tracking-wider ${
-                      hoveredPillar === i ? 'text-white/70' : 'text-[#EB5324]'
+                      hoveredPillar === i ? 'text-white/70' : 'text-[#FF4B24]'
                     }`}>{pillar.num}</span>
                     <div className={`w-8 h-px transition-all duration-500 ${
-                      hoveredPillar === i ? 'bg-[#FFF6EE]/50 w-12' : 'bg-[#EB5324]'
+                      hoveredPillar === i ? 'bg-[#ECF0EB]/50 w-12' : 'bg-[#FF4B24]'
                     }`} />
                   </div>
 
@@ -1132,7 +1132,7 @@ const AboutSection = ({ t }) => {
                   </p>
                 </div>
 
-                <div className={`absolute bottom-0 left-0 h-1 bg-[#EB5324] transition-all duration-500 ${
+                <div className={`absolute bottom-0 left-0 h-1 bg-[#FF4B24] transition-all duration-500 ${
                   hoveredPillar === i ? 'w-full' : 'w-0'
                 }`} />
               </div>
@@ -1149,10 +1149,10 @@ const Footer = ({ t }) => {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   return (
-    <footer ref={ref} className="relative bg-[#27324a] py-12 border-t border-neutral-700 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-neutral-800" />
+    <footer ref={ref} className="relative bg-[#000000] py-12 border-t border-neutral-700 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-black to-[#1a1a1a]" />
 
-      <div className={`absolute top-0 left-1/4 w-64 h-64 bg-[#EB5324]/10 rounded-full blur-3xl transition-all duration-1000 ${
+      <div className={`absolute top-0 left-1/4 w-64 h-64 bg-[#FF4B24]/10 rounded-full blur-3xl transition-all duration-1000 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`} />
 
@@ -1165,7 +1165,7 @@ const Footer = ({ t }) => {
             onMouseEnter={() => setIsLogoHovered(true)}
             onMouseLeave={() => setIsLogoHovered(false)}
           >
-            <A4ELogo className="text-2xl text-[#EB5324]" />
+            <A4ELogo className="text-2xl text-[#FF4B24]" />
           </div>
 
           <div className={`hidden md:block flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-8 transition-all duration-700 delay-200 ${
@@ -1176,27 +1176,27 @@ const Footer = ({ t }) => {
             <a
               href="/AFOR_Dossier_2025.pdf"
               download
-              className={`text-white/60 hover:text-[#EB5324] text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
+              className={`text-white/60 hover:text-[#FF4B24] text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
                 isVisible ? 'opacity-100' : 'opacity-0'
               }`}
             >
               {t.downloadPortfolio}
             </a>
 
-            <div className="h-3 w-px bg-[#FFF6EE]/20" />
+            <div className="h-3 w-px bg-[#ECF0EB]/20" />
 
             <a
               href="https://intranet.a4e.cl"
               target="_blank"
               rel="noopener noreferrer"
-              className={`text-white/60 hover:text-[#EB5324] text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
+              className={`text-white/60 hover:text-[#FF4B24] text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
                 isVisible ? 'opacity-100' : 'opacity-0'
               }`}
             >
               {t.intranet}
             </a>
 
-            <div className="h-3 w-px bg-[#FFF6EE]/20" />
+            <div className="h-3 w-px bg-[#ECF0EB]/20" />
 
             <p className={`text-white/50 text-xs font-light text-center md:text-right transition-all duration-700 delay-300 ${
               isVisible ? 'opacity-100' : 'opacity-0'
@@ -1225,14 +1225,14 @@ export default function A4ELanding() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-neutral-900 antialiased scroll-smooth" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
+    <div className="min-h-screen bg-black antialiased scroll-smooth" style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrollY > 100
           ? 'translate-y-0 bg-neutral-900/80 backdrop-blur-lg shadow-lg shadow-black/20 py-3'
           : '-translate-y-full bg-neutral-900/70 backdrop-blur-md py-4'
       } border-b border-white/10`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <A4ELogo className={`transition-all duration-300 ${scrollY > 50 ? "text-xl" : "text-2xl"} text-[#EB5324]`} />
+          <A4ELogo className={`transition-all duration-300 ${scrollY > 50 ? "text-xl" : "text-2xl"} text-[#FF4B24]`} />
 
           <div className="hidden md:flex items-center gap-8">
             <nav className="flex items-center gap-8">
@@ -1281,7 +1281,7 @@ export default function A4ELanding() {
                     if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
                     setMenuOpen(false);
                   }}
-                  className="text-white/80 hover:text-[#EB5324] text-lg tracking-widest uppercase transition-colors"
+                  className="text-white/80 hover:text-[#FF4B24] text-lg tracking-widest uppercase transition-colors"
                 >
                   {item}
                 </a>
@@ -1293,11 +1293,11 @@ export default function A4ELanding() {
       )}
 
       {/* Hero Principal con Imagen de Fondo */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img src="/hero-cover.jpg" alt="A4E Industrial" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/85 via-neutral-900/60 to-neutral-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-[#FF4B24]/20" />
         </div>
 
         {/* Content - Logo Left, Text Right */}
@@ -1313,9 +1313,9 @@ export default function A4ELanding() {
             <div className="flex-1 text-center md:text-right max-w-2xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white tracking-tight leading-tight mb-6">
                 <span className="block">{t.heroTitle1}</span>
-                <span className="block text-[#EB5324] font-medium">{t.heroTitle2}</span>
+                <span className="block text-[#FF4B24] font-medium">{t.heroTitle2}</span>
               </h1>
-              <div className="w-24 h-px bg-[#EB5324] mb-6 ml-auto hidden md:block" />
+              <div className="w-24 h-px bg-[#FF4B24] mb-6 ml-auto hidden md:block" />
               <p className="text-white/90 text-base md:text-lg font-normal leading-relaxed mb-4 text-justify">
                 {t.heroDesc}
               </p>
@@ -1336,7 +1336,7 @@ export default function A4ELanding() {
       </section>
       <AboutSection t={t} />
 
-      <section id="services" className="relative py-20 md:py-28 bg-[#27324a] overflow-hidden">
+      <section id="services" className="relative py-20 md:py-28 bg-[#000000] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ServicesContent t={t} />
@@ -1351,10 +1351,10 @@ export default function A4ELanding() {
         <video autoPlay loop muted playsInline className="w-full h-full object-cover">
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-transparent to-neutral-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-[#FF4B24]/10 to-black/50" />
       </div>
 
-      <section id="projects" className="relative py-20 md:py-28 bg-neutral-100 overflow-hidden">
+      <section id="projects" className="relative py-20 md:py-28 bg-[#ECF0EB] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
           <SectionHeader
             label={t.highlighted}
@@ -1374,7 +1374,7 @@ export default function A4ELanding() {
         <ProjectModal project={selectedProject} t={t} onClose={() => setSelectedProject(null)} />
       )}
 
-      <section id="track-record" className="relative py-20 md:py-28 bg-gradient-to-br from-[#c4441d] to-[#a33818] overflow-hidden">
+      <section id="track-record" className="relative py-20 md:py-28 bg-gradient-to-br from-[#FF4B24] to-[#000000] overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: 'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)',
@@ -1393,8 +1393,8 @@ export default function A4ELanding() {
           {/* Tabla 1: Desarrollo de Ingeniería Propio */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-6 bg-[#FFF6EE]" />
-              <h3 className="text-lg font-medium text-white">{t.engineeringDev.split('CHKING')[0]}<a href="https://chking.cl/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#59BABD] transition-colors">CHKING</a>{t.engineeringDev.split('CHKING')[1]}</h3>
+              <div className="w-1 h-6 bg-[#ECF0EB]" />
+              <h3 className="text-lg font-medium text-white">{t.engineeringDev.split('CHKING')[0]}<a href="https://chking.cl/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#5F6468] transition-colors">CHKING</a>{t.engineeringDev.split('CHKING')[1]}</h3>
               <span className="text-xs text-white/50 font-mono">{engineeringProjects.length}</span>
             </div>
 
@@ -1409,7 +1409,7 @@ export default function A4ELanding() {
                 </thead>
                 <tbody>
                   {engineeringProjects.map((p, i) => (
-                    <tr key={i} className="border-b border-white/10 hover:bg-[#FFF6EE]/10 transition-colors duration-300 group">
+                    <tr key={i} className="border-b border-white/10 hover:bg-[#ECF0EB]/10 transition-colors duration-300 group">
                       <td className="py-3 px-4 text-sm font-mono text-white/50 group-hover:text-white transition-colors">{p.year}</td>
                       <td className="py-3 px-4 text-sm text-white/80 group-hover:text-white transition-colors">{p.project}</td>
                       <td className="py-3 px-4 text-sm text-right font-medium text-white/60 group-hover:text-white transition-colors">{p.client}</td>
@@ -1423,8 +1423,8 @@ export default function A4ELanding() {
           {/* Tabla 2: Contraparte / Revisión */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-6 bg-[#FFF6EE]" />
-              <h3 className="text-lg font-medium text-white">{t.counterpartReview.split('CHKING')[0]}<a href="https://chking.cl/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#59BABD] transition-colors">CHKING</a>{t.counterpartReview.split('CHKING')[1]}</h3>
+              <div className="w-1 h-6 bg-[#ECF0EB]" />
+              <h3 className="text-lg font-medium text-white">{t.counterpartReview.split('CHKING')[0]}<a href="https://chking.cl/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#5F6468] transition-colors">CHKING</a>{t.counterpartReview.split('CHKING')[1]}</h3>
               <span className="text-xs text-white/50 font-mono">{counterpartProjects.length}</span>
             </div>
 
@@ -1439,7 +1439,7 @@ export default function A4ELanding() {
                 </thead>
                 <tbody>
                   {counterpartProjects.map((p, i) => (
-                    <tr key={i} className="border-b border-white/10 hover:bg-[#FFF6EE]/10 transition-colors duration-300 group">
+                    <tr key={i} className="border-b border-white/10 hover:bg-[#ECF0EB]/10 transition-colors duration-300 group">
                       <td className="py-3 px-4 text-sm font-mono text-white/50 group-hover:text-white transition-colors">{p.year}</td>
                       <td className="py-3 px-4 text-sm text-white/80 group-hover:text-white transition-colors">{p.project}</td>
                       <td className="py-3 px-4 text-sm text-right font-medium text-white/60 group-hover:text-white transition-colors">{p.company}</td>
@@ -1452,7 +1452,7 @@ export default function A4ELanding() {
         </div>
       </section>
 
-      <section id="contact" className="relative py-20 md:py-28 bg-neutral-100 overflow-hidden">
+      <section id="contact" className="relative py-20 md:py-28 bg-[#ECF0EB] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <ContactInfo t={t} />
