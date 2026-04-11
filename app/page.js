@@ -1174,7 +1174,7 @@ const Footer = ({ t }) => {
 
           <div className="flex items-center gap-6">
             <a
-              href="/A4E_Dossier_2025.pdf"
+              href="/AFOR_Dossier_2025.pdf"
               download
               className={`text-white/60 hover:text-[#EB5324] text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
                 isVisible ? 'opacity-100' : 'opacity-0'
