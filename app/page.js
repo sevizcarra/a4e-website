@@ -1183,7 +1183,16 @@ const Footer = ({ t }) => {
               {t.downloadPortfolio}
             </a>
 
-            {/* Team Access oculto hasta definir nueva URL bajo dominio afor.cl */}
+            <a
+              href="https://intranet.afor.cl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-white/50 hover:text-white text-xs font-light transition-all duration-700 delay-200 ${
+                isVisible ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              {t.intranet}
+            </a>
             <div className="h-3 w-px bg-[#ECF0EB]/20" />
 
             <p className={`text-white/50 text-xs font-light text-center md:text-right transition-all duration-700 delay-300 ${
