@@ -560,7 +560,7 @@ const FeaturedProjectCard = ({ project, index, t, onSelect }) => {
 };
 
 // Logo AFOR - Audiowide font
-const A4ELogo = ({ className = "" }) => {
+const AforLogo = ({ className = "" }) => {
   return <span style={{fontFamily: "var(--font-audiowide), sans-serif"}} className={`tracking-wider leading-none inline-block ${className}`}>AFOR</span>;
 };
 
@@ -1165,7 +1165,7 @@ const Footer = ({ t }) => {
             onMouseEnter={() => setIsLogoHovered(true)}
             onMouseLeave={() => setIsLogoHovered(false)}
           >
-            <A4ELogo className="text-2xl text-[#FF4B24]" />
+            <AforLogo className="text-2xl text-[#FF4B24]" />
           </div>
 
           <div className={`hidden md:block flex-1 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-8 transition-all duration-700 delay-200 ${
@@ -1183,25 +1183,13 @@ const Footer = ({ t }) => {
               {t.downloadPortfolio}
             </a>
 
-            <div className="h-3 w-px bg-[#ECF0EB]/20" />
-
-            <a
-              href="https://intranet.a4e.cl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`text-white/60 hover:text-[#FF4B24] text-xs font-light tracking-wide transition-all duration-300 hover:scale-105 ${
-                isVisible ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              {t.intranet}
-            </a>
-
+            {/* Team Access oculto hasta definir nueva URL bajo dominio afor.cl */}
             <div className="h-3 w-px bg-[#ECF0EB]/20" />
 
             <p className={`text-white/50 text-xs font-light text-center md:text-right transition-all duration-700 delay-300 ${
               isVisible ? 'opacity-100' : 'opacity-0'
             }`}>
-              © 2025 A4E. {t.allRights}
+              © 2025 AFOR. {t.allRights}
             </p>
           </div>
         </div>
@@ -1210,9 +1198,9 @@ const Footer = ({ t }) => {
   );
 };
 
-export default function A4ELanding() {
+export default function AforLanding() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('es');
   const [selectedProject, setSelectedProject] = useState(null);
   const [scrollY, setScrollY] = useState(0);
 
@@ -1232,7 +1220,7 @@ export default function A4ELanding() {
           : '-translate-y-full bg-neutral-900/70 backdrop-blur-md py-4'
       } border-b border-white/10`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <A4ELogo className={`transition-all duration-300 ${scrollY > 50 ? "text-xl" : "text-2xl"} text-[#FF4B24]`} />
+          <AforLogo className={`transition-all duration-300 ${scrollY > 50 ? "text-xl" : "text-2xl"} text-[#FF4B24]`} />
 
           <div className="hidden md:flex items-center gap-8">
             <nav className="flex items-center gap-8">
@@ -1296,7 +1284,7 @@ export default function A4ELanding() {
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img src="/hero-cover.jpg" alt="A4E Industrial" className="w-full h-full object-cover" />
+          <img src="/hero-cover.jpg" alt="AFOR Industrial" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-[#FF4B24]/20" />
         </div>
 
@@ -1305,7 +1293,7 @@ export default function A4ELanding() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             {/* Logo Left */}
             <div className="flex-shrink-0 flex flex-col items-start">
-              <A4ELogo className="text-7xl md:text-8xl lg:text-9xl text-white drop-shadow-2xl" />
+              <AforLogo className="text-7xl md:text-8xl lg:text-9xl text-white drop-shadow-2xl" />
               <RotatingTagline />
             </div>
 

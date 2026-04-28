@@ -1,4 +1,4 @@
-# 🚀 Deploy Rápido - a4e.cl
+# Deploy Rápido - afor.cl
 
 ## Opción más rápida: Vercel CLI
 
@@ -7,7 +7,7 @@
 npm i -g vercel
 
 # 2. Ir a la carpeta
-cd a4e-website
+cd afor-website
 
 # 3. Instalar dependencias
 npm install
@@ -23,12 +23,12 @@ Sigue las instrucciones en pantalla:
 
 ---
 
-## Configurar a4e.cl
+## Configurar afor.cl
 
 ### 1. En Vercel (después del deploy)
 
 1. Ve a tu proyecto → **Settings** → **Domains**
-2. Agrega: `a4e.cl` y `www.a4e.cl`
+2. Agrega: `afor.cl` y `www.afor.cl`
 3. Vercel te mostrará los DNS a configurar
 
 ### 2. En NIC Chile
@@ -62,7 +62,7 @@ Valor: 76.76.21.21
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/TU_USUARIO/a4e-website.git
+git remote add origin https://github.com/TU_USUARIO/afor-website.git
 git push -u origin main
 
 # Conecta con Vercel (una vez)
@@ -89,8 +89,8 @@ vercel --prod
 ## Verificar
 
 1. **Local**: `npm run dev` → [localhost:3000](http://localhost:3000)
-2. **Producción**: Vercel te da una URL tipo `a4e-website.vercel.app`
-3. **Dominio**: Cuando DNS propague → `https://a4e.cl`
+2. **Producción**: Vercel te da una URL tipo `afor-website.vercel.app`
+3. **Dominio**: Cuando DNS propague → `https://afor.cl`
 
 ---
 

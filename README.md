@@ -1,6 +1,6 @@
-# A4E - Architecture for Engineering
+# AFOR - Architecture for Engineering
 
-Landing page oficial de A4E (Architecture for Engineering).
+Landing page oficial de AFOR (Architecture for Engineering).
 
 ## 🚀 Deploy Rápido a Vercel
 
@@ -9,12 +9,12 @@ Landing page oficial de A4E (Architecture for Engineering).
 #### 1. Subir a GitHub
 
 ```bash
-cd a4e-website
+cd afor-website
 git init
 git add .
-git commit -m "Initial commit - A4E landing page"
+git commit -m "Initial commit - AFOR landing page"
 git branch -M main
-git remote add origin https://github.com/TU_USUARIO/a4e-website.git
+git remote add origin https://github.com/TU_USUARIO/afor-website.git
 git push -u origin main
 ```
 
@@ -35,20 +35,20 @@ git push -u origin main
 npm i -g vercel
 
 # Desde la carpeta del proyecto
-cd a4e-website
+cd afor-website
 vercel --prod
 ```
 
 ---
 
-## 🌐 Configurar Dominio a4e.cl
+## 🌐 Configurar Dominio afor.cl
 
 ### Paso 1: Agregar dominio en Vercel
 
 1. En tu proyecto de Vercel, ve a **Settings** → **Domains**
 2. Agrega estos dominios:
-   - `a4e.cl`
-   - `www.a4e.cl`
+   - `afor.cl`
+   - `www.afor.cl`
 3. Vercel te mostrará los registros DNS necesarios
 
 ### Paso 2: Configurar DNS en NIC Chile
@@ -120,7 +120,7 @@ vercel --prod
 ### Primera vez (instalación):
 
 ```bash
-cd a4e-website
+cd afor-website
 npm install
 ```
 
@@ -144,13 +144,13 @@ npm run start
 ## 📁 Estructura del Proyecto
 
 ```
-a4e-website/
+afor-website/
 ├── app/
 │   ├── globals.css      # Estilos globales + Tailwind
 │   ├── layout.js        # Layout principal (metadata, SEO)
 │   └── page.js          # Landing page completa
 ├── public/
-│   └── logo-a4e.png     # Logo A4E
+│   └── AFOR_Dossier_2025.pdf  # Dossier AFOR
 ├── next.config.js       # Configuración Next.js
 ├── tailwind.config.js   # Configuración Tailwind CSS
 └── package.json         # Dependencias
@@ -166,7 +166,7 @@ Edita en `app/layout.js`:
 
 ```javascript
 export const metadata = {
-  title: 'A4E - Architecture for Engineering',
+  title: 'AFOR - Architecture for Engineering',
   description: 'Tu descripción aquí',
   keywords: 'arquitectura, ingeniería, ...',
 }
@@ -200,10 +200,10 @@ const translations = {
 ## 📊 Monitoreo
 
 Vercel proporciona:
-- ✅ Analytics automático
-- ✅ Logs en tiempo real
-- ✅ Preview deployments (cada PR en GitHub)
-- ✅ Rollback instantáneo a versiones anteriores
+- Analytics automático
+- Logs en tiempo real
+- Preview deployments (cada PR en GitHub)
+- Rollback instantáneo a versiones anteriores
 
 ---
 
@@ -216,20 +216,11 @@ Vercel proporciona:
 
 ---
 
-## 🆘 Soporte
-
-Si tienes problemas:
-
-1. **DNS no propaga**: Espera hasta 48h, verifica en [whatsmydns.net](https://www.whatsmydns.net)
-2. **Build falla**: Revisa logs en Vercel dashboard
-3. **Dominio no verifica**: Asegúrate de que los registros DNS sean exactos
-
----
-
 ## 📝 Changelog
 
+- **v1.1.0** - Español como idioma por defecto, rebranding AFOR
 - **v1.0.0** - Landing page inicial con animaciones optimizadas
-  - Logo A4E embebido
+  - Logo AFOR con tipografía Audiowide
   - Animaciones de fade-in configurables
   - Responsive design completo
-  - Listo para a4e.cl
+  - Listo para afor.cl
