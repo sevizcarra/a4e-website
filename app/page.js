@@ -57,17 +57,17 @@ const translations = {
   es: {
     nav: ['Inicio', 'Nosotros', 'Servicios', 'Proyectos', 'Contacto'],
     tagline: 'El outsourcing de arquitectura para su ingeniería',
-    heroTitle1: 'SU EQUIPO DE ARQUITECTURA',
-    heroTitle2: 'INTEGRADO A SU INGENIERÍA',
-    heroDesc: 'Nos acoplamos a su equipo de proyecto como una extensión de su ingeniería, adoptando su codificación, manuales y estándares de entrega. Desarrollamos proyectos, expedientes técnicos y soluciones constructivas coordinadas con sus disciplinas.',
-    heroSubdesc: 'Operamos bajo sus procesos internos, codificación y plazos. El resultado: entregables libres de interferencias, listos para construcción y compatibles con el estándar de su mandante.',
+    heroTitle1: 'UNA FIRMA DEDICADA',
+    heroTitle2: 'AL PROYECTO DEL CLIENTE',
+    heroDesc: 'Nos integramos al equipo del proyecto como una extensión de su ingeniería. Adoptamos su codificación, manuales y estándares de entrega. No vendemos horas — vendemos criterio: el de una dirección estratégica con diez años en la industria, y el de una gerencia comercial con dieciocho años construyendo cuentas mineras grandes.',
+    heroSubdesc: 'Operamos bajo sus procesos internos, codificación y plazos. Sin capas intermedias, sin account manager, sin diluir el proyecto entre veinte clientes paralelos. El senior que firma es el mismo que está al teléfono.',
     viewProjects: 'Ver Proyectos',
     contactUs: 'Contáctenos',
     about: 'Nosotros',
-    aboutTitle: 'Consultoría Técnica en Arquitectura para empresas de Ingeniería',
-    aboutSubtitle: 'Más de 10 años de experiencia profesional integrando la arquitectura como disciplina crítica en proyectos mineros e industriales.',
+    aboutTitle: 'Consultoría técnica en arquitectura, ingeniería y project management para industria y minería',
+    aboutSubtitle: 'Más de 10 años de experiencia profesional integrando arquitectura, ingeniería y project management como disciplinas críticas en proyectos mineros e industriales.',
     aboutText1: 'Somos una oficina especializada en el desarrollo de infraestructura para la gran minería e industria. Nos diferenciamos por abordar la arquitectura no solo como un fin estético, sino como un componente clave operacional que debe responder a la exigencias de la  producción, seguridad y mantenimiento de sus procesos.',
-    aboutText2: 'Entendemos el lenguaje de la ingeniería. Nuestro trabajo se integra fluidamente con las especialidades estructurales, eléctricas, mecánicas y PMO, garantizando entregables libres de interferencias, compatibles con la codificación del mandante y optimizados para el ciclo de vida de los activos.',
+    aboutText2: 'Entendemos el lenguaje de la ingeniería. Nuestro trabajo se integra fluidamente con las especialidades estructurales, eléctricas, mecánicas y PMO, garantizando entregables libres de interferencias, compatibles con la codificación del mandante y optimizados para el ciclo de vida de los activos. Somos una firma dedicada: el equipo que firma es el mismo que ejecuta.',
     pillar1Title: 'Enfoque en Procesos',
     pillar1Desc: 'Diseñamos desde la lógica del proceso productivo. Cada metro cuadrado se planifica para facilitar la operación, el flujo de personal y la continuidad del servicio.',
     pillar2Title: 'Rigor Normativo',
@@ -75,7 +75,7 @@ const translations = {
     pillar3Title: 'Coordinación Multidisciplinaria',
     pillar3Desc: 'Trabajamos en Revit/BIM y entregamos modelos coordinados en el formato y codificación que su proyecto requiera. Nos integramos con las disciplinas estructural, mecánica, eléctrica e instrumentación sin generar interferencias ni reprocesos.',
     pillar4Title: 'Modelo Flexible',
-    pillar4Desc: 'Acceda a un equipo especializado de arquitectura solo cuando su proyecto lo requiera. Sin overhead permanentes y con capacidad disponible para responder a sus plazos y acoplarnos a sus procesos internos de manuales y codificaciones.',
+    pillar4Desc: 'Acceda a un equipo dedicado solo cuando su proyecto lo requiera. Sin overhead permanentes y con capacidad de acoplarnos a sus procesos internos, manuales y plazos.',
     highlighted: 'Proyectos',
     highlightedTitle: 'Proyectos Destacados',
     highlightedDesc: 'Algunos de nuestros proyectos más representativos en la gran minería.',
@@ -90,15 +90,16 @@ const translations = {
     colClient: 'Cliente',
     colCompany: 'Empresa Líder',
     services: 'Servicios',
-    servicesTitle: 'Soluciones Especializadas',
-    servicesDesc: 'Ofrecemos servicios arquitectónicos integrales diseñados específicamente para proyectos de ingeniería, instalaciones industriales y operaciones mineras a gran escala.',
+    servicesTitle: 'Servicios',
+    servicesDesc: 'Ofrecemos servicios técnicos integrales en arquitectura, project management y coordinación multidisciplinar, diseñados específicamente para proyectos de ingeniería, instalaciones industriales y operaciones mineras.',
     servicesList: [
       'Master Plan de Arquitectura para estudio de Faenas e Instalaciones',
       'Edificación y remodelación de espacios claves como Oficinas y Casas de Cambio',
       'Salas de Control, de Servidores, Eléctricas y Técnicas.',
       'Edificación técnica para RESPEL, Almacenamiento y Truck Shops',
       'Revisión de contraparte de planos y documentos.',
-      'Supervisión de Terreno de ejecución y avances'
+      'Supervisión de Terreno de ejecución y avances',
+      'Project Management dedicado para proyectos multidisciplinares'
     ],
     yearsExp: 'Años de Experiencia',
     contact: 'Contacto',
@@ -115,6 +116,8 @@ const translations = {
       'Mining Facilities',
       'Industrial Facilities',
       'Plot Plan for Processes and Facilities',
+      'Project Management',
+      'Coordinación multidisciplinar',
       'Others'
     ],
     submitMessage: 'Enviar Mensaje',
@@ -566,7 +569,7 @@ const AforLogo = ({ className = "" }) => {
 
 // Rotating tagline under logo
 const RotatingTagline = () => {
-  const words = ['Engineering', 'Your Processes'];
+  const words = ['managing your scope', 'managing your project'];
   const [index, setIndex] = React.useState(0);
   const [phase, setPhase] = React.useState('in');
   React.useEffect(() => {
@@ -582,7 +585,7 @@ const RotatingTagline = () => {
   return (
     <div className="mt-2 text-left whitespace-nowrap" style={{minWidth: "300px"}}>
       <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-        Architecture for{' '}
+        Developing ideas,{' '}
       </span>
       <span className="text-[#FF4B24] font-normal text-sm md:text-base lg:text-lg tracking-widest uppercase" style={{
         fontFamily: 'system-ui, -apple-system, sans-serif',
