@@ -57,7 +57,6 @@ const translations = {
   es: {
     nav: ['Inicio', 'Nosotros', 'Servicios', 'Proyectos', 'Contacto'],
     tagline: 'El outsourcing de arquitectura para su ingeniería',
-    slogan: 'Hacemos crecer las ideas',
     heroTitle1: 'UNA FIRMA DEDICADA',
     heroTitle2: 'AL PROYECTO DEL CLIENTE',
     heroDesc: 'Nos integramos al equipo del proyecto como una extensión de su ingeniería. Adoptamos su codificación, manuales y estándares de entrega. No vendemos horas — vendemos criterio: el de una dirección estratégica con diez años en la industria, y el de una gerencia comercial con dieciocho años construyendo cuentas mineras grandes.',
@@ -130,7 +129,6 @@ const translations = {
   en: {
     nav: ['Home', 'About', 'Services', 'Projects', 'Contact'],
     tagline: 'Architecture outsourcing for your engineering',
-    slogan: 'Making ideas grow',
     heroTitle1: 'YOUR ARCHITECTURE TEAM',
     heroTitle2: 'INTEGRATED INTO YOUR ENGINEERING PROCESS',
     heroDesc: 'We integrate into your project team as an extension of your engineering, adopting your coding, manuals, and delivery standards. We develop projects, technical documents, and construction solutions coordinated with your disciplines.',
@@ -200,7 +198,6 @@ const translations = {
   pt: {
     nav: ['Início', 'Sobre', 'Serviços', 'Projetos', 'Contato'],
     tagline: 'Outsourcing de arquitetura para sua engenharia',
-    slogan: 'Fazemos as ideias crescerem',
     heroTitle1: 'SUA EQUIPE DE ARQUITETURA',
     heroTitle2: 'INTEGRADA À SUA ENGENHARIA',
     heroDesc: 'Nos acoplamos à sua equipe de projeto como uma extensão da sua engenharia, adotando sua codificação, manuais e padrões de entrega. Desenvolvemos projetos, expedientes técnicos e soluções construtivas coordenadas com suas disciplinas.',
@@ -270,7 +267,6 @@ const translations = {
   zh: {
     nav: ['首页', '关于', '服务', '项目', '联系'],
     tagline: '为您的工程提供建筑外包服务',
-    slogan: '让想法生长',
     heroTitle1: '您的建筑团队',
     heroTitle2: '融入您的工程',
     heroDesc: '我们作为工程的延伸融入您的项目团队，采用您的编码、手册和交付标准。我们开发项目、技术文件和与您各学科协调的施工解决方案。',
@@ -571,12 +567,12 @@ const AforLogo = ({ className = "" }) => {
   return <span style={{fontFamily: "var(--font-audiowide), sans-serif"}} className={`tracking-wider leading-none inline-block ${className}`}>AFOR</span>;
 };
 
-// Tagline under logo (estatico, blanco, traducido por idioma)
-const RotatingTagline = ({ t }) => {
+// Tagline under logo (estatico, blanco, eslogan de marca en ingles)
+const RotatingTagline = () => {
   return (
     <div className="mt-2 text-left whitespace-nowrap" style={{minWidth: "300px"}}>
       <span className="text-white text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-        {t?.slogan || 'Making ideas grow'}
+        Making ideas grow
       </span>
     </div>
   );
@@ -1288,7 +1284,7 @@ export default function AforLanding() {
             {/* Logo Left */}
             <div className="flex-shrink-0 flex flex-col items-start">
               <AforLogo className="text-7xl md:text-8xl lg:text-9xl text-white drop-shadow-2xl" />
-              <RotatingTagline t={t} />
+              <RotatingTagline />
             </div>
 
             {/* Text Right */}
