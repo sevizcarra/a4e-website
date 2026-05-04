@@ -572,7 +572,7 @@ const RotatingTagline = () => {
   return (
     <div className="mt-2 text-left whitespace-nowrap" style={{minWidth: "300px"}}>
       <span className="text-white text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-        Developing ideas, managing your scope
+        Growing ideas, Managing scopes
       </span>
     </div>
   );
