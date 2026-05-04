@@ -567,34 +567,12 @@ const AforLogo = ({ className = "" }) => {
   return <span style={{fontFamily: "var(--font-audiowide), sans-serif"}} className={`tracking-wider leading-none inline-block ${className}`}>AFOR</span>;
 };
 
-// Rotating tagline under logo
+// Tagline under logo (estatico, blanco, sin animacion)
 const RotatingTagline = () => {
-  const words = ['managing your scope', 'managing your project'];
-  const [index, setIndex] = React.useState(0);
-  const [phase, setPhase] = React.useState('in');
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setPhase('out');
-      setTimeout(() => {
-        setIndex(prev => (prev + 1) % words.length);
-        setPhase('in');
-      }, 500);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
   return (
     <div className="mt-2 text-left whitespace-nowrap" style={{minWidth: "300px"}}>
-      <span className="text-white/80 text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-        Developing ideas,{' '}
-      </span>
-      <span className="text-[#FF4B24] font-normal text-sm md:text-base lg:text-lg tracking-widest uppercase" style={{
-        fontFamily: 'system-ui, -apple-system, sans-serif',
-        display: 'inline-block',
-        transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-        transform: phase === 'in' ? 'translateY(0)' : 'translateY(15px)',
-        opacity: phase === 'in' ? 1 : 0,
-      }}>
-        {words[index]}
+      <span className="text-white text-sm md:text-base lg:text-lg font-light tracking-widest uppercase" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
+        Developing ideas, managing your scope
       </span>
     </div>
   );
