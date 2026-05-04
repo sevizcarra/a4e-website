@@ -9,7 +9,7 @@ const audiowide = Audiowide({
 })
 
 export const metadata = {
-  title: 'AFOR - Growing ideas, Managing scopes',
+  title: 'AFOR - Making ideas grow',
   description: 'Soluciones de arquitectura industrial especializadas en ingeniería de precisión',
   keywords: 'arquitectura, ingeniería, industrial, construcción, Chile',
 }
